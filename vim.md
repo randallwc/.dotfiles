@@ -96,8 +96,6 @@ P	paste buffer before cursor
 :set tabstop=4 shiftwidth=4 expandtab
 ```
 
-:set noh
-
 # NOT FORMATTED
 
 ```
