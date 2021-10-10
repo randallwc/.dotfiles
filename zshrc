@@ -10,7 +10,7 @@ autoload -Uz compinit && compinit
 alias src='source ~/.zshrc'
 
 # aliases
-source ~/.dotfiles/.aliasrc
+source ~/.dotfiles/aliasrc
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
