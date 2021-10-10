@@ -1,5 +1,6 @@
-Vim
+# Vim
 
+```
    k
  h   l
    j
@@ -88,6 +89,7 @@ C	delete line and insert
 
 p	paste buffer after cursor
 P	paste buffer before cursor
+```
 
 ## PEP
 :set tabstop=4 shiftwidth=4 expandtab
