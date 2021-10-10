@@ -43,11 +43,14 @@ mount
 ps
 jobs
 pidof
-$0 -- name of the script
-$# -- number of positional parameters
-$$ -- pid of the current shell
-$@ -- array-like construct of all positional parameters
+$0  # name of the script
+$#  # number of positional parameters
+$$  # pid of the current shell
+$@  # array-like construct of all positional parameters
+```
+
 ## USERS & PERMS
+```
 whoami
 who
 w
