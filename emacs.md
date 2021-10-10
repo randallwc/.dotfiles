@@ -1,5 +1,6 @@
-Emacs
+# Emacs
 
+```
 C-x C-c		save and quit
 C-x C-z		put emacs in the background
 C-x C-f		open file
@@ -144,4 +145,4 @@ C-x C-i		indent
 C-x C-l		down case region
 C-x C-u		upper case region
 M-x fill-region	fill region ?
-
+```

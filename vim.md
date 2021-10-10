@@ -92,12 +92,15 @@ P	paste buffer before cursor
 ```
 
 ## PEP
+```
 :set tabstop=4 shiftwidth=4 expandtab
+```
 
 :set noh
 
 # NOT FORMATTED
 
+```
 "" COMMANDS
 " :ls
 " :b [FILESUBSTRING]
@@ -124,3 +127,4 @@ P	paste buffer before cursor
 " c to delete word then enter insert mode
 " cc to delete whole line
 " R to replace text
+```
