@@ -11,7 +11,10 @@ ping
 traceroute
 ndp
 dig
+```
+
 ## MESSAGING
+```bash
 mesg
 talk
 nc
