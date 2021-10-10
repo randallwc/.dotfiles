@@ -1,0 +1,19 @@
+[user]
+	name = William Randall
+	email = 15082470+randallwc@users.noreply.github.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = /Users/williamrandall/.gitignore_global
+	editor = vim
+[color]
+	ui = true
+[credential]
+	helper = osxkeychain
+[diff]
+	tool = vimdiff
+[init]
+	defaultBranch = main

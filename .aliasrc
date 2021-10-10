@@ -1,0 +1,124 @@
+#!/bin/bash
+
+# add colors to ls on mac
+alias ls='ls -G'
+
+# ls options
+alias la='ls -a'
+alias l='ls -F'
+alias ll='ls -l'
+alias lll='ls -al'
+
+# show hidden files
+alias l.='ls -d1 .*'
+
+# make grep show colors
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# my aliases
+# alias sshb='ssh debian@192.168.1.104'
+# alias sshbu='ssh debian@192.168.7.2'
+# alias sshbi='ssh debian@99.0.60.235 -p 22'
+alias sshc='ssh culver9'
+alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
+
+# c is now clear
+alias c='clear'
+
+# alias for quick changing directories
+alias ghub='cd ~/Documents/GitHub/'
+alias ucla='cd ~/Documents/UCLA/4th\ yr/1st\ qtr'
+alias desk='cd ~/Desktop/'
+alias doc='cd ~/Documents/'
+alias down='cd ~/Downloads/'
+
+# X11 forwarding
+# export DISPLAY=:0
+
+# alias to output path
+alias path='echo $PATH | sed s/:/\\n/g | sort'
+
+
+# NETWORKING ALIASES
+# start a simple http server
+sserver() {
+	local p=8080 
+	if [ "$#" -eq 1 ]; then 
+		p=$1
+	fi
+	printf "http://%s:%s\n" $(hostname) $p && sudo python3 -m http.server $p
+}
+# get local ip
+alias localip='ipconfig getifaddr en0'
+# mac addresses
+alias macaddrs='arp -a'
+
+# keep display awake
+alias nosleep='caffeinate -d'
+
+# brew deps tree
+alias bdt='brew deps --tree --installed'
+
+# USEFUL COMMANDS
+# https://tldr.ostera.io/
+
+## NETWORKING
+# ifconfig
+# ipconfig
+# arp
+# netstat
+# ping
+# traceroute
+# ndp
+# dig
+## MESSAGING
+# mesg
+# talk
+# nc
+# wall
+
+## MAC SPECIFIC
+# pbcopy
+# pbpaste
+
+## TEXT
+# grep
+# sed
+# comm
+# diff
+# tr
+# shuf
+
+## COMPUTER CONTROL
+# kill
+# du
+# df
+# mount
+# ps
+# jobs
+# pidof
+# $0 -- name of the script
+# $# -- number of positional parameters
+# $$ -- pid of the current shell
+# $@ -- array-like construct of all positional parameters
+## USERS & PERMS
+# whoami
+# who
+# w
+
+## MISC
+# cal
+# date
+# awk
+# sha
+# sha256
+# bc -- calculator
+
+## user input
+# read
+
+## COMMANDS
+# ^-r -- search through history 
+
