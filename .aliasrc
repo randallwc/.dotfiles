@@ -40,7 +40,6 @@ alias down='cd ~/Downloads/'
 # alias to output path
 alias path='echo $PATH | sed s/:/\\n/g | sort'
 
-
 # NETWORKING ALIASES
 # start a simple http server
 sserver() {
@@ -60,65 +59,3 @@ alias nosleep='caffeinate -d'
 
 # brew deps tree
 alias bdt='brew deps --tree --installed'
-
-# USEFUL COMMANDS
-# https://tldr.ostera.io/
-
-## NETWORKING
-# ifconfig
-# ipconfig
-# arp
-# netstat
-# ping
-# traceroute
-# ndp
-# dig
-## MESSAGING
-# mesg
-# talk
-# nc
-# wall
-
-## MAC SPECIFIC
-# pbcopy
-# pbpaste
-
-## TEXT
-# grep
-# sed
-# comm
-# diff
-# tr
-# shuf
-
-## COMPUTER CONTROL
-# kill
-# du
-# df
-# mount
-# ps
-# jobs
-# pidof
-# $0 -- name of the script
-# $# -- number of positional parameters
-# $$ -- pid of the current shell
-# $@ -- array-like construct of all positional parameters
-## USERS & PERMS
-# whoami
-# who
-# w
-
-## MISC
-# cal
-# date
-# awk
-# sha
-# sha256
-# bc -- calculator
-
-## user input
-# read
-
-## COMMANDS
-# ^-r -- search through history 
-

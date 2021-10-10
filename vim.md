@@ -89,10 +89,36 @@ C	delete line and insert
 p	paste buffer after cursor
 P	paste buffer before cursor
 
-PEP
-
+## PEP
 :set tabstop=4 shiftwidth=4 expandtab
 
-:set number
-:set nonumber
 :set noh
+
+# NOT FORMATTED
+
+"" COMMANDS
+" :ls
+" :b [FILESUBSTRING]
+" :qall
+" :find
+" :edit [file]
+" :earlier and :later
+" :reg to see buffers and "np to paste from buffer n
+" :s/old/new/g and :s/old/new/gc (for a prompt)
+" :%s/old/new/g for the whole file
+" :![command]
+" :r !ls
+" :r [File] reads file into this file
+" :vimgrep pattern %
+" :vimgrep pattern % | copen
+
+"" KEY COMBOS
+"" CONTROL
+" ^g show file name
+" ^n auto complete ^E to select
+" ^a to increment numbers
+" ^d for command completion
+"" 
+" c to delete word then enter insert mode
+" cc to delete whole line
+" R to replace text

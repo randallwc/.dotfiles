@@ -59,30 +59,3 @@ if &term =~ "xterm\\|rxvt"
 	" 5 -> blinking vertical bar
 	" 6 -> solid vertical bar
 endif
-
-"" COMMANDS
-" :ls
-" :b [FILESUBSTRING]
-" :qall
-" :find
-" :edit [file]
-" :earlier and :later
-" :reg to see buffers and "np to paste from buffer n
-" :s/old/new/g and :s/old/new/gc (for a prompt)
-" :%s/old/new/g for the whole file
-" :![command]
-" :r !ls
-" :r [File] reads file into this file
-" :vimgrep pattern %
-" :vimgrep pattern % | copen
-
-"" KEY COMBOS
-"" CONTROL
-" ^g show file name
-" ^n auto complete ^E to select
-" ^a to increment numbers
-" ^d for command completion
-"" 
-" c to delete word then enter insert mode
-" cc to delete whole line
-" R to replace text
