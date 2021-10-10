@@ -13,4 +13,8 @@ install homebrew at https://brew.sh
 
 ```
 brew bundle --file ~/.dotfiles/Brewfile
+
+# and run this to update it
+
+brew bundle dump --force --describe
 ```

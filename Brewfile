@@ -2,6 +2,8 @@ tap "beeftornado/rmtree"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # GNU Emacs text editor
 brew "emacs"
 # Distributed revision control system
