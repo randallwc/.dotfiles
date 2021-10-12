@@ -19,15 +19,15 @@ H	Jump to the top of the screen.
 M	Jump to the middle of the screen.
 L	Jump to the bottom of the screen.
 
-x	remove char
-X	backspace
-d	delete
-D	d$
-diX	delete inbetween X where X is a character
-w	word
-W	real word
-e	end
-E	real end
+x		remove char
+X		backspace
+d		delete
+D		d$
+di[div]		delete inbetween [div]
+w		word
+W		real word
+e		end
+E		real end
 
 commands for find and till
 f	find
@@ -38,27 +38,29 @@ T	till backwards
 ,	repeat backwards
 
 cursor movement
-0	begining of line
-^	first non whitespace char
-$	end of line
-gg	begining of file
-G	end of file
-NG	jump to 'N' line number
-''	jump back to the line where cursor was before
-``	undo last jump
-'.	jump to last changed line (will just go to last edit)
-g;	jump to place of last edit (will keep going back in edits)
-%	jump to other bracket
+0		begining of line
+^		first non whitespace char
+$		end of line
+gg		begining of file
+G		end of file
+[line]G		jump to [line] line number
+''		jump back to the line where cursor was before
+``		undo last jump
+'.		jump to last changed line (will just go to last edit)
+g;		jump to place of last edit (will keep going back in edits)
+%		jump to other bracket
 
 u	undo
 g-	undo but contains more states
-C-r	redo
+^-r	redo
 g+	redo but contains more states
 v	visual
-C-v	visual block
+^-v	visual block
 gv	reselect
 
-J	join current line and below line
+J			join current line and below line
+q:			open command history
+q[letter] [keycombo] q	record command 
 
 :		command
 :w		save
@@ -163,7 +165,6 @@ g<tab>		go to last opened tab
 " ^n auto complete ^E to select
 " ^a to increment numbers
 " ^d for command completion
-"" 
 " c to delete word then enter insert mode
 " cc to delete whole line
 " R to replace text
