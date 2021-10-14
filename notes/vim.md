@@ -156,6 +156,8 @@ g<tab>		go to last opened tab
 " :![command]
 " :r !ls
 " :r [File] reads file into this file
+" :w [File] write file into this file
+" :w !pbcopy " pipe current buffer into a command
 " :vimgrep pattern %
 " :vimgrep pattern % | copen
 
