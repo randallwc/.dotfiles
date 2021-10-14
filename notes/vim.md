@@ -118,7 +118,8 @@ WINDOWS
 ^-w q 		quit current window
 ^-w o		close all but current window
 ^-w r		rotate windows downward
-^-w s 		split window
+^-w s 		split window horizontally
+^-w v		split window vertically 
 
 TABS
 gt		next tab
