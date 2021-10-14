@@ -2,7 +2,7 @@
 
 echo "making simlinks in home dir"
 
-for file in vimrc zshrc gitconfig gitignore_global;
+for file in vimrc zshrc bashrc gitconfig gitignore_global;
 do
 	ln -s ~/.dotfiles/$file ~/.$file
 done
