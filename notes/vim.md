@@ -61,6 +61,7 @@ gv	reselect
 J			join current line and below line
 q:			open command history
 q[letter] [keycombo] q	record command 
+^-g			show the filename
 
 :		command
 :w		save
