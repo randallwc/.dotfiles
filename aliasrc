@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# add colors to ls on mac
-alias ls='ls -G'
+# add colors to ls
+if ls --color=auto > /dev/null 2>&1
+then
+	alias ls='ls --color=auto'
+else
+	alias ls='ls -G'
+fi
 
 # ls options
 alias la='ls -a'
