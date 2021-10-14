@@ -63,7 +63,7 @@ alias nosleep='caffeinate -d'
 alias bdt='brew deps --tree --installed'
 
 # replace cat with bat
-if which bat 2>&1 > /dev/null
+if which bat > /dev/null 2>&1
 then
 	alias cat='bat'
 fi
