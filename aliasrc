@@ -7,7 +7,9 @@ alias ls='ls -G'
 alias la='ls -a'
 alias l='ls -F'
 alias ll='ls -l'
+alias llf='ll -F'
 alias lll='ls -al'
+alias lllf='lll -F'
 
 # show hidden files
 alias l.='ls -d1 .*'
