@@ -12,6 +12,8 @@ brew "git"
 brew "htop"
 # Use Realtek DVB-T dongles as a cheap SDR
 brew "librtlsdr"
+# Platform built on V8 to build network applications
+brew "node"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Software-defined radio receiver powered by GNU Radio and Qt
