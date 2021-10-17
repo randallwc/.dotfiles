@@ -24,8 +24,6 @@ cask "boop"
 cask "discord"
 # Web browser
 cask "google-chrome"
-# Software-defined radio receiver powered by GNU Radio and Qt
-cask "gqrx"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Move and resize windows using keyboard shortcuts or snap areas
