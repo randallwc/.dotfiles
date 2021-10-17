@@ -16,9 +16,23 @@ brew "librtlsdr"
 brew "node"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Application uninstaller
+cask "appcleaner"
+# Scriptable scratchpad for developers
+cask "boop"
+# Voice and text chat software
+cask "discord"
+# Web browser
+cask "google-chrome"
 # Software-defined radio receiver powered by GNU Radio and Qt
 cask "gqrx"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Team communication and collaboration software
+cask "slack"
 # Free and open-source hosted hypervisor for x86 virtualization
 cask "virtualbox"
+# Open-source code editor
+cask "visual-studio-code"
