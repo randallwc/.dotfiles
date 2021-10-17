@@ -4,6 +4,8 @@ tap "homebrew/cask"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # GNU Emacs text editor
 brew "emacs"
 # Distributed revision control system
@@ -20,17 +22,29 @@ brew "tree"
 cask "appcleaner"
 # Scriptable scratchpad for developers
 cask "boop"
+# Remove junk and unused files
+cask "ccleaner"
+# Server and cloud storage browser
+cask "cyberduck"
 # Voice and text chat software
 cask "discord"
 # Web browser
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Native desktop app for Messenger (formerly Facebook Messenger)
+cask "messenger"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
 cask "slack"
+# Music streaming service
+cask "spotify"
 # Free and open-source hosted hypervisor for x86 virtualization
 cask "virtualbox"
 # Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+# Open-source version of the X.Org X Window System
+cask "xquartz"
