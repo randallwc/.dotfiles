@@ -30,3 +30,11 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
 # defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
 ```
+
+install `logi options`
+
+Keyboard > Keyboard > Key Repeat
+set `Fast`
+
+Keyboard > Keyboard > Delay Until Repeat
+Short
