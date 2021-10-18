@@ -1,0 +1,44 @@
+Amphetamine.app
+Anaconda-Navigator.app
+AppCleaner.app
+Boop.app
+CCleaner.app
+Chrome Remote Desktop Host Uninstaller.app
+Cisco
+DaisyDisk.app
+DataGrip.app
+Discord.app
+DistributionSummary.plist
+Docker.app
+EAGLE-9.6.2
+ExportOptions.plist
+FileZilla.app
+GitHub Desktop.app
+GoodNotes.app
+Google Chrome.app
+Gqrx.app
+Horo.app
+Keynote.app
+Logi Options.app
+MATLAB_R2021a.app
+Messenger.app
+Microsoft Remote Desktop.app
+Minecraft.app
+Numbers.app
+Pages.app
+Playgrounds.app
+QMK Toolbox.app
+Rectangle.app
+Roblox.app
+Safari.app
+Scan Thing.app
+Slack.app
+Spotify.app
+Steam.app
+Utilities
+VLC.app
+VirtualBox.app
+Visual Studio Code.app
+iMovie.app
+iTerm.app
+zoom.us.app
