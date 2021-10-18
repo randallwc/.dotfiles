@@ -38,3 +38,5 @@ set `Fast`
 
 Keyboard > Keyboard > Delay Until Repeat
 Short
+
+install conda somehow???
