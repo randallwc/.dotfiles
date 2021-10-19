@@ -12,6 +12,6 @@ then
 	echo "finished making simlinks in home dir"
 	exit 0
 else
-	echo "something went wrong making simlinks"
+	echo "something went wrong making simlinks\n exiting..."
 	exit 1
 fi

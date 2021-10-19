@@ -40,6 +40,7 @@ alias ucla='cd ~/Documents/UCLA/4th\ yr/1st\ qtr'
 alias desk='cd ~/Desktop/'
 alias doc='cd ~/Documents/'
 alias down='cd ~/Downloads/'
+alias dot='cd ~/.dotfiles/'
 
 # X11 forwarding
 # export DISPLAY=:0

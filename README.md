@@ -42,3 +42,8 @@ Short
 install conda somehow???
 
 [create git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+Disable iCloud Optimization
+```
+System Preferences > Apple ID > iCloud and disable Optimize Mac Storage
+```
