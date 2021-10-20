@@ -47,3 +47,12 @@ Disable iCloud Optimization
 ```
 System Preferences > Apple ID > iCloud and disable Optimize Mac Storage
 ```
+
+# TODO
+
+[ ] clean up documentation
+[ ] make a script to make the github folder
+[ ] make a script to clone the currently used repos
+[ ] store the settings from VScode
+[ ] find a way to install conda in a lightweight way
+[ ] write down all settings that need to be updated
