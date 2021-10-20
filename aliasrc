@@ -35,7 +35,7 @@ alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
 alias c='clear'
 
 # alias for quick changing directories
-alias ghub='cd ~/Documents/GitHub/'
+alias ghub='cd ~/GitHub/'
 alias ucla='cd ~/Documents/UCLA/4th\ yr/1st\ qtr'
 alias desk='cd ~/Desktop/'
 alias doc='cd ~/Documents/'
