@@ -8,7 +8,8 @@ _CYAN=$(tput setaf 6)
 _WHITE=$(tput setaf 7)
 _RESET=$(tput sgr0)
 _BOLD=$(tput bold)
-export PS1="${_YELLOW}\t ${_CYAN}\u ${_BLUE}\h ${_WHITE}\$? ${_MAGENTA}\W ${_WHITE}\\$ ${_RESET}"
+# export PS1="${_YELLOW}\t ${_CYAN}\u ${_BLUE}\h ${_WHITE}\$? ${_MAGENTA}\W ${_WHITE}\\$ ${_RESET}"
+export PS1="\t \u \h $? \W \\$ "
 
 # alias to source .zshrc
 alias src='source ~/.bashrc'
