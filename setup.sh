@@ -7,7 +7,7 @@ for file in $files;
 do
 	if [[ "$1" == "--force" ]]
 	then
-		echo "force rewrite of simlinks"
+		echo "force rewrite of simlinks for file $file"
 		ln -fs ~/.dotfiles/$file ~/.$file
 	else
 		ln -s ~/.dotfiles/$file ~/.$file
