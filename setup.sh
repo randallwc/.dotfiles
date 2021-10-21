@@ -30,6 +30,12 @@ then
 		for repo in $repositories
 		do
 			git clone git@github.com:randallwc/$repo
+			if [[ $? -ne 0 ]]
+			then
+				echo "error occured in git clone"
+				rmdir ~/GitHub
+				exit 1
+			fi
 		done
 	fi
 fi
