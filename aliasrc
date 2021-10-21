@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # add colors to ls
-if ls --color=auto > /dev/null 2>&1
+if ls --color=auto >/dev/null 2>&1
 then
 	alias ls='ls --color=auto'
 else
@@ -69,7 +69,7 @@ alias nosleep='caffeinate -d'
 alias bdt='brew deps --tree --installed'
 
 # replace cat with bat
-if which bat > /dev/null 2>&1
+if which bat >/dev/null 2>&1
 then
 	alias cat='bat'
 fi
