@@ -5,7 +5,7 @@ repositories="CSM152A CSM148"
 echo "making simlinks in home dir"
 for file in $files;
 do
-	if [[ "$1" -eq "--force" ]]
+	if [[ "$1" == "--force" ]]
 	then
 		echo "force rewrite of simlinks"
 		ln -fs ~/.dotfiles/$file ~/.$file
@@ -16,7 +16,7 @@ done
 
 if [[ ! -d ~/Github/ ]]
 then
-	if [[ "$1" -eq "--github" ]]
+	if [[ "$1" == "--github" ]]
 	then
 		echo "making GitHub in home directory"
 		mkdir ~/GitHub/
