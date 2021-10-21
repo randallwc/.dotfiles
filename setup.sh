@@ -16,17 +16,20 @@ done
 
 if [[ ! -d ~/Github/ ]]
 then
-	echo "making GitHub in home directory"
-	mkdir ~/GitHub/
-	cd ~/GitHub/
-	git --version >/dev/null 2>&1
-	if [[ $? -ne 0 ]]
+	if [[ "$1" -eq "--github" ]]
 	then
-		echo "git not installed"
-		exit 1
+		echo "making GitHub in home directory"
+		mkdir ~/GitHub/
+		cd ~/GitHub/
+		git --version >/dev/null 2>&1
+		if [[ $? -ne 0 ]]
+		then
+			echo "git not installed"
+			exit 1
+		fi
+		for repo in $repositories
+		do
+			git clone git@github.com:randallwc/$repo
+		done
 	fi
-	for repo in $repositories
-	do
-		git clone git@github.com:randallwc/$repo
-	done
 fi
