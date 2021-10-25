@@ -50,13 +50,14 @@ G		end of file
 g;		jump to place of last edit (will keep going back in edits)
 %		jump to other bracket
 
-u	undo
-g-	undo but contains more states
-^-r	redo
-g+	redo but contains more states
-v	visual
-^-v	visual block
-gv	reselect
+u		undo
+g-		undo but contains more states
+^-r		(NORMAL) redo
+^-r[reg]	(INSERT) paste from buffer
+g+		redo but contains more states
+v		visual
+^-v		visual block
+gv		reselect
 
 J			join current line and below line
 q:			open command history
