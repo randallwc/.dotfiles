@@ -68,6 +68,8 @@ alias nosleep='caffeinate -d'
 # brew deps tree
 alias bdt='brew deps --tree --installed'
 
+alias bbd='brew bundle dump --force --describe'
+
 # replace cat with bat
 if which bat >/dev/null 2>&1
 then
