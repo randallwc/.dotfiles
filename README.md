@@ -1,63 +1,59 @@
 # setting up new mac
 
+# install xcode
 ```
 xcode-select --install
 ```
 
-symlink files
-```
-ln -s ~/.dotfiles/[file] ~/[file]
-```
+# symlink files
+`./setup.sh`
 
-install homebrew at https://brew.sh
+# set up github links
+`./setup.sh --github`
 
-```
-brew bundle --file ~/.dotfiles/Brewfile
-
-# and run this to update it
-
-brew bundle dump --force --describe
+# [install homebrewi](https://brew.sh)
+# Link the settings file
+```sh
+brew bundle --file ~/.dotfiles/Brewfile # this is to link the file
+brew bundle dump --force --describe # and run this to update it
 ```
 
-```bash
-# System Preferences > Accessibility > Pointer Control > Mouse & Trackpad > Trackpad Options > Enable Dragging > Three Finger Drag (NOTE: The GUI doesn't update)
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
-```
+# Download Apps From Appstore
+- Scan Thing
+- Daisy Disk
+- Amphetamine
+- Horo
+- Good Notes
 
-```bash
+# Enable 3 finger drag
+`System Preferences > Accessibility > Pointer Control > Mouse & Trackpad > Trackpad Options > Enable Dragging > Three Finger Drag`
+
 # iTerm2 Settings
+```sh
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
-# defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
 ```
 
-install `logi options`
+# [install logi options](https://www.logitech.com/en-us/product/options)
 
 # set up key board repeat
-Keyboard > Keyboard > Key Repeat
-set `Fast`
-Keyboard > Keyboard > Delay Until Repeat
-Short
+`Keyboard > Keyboard > Key Repeat`
+**set Fast**
+`Keyboard > Keyboard > Delay Until Repeat`
+**Short**
 
-install conda somehow???
+# [install miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
-[create git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+# [create git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-Disable iCloud Optimization
-```
-System Preferences > Apple ID > iCloud and disable Optimize Mac Storage
-```
+# Enable Document Sync on iCloud
+`System Preferences > Apple ID > iCloud Drive > Options > Desktop & Documents Folders`
+
+# Disable iCloud Optimization
+`System Preferences > Apple ID > iCloud and disable Optimize Mac Storage`
 
 # TODO
 
 - [ ] clean up documentation
-
-- [x] make a script to make the github folder
-
-- [x] make a script to clone the currently used repos
-
-- [ ] store the settings from VScode
-
-- [ ] find a way to install conda in a lightweight way
 
 - [ ] write down all settings that need to be updated
