@@ -62,6 +62,9 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 # enable icloud on messages
 # enable control zoom
 # enable tts
+# put bluetooth in menu bar
+# put sound in menu bar
+# play feedback when volume is changed
 
 # TODO
 
