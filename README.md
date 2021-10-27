@@ -5,8 +5,8 @@
 # symlink files
 `./setup.sh`
 
-# [create git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 # set up github links
+## [create git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 `./setup.sh --github`
 
 # [install homebrew](https://brew.sh)
