@@ -42,6 +42,9 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 `Keyboard > Keyboard > Delay Until Repeat`
 **Short**
 
+# update finder settings
+`Finder > Preferences > [do stuff here]`
+
 # [install miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
 # [create git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
