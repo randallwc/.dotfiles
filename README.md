@@ -14,8 +14,10 @@
 # [install homebrew](https://brew.sh)
 # link the settings file
 ```sh
-brew bundle --file ~/.dotfiles/Brewfile # this is to link the file
-brew bundle dump --force --describe # and run this to update it
+# this is to link the file
+brew bundle --file ~/.dotfiles/Brewfile 
+# and run this to update it
+brew bundle dump --force --describe
 ```
 
 # download apps from appstore
