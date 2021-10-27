@@ -10,20 +10,20 @@
 `./setup.sh --github`
 
 # [install homebrew](https://brew.sh)
-# Link the settings file
+# link the settings file
 ```sh
 brew bundle --file ~/.dotfiles/Brewfile # this is to link the file
 brew bundle dump --force --describe # and run this to update it
 ```
 
-# Download Apps From Appstore
+# download apps from appstore
 - Scan Thing
 - Daisy Disk
 - Amphetamine
 - Horo
 - Good Notes
 
-# Enable 3 finger drag
+# enable 3 finger drag
 `System Preferences > Accessibility > Pointer Control > Mouse & Trackpad > Trackpad Options > Enable Dragging > Three Finger Drag`
 
 # iTerm2 Settings
@@ -37,11 +37,11 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 # set up key board repeat
 `Keyboard > Keyboard > Key Repeat`
 
-**set Fast**
+**set fast**
 
 `Keyboard > Keyboard > Delay Until Repeat`
 
-**set Short**
+**set short**
 
 # update finder settings
 `Finder > Preferences > [do stuff here]`
@@ -49,11 +49,14 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 # [install miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
 
-# Enable Document Sync on iCloud
+# enable document sync on icloud
 `System Preferences > Apple ID > iCloud Drive > Options > Desktop & Documents Folders`
 
-# Disable iCloud Optimization
+# disable icloud optimization
 `System Preferences > Apple ID > iCloud and disable Optimize Mac Storage`
+
+# enable control zoom
+# enable tts
 
 # TODO
 
