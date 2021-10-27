@@ -59,6 +59,7 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 # disable icloud optimization
 `System Preferences > Apple ID > iCloud and disable Optimize Mac Storage`
 
+# enable icloud on messages
 # enable control zoom
 # enable tts
 
