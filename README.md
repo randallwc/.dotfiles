@@ -51,6 +51,8 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 `Finder > Preferences > [do stuff here]`
 
 # [install miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- [jupyter lab](https://jupyter.org/install)
+- ipython
 
 
 # enable document sync on icloud
