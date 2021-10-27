@@ -1,9 +1,7 @@
 # setting up new mac
 
 # install xcode
-```
-xcode-select --install
-```
+`xcode-select --install`
 
 # symlink files
 `./setup.sh`
@@ -11,7 +9,7 @@ xcode-select --install
 # set up github links
 `./setup.sh --github`
 
-# [install homebrewi](https://brew.sh)
+# [install homebrew](https://brew.sh)
 # Link the settings file
 ```sh
 brew bundle --file ~/.dotfiles/Brewfile # this is to link the file
@@ -38,8 +36,11 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 
 # set up key board repeat
 `Keyboard > Keyboard > Key Repeat`
+
 **set Fast**
+
 `Keyboard > Keyboard > Delay Until Repeat`
+
 **Short**
 
 # update finder settings
