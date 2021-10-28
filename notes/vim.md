@@ -141,7 +141,7 @@ g<tab>		go to last opened tab
 
 ## PEP
 ```
-:set tabstop=4 shiftwidth=4 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 ```
 
 # NOT FORMATTED
