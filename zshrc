@@ -34,4 +34,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# enable zsh iterm2 shell integration
+# https://iterm2.com/documentation-utilities.html
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
