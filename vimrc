@@ -61,7 +61,9 @@ if &term =~ "xterm\\|rxvt"
 endif
 
 if has('persistent_undo') "check if your vim version supports it
-	set undofile "turn on the feature
+	set undofile                " Save undos after file closes
 	silent !mkdir -p ~/.vim/undo
-	set undodir=$HOME/.vim/undo "directory where the undo files will be stored
+	set undodir=$HOME/.vim/undo " where to save undo histories
+	set undolevels=1000         " How many undos
+	set undoreload=10000        " number of lines to save
 endif
