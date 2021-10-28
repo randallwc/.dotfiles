@@ -70,7 +70,13 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 # play feedback when volume is changed
 
 # TODO
+## minor
 
+- [ ] fix search in vim to fuzzy search
+
+- [ ] look into greyed out tab completion in zsh
+
+- [ ] look into vi mode for zsh ( add visual indicator for insert and command mode )
+
+## major
 - [ ] clean up documentation
-
-- [ ] write down all settings that need to be updated
