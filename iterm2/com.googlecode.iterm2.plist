@@ -10,6 +10,8 @@
 	<dict/>
 	<key>Default Bookmark Guid</key>
 	<string>8C7CE755-2885-4A73-82DB-656C663BD57E</string>
+	<key>Default Toolbelt Width</key>
+	<real>250</real>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
@@ -958,6 +960,8 @@
 				<key>Red Component</key>
 				<real>0.70980000495910645</real>
 			</dict>
+			<key>Send Bell Alert</key>
+			<false/>
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Shortcut</key>
@@ -1103,6 +1107,14 @@
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Captured Output</string>
+		<string>Command History</string>
+		<string>Paste History</string>
+		<string>Profiles</string>
+		<string>Recent Directories</string>
+		<string>Snippets</string>
+		<string>Actions</string>
+		<string>Jobs</string>
+		<string>Notes</string>
 	</array>
 	<key>UseBorder</key>
 	<false/>
