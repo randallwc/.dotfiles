@@ -3,8 +3,12 @@ export PROMPT='%F{yellow}%*%f %F{cyan}%n%f %F{blue}%m%f %F{white}%?%f %F{magenta
 
 # case-insensitive matching only if there are no case-sensitive matches
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+# tab complete select visually
+zstyle ':completion:*' menu select
 # initialize advanced tab completion
 autoload -Uz compinit && compinit
+# tab completion with highlighting
+zmodload -i zsh/complist
 
 # alias to source .zshrc
 alias src='source ~/.zshrc'
@@ -30,3 +34,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
