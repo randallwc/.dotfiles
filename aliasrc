@@ -63,6 +63,7 @@ alias nosleep='caffeinate -d'
 # brew deps tree
 alias bdt='brew deps --tree --installed'
 
+# update brew bundle
 alias bbd='brew bundle dump --force --describe'
 
 # replace cat with bat
@@ -70,3 +71,6 @@ if which bat >/dev/null 2>&1
 then
 	alias cat='bat'
 fi
+
+# add homembrew path
+export PATH="/usr/local/sbin:$PATH"
