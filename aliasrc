@@ -42,6 +42,7 @@ alias dot='cd ~/.dotfiles/'
 
 # alias to output path
 alias path='echo $PATH | sed s/:/\\n/g | sort'
+alias pathu='path | uniq -c'
 
 # NETWORKING ALIASES
 # start a simple http server
