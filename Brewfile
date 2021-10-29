@@ -4,8 +4,6 @@ tap "homebrew/cask"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Pack, ship and run any application as a lightweight container
-brew "docker"
 # GNU Emacs text editor
 brew "emacs"
 # Distributed revision control system
