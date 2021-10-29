@@ -72,6 +72,3 @@ if which bat >/dev/null 2>&1
 then
 	alias cat='bat'
 fi
-
-# add homembrew path
-export PATH="/usr/local/sbin:$PATH"

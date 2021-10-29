@@ -5,3 +5,6 @@ if [ -n "$BASH" ] && [ -r ~/.bashrc ];
 then
     . ~/.bashrc
 fi
+
+# add homembrew path
+export PATH="/usr/local/sbin:$PATH"
