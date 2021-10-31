@@ -42,8 +42,6 @@ cask "slack"
 cask "spotify"
 # Video game digital distribution service
 cask "steam"
-# Free and open-source hosted hypervisor for x86 virtualization
-cask "virtualbox"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
