@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # add colors to ls
-alias ls='ls --color=auto'
+if ls -G >/dev/null 2>&1
+then
+	alias ls='ls -G'
+else
+	alias ls='ls --color=auto'
+fi
 
 # ls options
 alias la='ls -a'
