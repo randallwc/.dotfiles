@@ -16,6 +16,8 @@ brew "librtlsdr"
 brew "node"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Application launcher and productivity software
+cask "alfred"
 # Application uninstaller
 cask "appcleaner"
 # Scriptable scratchpad for developers
