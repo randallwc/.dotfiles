@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-files="vimrc zshrc bashrc profile gitconfig gitignore_global"
+files="vimrc zshrc zprofile bashrc profile gitconfig gitignore_global"
 repositories="CSM152A CSM148"
 
 echo "making simlinks in home dir"
