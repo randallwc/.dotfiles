@@ -2,6 +2,9 @@
 # install xcode
 `xcode-select --install`
 
+# [install rosetta](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
+`softwareupdate --install-rosetta`
+
 # symlink files
 `./setup.sh`
 
