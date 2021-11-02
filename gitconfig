@@ -9,7 +9,6 @@
 [core]
 	excludesfile = /Users/williamrandall/.gitignore_global
 	editor = vim
-	autocrlf = true
 [color]
 	ui = true
 [credential]
