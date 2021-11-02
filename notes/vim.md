@@ -143,6 +143,8 @@ g<tab>		go to last opened tab
 ```
 set tabstop=4 shiftwidth=4 expandtab
 set expandtab|retab
+
+set tabstop=4 shiftwidth=4 expandtab|retab
 ```
 
 # NOT FORMATTED
