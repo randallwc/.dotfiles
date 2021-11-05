@@ -39,12 +39,15 @@ shuf
 
 ## COMPUTER CONTROL
 ```bash
+pushd
+popd
 kill
 du
 df
 mount
 ps
 jobs
+fg
 pidof
 uptime
 top
