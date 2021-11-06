@@ -39,6 +39,8 @@ shuf
 
 ## COMPUTER CONTROL
 ```bash
+find
+locate && sudo updatedb
 pushd
 popd
 kill
@@ -62,10 +64,14 @@ $@  # array-like construct of all positional parameters
 whoami
 who
 w
+users
+id
 ```
 
 ## MISC
 ```bash
+whatis # find out what a command does
+apropos # find commands related to keyword
 cal
 date
 awk
