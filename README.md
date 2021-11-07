@@ -18,9 +18,9 @@
 # link the settings file
 ```sh
 # this is to link the file
-brew bundle --file ~/.dotfiles/Brewfile 
+brew bundle --file=~/.dotfiles/Brewfile 
 # and run this to update it
-brew bundle dump --force --describe
+brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
 ```
 
 # download apps from appstore

@@ -70,7 +70,7 @@ alias nosleep='caffeinate -d'
 alias bdt='brew deps --tree --installed'
 
 # update brew bundle
-alias bbd='brew bundle dump --force --describe'
+alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
 
 # replace cat with bat
 if which bat >/dev/null 2>&1
