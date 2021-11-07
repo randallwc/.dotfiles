@@ -5,6 +5,8 @@ export PROMPT='%F{yellow}%*%f %F{cyan}%n%f %F{blue}%m%f %F{white}%?%f %F{magenta
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 # tab complete select visually
 zstyle ':completion:*' menu select
+# shift tab tab completes backwards
+bindkey '^[[Z' reverse-menu-complete
 # initialize advanced tab completion
 autoload -Uz compinit && compinit
 # tab completion with highlighting
