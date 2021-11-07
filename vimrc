@@ -3,7 +3,7 @@ set nocompatible
 " enable syntax highlighting
 syntax enable
 
-"enable numbers on the left size
+" enable numbers on the left size
 "set nu
 
 " turn hybrid line numbers on
