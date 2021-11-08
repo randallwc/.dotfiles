@@ -46,7 +46,7 @@ let &showbreak = '⤥  '
 
 " color past a certain number of chars
 "set colorcolumn=80
-" set color of highlight to gray 
+" set color of highlight to gray
 "highlight ColorColumn ctermbg=8
 
 " change cursor based on mode
@@ -69,7 +69,8 @@ if has('persistent_undo') "check if your vim version supports it
 endif
 
 " fix tabs into spaces
-set tabstop=4 shiftwidth=4 expandtab|retab
+set tabstop=4 shiftwidth=4
+" expandtab|retab
 
 " https://vim.fandom.com/wiki/Remove_unwanted_spaces
 " remove trailing whitespace
