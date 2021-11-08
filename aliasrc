@@ -33,6 +33,8 @@ alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
 
 # c is now clear
 alias c='clear'
+# e is exit
+alias e='exit'
 
 # alias for quick changing directories
 alias ghub='cd ~/GitHub/'
