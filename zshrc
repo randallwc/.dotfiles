@@ -12,14 +12,13 @@ autoload -Uz compinit && compinit
 # tab completion with highlighting
 zmodload -i zsh/complist
 
+help() { bash -c "help $1" }
+
 # alias to source .zshrc
 alias src='source ~/.zshrc'
 
 # aliases
 source ~/.dotfiles/aliasrc
-
-# notes
-# esc-q -- stash command
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -40,3 +39,6 @@ unset __conda_setup
 # https://iterm2.com/documentation-utilities.html
 # https://iterm2.com/documentation-shell-integration.html
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# notes
+# esc-q -- stash command
