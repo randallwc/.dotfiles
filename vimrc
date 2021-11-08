@@ -67,3 +67,21 @@ if has('persistent_undo') "check if your vim version supports it
 	set undolevels=1000         " How many undos
 	set undoreload=10000        " number of lines to save
 endif
+
+" fix tabs into spaces
+set tabstop=4 shiftwidth=4 expandtab|retab
+
+" https://vim.fandom.com/wiki/Remove_unwanted_spaces
+" remove trailing whitespace
+function TrimWhiteSpace()
+  %s/\s*$//
+  ''
+endfunction
+
+if has("patch-7.4.354")
+    " Indents word-wrapped lines as much as the 'parent' line
+    set breakindent
+    " Ensures word-wrap does not split words
+    set formatoptions=l
+    set lbr
+endif
