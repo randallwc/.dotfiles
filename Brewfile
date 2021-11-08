@@ -34,6 +34,8 @@ cask "google-chrome"
 cask "iterm2"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
+# Calculator and converter application
+cask "numi"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
