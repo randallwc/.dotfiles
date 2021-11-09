@@ -87,3 +87,6 @@ if has("patch-7.4.354")
     set formatoptions=l
     set lbr
 endif
+
+" make it auto indent
+set autoindent
