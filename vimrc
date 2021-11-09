@@ -26,6 +26,7 @@ runtime ftplugin/man.vim
 filetype plugin on
 
 " Search down into subfolders
+" `find`
 set path+=**
 
 " Display all matching files when we tab complete
