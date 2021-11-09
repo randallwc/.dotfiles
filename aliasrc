@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # add colors to ls
-if ls -G >/dev/null 2>&1
-then
-	alias ls='ls -G'
-else
-	alias ls='ls --color=auto'
-fi
+os=$(uname)
+case $os in
+	MING*) alias ls='ls --color=auto' ;;
+	Linux) alias ls='ls --color-auto';;
+	Darwin) alias ls='ls -G' ;;
+	*) alias ls='ls --color=auto' ;;
+esac
 
 # ls options
 alias la='ls -a'
@@ -75,7 +76,6 @@ alias bdt='brew deps --tree --installed'
 alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
 
 # replace cat with bat
-if command -v bat
-then
-	alias cat='bat'
-fi
+case $os in
+	Darwin) command -v bat && alias cat='bat' ;;
+esac
