@@ -3,6 +3,7 @@
 `xcode-select --install`
 
 # [install rosetta](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
+> for M1 chips
 `softwareupdate --install-rosetta`
 
 # symlink files
@@ -65,12 +66,13 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 # disable icloud optimization
 `System Preferences > Apple ID > iCloud and disable Optimize Mac Storage`
 
-# enable icloud on messages
-# enable control zoom
-# enable tts
-# put bluetooth in menu bar
-# put sound in menu bar
-# play feedback when volume is changed
+# misc settings
+1. enable icloud on messages
+1. enable control zoom
+1. enable tts
+1. put bluetooth in menu bar
+1. put sound in menu bar
+1. play feedback when volume is changed
 
 # TODO
 ## minor
