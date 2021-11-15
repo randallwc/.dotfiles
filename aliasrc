@@ -3,10 +3,10 @@
 # add colors to ls
 os=$(uname)
 case $os in
-	MING*) alias ls='ls --color=auto' ;;
-	Linux) alias ls='ls --color-auto';;
-	Darwin) alias ls='ls -G' ;;
-	*) alias ls='ls --color=auto' ;;
+    MING*) alias ls='ls --color=auto' ;;
+    Linux) alias ls='ls --color-auto';;
+    Darwin) alias ls='ls -G' ;;
+    *) alias ls='ls --color=auto' ;;
 esac
 
 # ls options
@@ -55,11 +55,11 @@ alias pathu='path | uniq -c'
 # NETWORKING ALIASES
 # start a simple http server
 sserver() {
-	local p=8080 
-	if [ "$#" -eq 1 ]; then 
-		p=$1
-	fi
-	printf "http://%s:%s\n" $(hostname) $p && sudo python3 -m http.server $p
+    local p=8080
+    if [ "$#" -eq 1 ]; then
+        p=$1
+    fi
+    printf "http://%s:%s\n" $(hostname) $p && sudo python3 -m http.server $p
 }
 # get local ip
 alias localip='ipconfig getifaddr en0'
@@ -77,5 +77,5 @@ alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
 
 # replace cat with bat
 case $os in
-	Darwin) command -v bat >/dev/null && alias cat='bat' ;;
+    Darwin) command -v bat >/dev/null && alias cat='bat' ;;
 esac

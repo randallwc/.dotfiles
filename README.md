@@ -78,7 +78,7 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 ```git
 # ~/.gitlocal on mac
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 ```
 
 # TODO
