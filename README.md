@@ -74,8 +74,9 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 1. put sound in menu bar
 1. play feedback when volume is changed
 
+# set up gitlocal
 ```git
-# ~/.gitlocal
+# ~/.gitlocal on mac
 [credential]
 	helper = osxkeychain
 ```
