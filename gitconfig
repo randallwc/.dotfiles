@@ -9,7 +9,7 @@
     process = git-lfs filter-process
     required = true
 [core]
-    excludesfile = /Users/williamrandall/.gitignore_global
+    excludesfile = ~/.gitignore_global
     editor = vim
 [color]
     ui = true
