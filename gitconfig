@@ -1,3 +1,5 @@
+[include]
+    path = .gitlocal
 [user]
 	name = William Randall
 	email = 15082470+randallwc@users.noreply.github.com
@@ -11,8 +13,6 @@
 	editor = vim
 [color]
 	ui = true
-[credential]
-	helper = osxkeychain
 [diff]
 	tool = vimdiff
 [init]
