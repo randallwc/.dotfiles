@@ -4,8 +4,12 @@ tap "homebrew/cask"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Configurable talking characters in ASCII art
+brew "cowsay"
 # GNU Emacs text editor
 brew "emacs"
+# Banner-like program prints strings as ASCII art
+brew "figlet"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
