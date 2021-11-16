@@ -89,3 +89,12 @@ read
 ```bash
 ^-r # search through history 
 ```
+
+## BREW
+```bash
+cowsay
+    cowthink
+figlet
+    figlist
+    showfigfonts
+```
