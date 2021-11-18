@@ -75,8 +75,12 @@ set tabstop=4 shiftwidth=4 expandtab|retab
 " https://vim.fandom.com/wiki/Remove_unwanted_spaces
 " remove trailing whitespace
 function TrimWhiteSpace()
-  %s/\s*$//
-  ''
+    %s/\s*$//
+    ''
+endfunction
+
+function RemoveCarriageReturn()
+    %s/\r//g
 endfunction
 
 if has("patch-7.4.354")
