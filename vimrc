@@ -81,6 +81,7 @@ endfunction
 
 function RemoveCarriageReturn()
     %s/\r//g
+    ''
 endfunction
 
 if has("patch-7.4.354")
