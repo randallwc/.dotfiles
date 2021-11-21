@@ -94,3 +94,8 @@ endif
 
 " make it auto indent
 set autoindent
+
+" keep a certain ammount of context
+set scrolloff=5
+" use this one to keep cursor at center while scrolling
+" set scrolloff=9999
