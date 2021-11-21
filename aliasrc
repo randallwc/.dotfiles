@@ -49,7 +49,7 @@ alias dot='cd ~/.dotfiles/'
 # export DISPLAY=:0
 
 # alias to output path
-alias path='echo $PATH | sed s/:/\\n/g | sort'
+alias path='echo $PATH | tr : \\n | sort'
 alias pathu='path | uniq -c'
 
 # NETWORKING ALIASES
