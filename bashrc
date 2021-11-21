@@ -10,4 +10,4 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # aliases
 source ~/.dotfiles/aliasrc
 
-[ -f ~/.bash_profile ] && source ~/.bash_profile
+[ -f ~/.bash_profile ] && . ~/.bash_profile
