@@ -83,6 +83,7 @@ zt                      put cursor at top of screen
 
 >>                      indent
 <<                      unindent
+==                      indent to what is above
 
 INSERT MODE
 

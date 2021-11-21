@@ -97,5 +97,6 @@ set autoindent
 
 " keep a certain ammount of context
 set scrolloff=5
-" use this one to keep cursor at center while scrolling
+" use this one to keep cursor at center while scrolling BAD IDEA
+" https://vim.fandom.com/wiki/Keep_your_cursor_centered_vertically_on_the_screen
 " set scrolloff=9999
