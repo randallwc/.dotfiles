@@ -16,10 +16,10 @@ zmodload -i zsh/complist
 help() { bash -c "help $1" }
 
 # alias to source .zshrc
-alias src='. ~/.zshrc'
+alias src='[ -r ~/.zshrc ] && . ~/.zshrc'
 
 # aliases
-. ~/.dotfiles/aliasrc
+[ -r ~/.dotfiles/aliasrc ] && . ~/.dotfiles/aliasrc
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
