@@ -12,6 +12,7 @@ autoload -Uz compinit && compinit
 # tab completion with highlighting
 zmodload -i zsh/complist
 
+# make bash help command work in zsh
 help() { bash -c "help $1" }
 
 # alias to source .zshrc
