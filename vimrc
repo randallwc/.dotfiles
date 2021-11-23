@@ -80,7 +80,7 @@ function TrimWhiteSpace()
 endfunction
 
 function RemoveCarriageReturn()
-    %s/\r//g
+    %s/\r//
     ''
 endfunction
 
