@@ -1,6 +1,7 @@
 tap "beeftornado/rmtree"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
@@ -38,6 +39,8 @@ cask "google-chrome"
 cask "iterm2"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
+# Toolbox companion for QMK Firmware
+cask "qmk-toolbox"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
