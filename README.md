@@ -97,4 +97,5 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 - [ ] look into vi mode for zsh ( add visual indicator for insert and command mode )
 
 ## major
+- [ ] https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot
 - [ ] clean up documentation

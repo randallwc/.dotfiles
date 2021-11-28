@@ -1,3 +1,7 @@
+"""links"""
+" https://nvie.com/posts/how-i-boosted-my-vim/
+" http://kien.github.io/ctrlp.vim/
+
 set nocompatible
 if &t_Co > 2 || has("gui_running")
     syntax on " enable syntax highlighting
