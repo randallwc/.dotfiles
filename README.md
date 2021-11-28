@@ -84,10 +84,16 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 # TODO
 ## minor
 
+### bash
+- [ ] add color to ps1 in bash but not in the bad way
+- [ ] fix the circular dependencies in rc files esp with conda
+- [ ] add better tab completion in bash
+
+### vim
 - [ ] fix search in vim to fuzzy search
 
+### zsh
 - [ ] look into greyed out tab completion in zsh
-
 - [ ] look into vi mode for zsh ( add visual indicator for insert and command mode )
 
 ## major
