@@ -55,6 +55,9 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 # update finder settings
 `Finder > Preferences > [do stuff here]`
 
+`Finder > View > Show Path Bar`
+`Finder > View > Show Status Bar`
+
 # [install miniconda](https://docs.conda.io/en/latest/miniconda.html)
 - [jupyter lab](https://jupyter.org/install)
 - ipython
