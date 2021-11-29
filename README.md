@@ -91,6 +91,8 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 
 ### vim
 - [ ] fix search in vim to fuzzy search
+- [ ] shift tab to indent [link](https://vim.fandom.com/wiki/Shifting_blocks_visually)
+- [ ] read this [thing](https://vi.stackexchange.com/questions/12806/configure-which-column-gq-wraps-at)
 
 ### zsh
 - [ ] look into greyed out tab completion in zsh
