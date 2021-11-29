@@ -17,7 +17,7 @@ set wildmenu " Display all matching files when we tab complete
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wrap " enable softwrap of words
 set linebreak
-let &showbreak = '↪  ' " set line wrap symbol
+set showbreak=↪\ " line break
 set tabstop=4
 set shiftwidth=4
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
@@ -38,6 +38,7 @@ filetype plugin indent on
 runtime ftplugin/man.vim " set up vim manual TODO -- document
 
 "" MAPS
+map <Space> <Leader>
 " force write
 cmap w!! w !sudo tee % >/dev/null
 " Easy window navigation
@@ -48,8 +49,8 @@ map <C-l> <C-w>l
 " go down even when lines wrap
 nnoremap j gj
 nnoremap k gk
-" \/ will turn off highlights
-nmap <silent> \/ :nohlsearch<CR>
+" <space>/ will turn off highlights
+nmap <silent> <leader>/ :nohlsearch<CR>
 
 "" CONDITIONAL
 if &term =~ "xterm\\|rxvt" " change cursor based on mode
