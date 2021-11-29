@@ -32,6 +32,8 @@ set smarttab " insert tabs on the start of a line according to shiftwidth, not t
 set title " change the terminal's title
 set history=1000 " remember more commands and search history
 set textwidth=80
+set splitright
+set confirm
 
 "" PLUGINS
 filetype plugin indent on
@@ -51,6 +53,9 @@ nnoremap j gj
 nnoremap k gk
 " <space>/ will turn off highlights
 nmap <silent> <leader>/ :nohlsearch<CR>
+" shortcut to open vimrc and source it
+map <leader>vimrc :tabe $MYVIMRC<cr>
+autocmd bufwritepost .vimrc source $MYVIMRC && redraw!
 
 "" CONDITIONAL
 if &term =~ "xterm\\|rxvt" " change cursor based on mode
@@ -77,7 +82,8 @@ if has('autocmd')
 endif
 
 "" HIGHLIGHT
-match ErrorMsg '\s\+$' " show trailing spaces
+" show trailing spaces
+match ErrorMsg '\s\+$'
 
 "" FUNCTIONS
 " https://vim.fandom.com/wiki/Remove_unwanted_spaces
