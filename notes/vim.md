@@ -138,6 +138,9 @@ g<tab>      go to last opened tab
 :tabm [num] move tab to number
 :tabm +[num]
 :tabm -[num]
+
+:messages               show current message
+K                       show help for what is under cursor
 ```
 
 ## PEP
