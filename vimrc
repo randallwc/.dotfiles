@@ -41,8 +41,14 @@
 "" ENV
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-silent !mkdir -p ~/.vim/undo
-silent !mkdir -p ~/.vim/swap
+
+if !isdirectory($HOME . '/.vim/undo')
+    call mkdir($HOME . '/.vim/undo', 'p')
+endif
+
+if !isdirectory($HOME . '/.vim/swap')
+    call mkdir($HOME . '/.vim/swap', 'p')
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" SET
