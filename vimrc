@@ -1,4 +1,3 @@
-set nocompatible
 " ~/.vimrc
 "     __      __  ______
 "    /\ \  __/\ \/\  __  \
@@ -21,23 +20,41 @@ set nocompatible
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " document manual in vim
+" compare plugin managers
+    " (https://github.com/junegunn/vim-plug)
+    " (https://github.com/zsh-users/antigen)
+" add comment fix plugin (https://github.com/tpope/vim-commentary)
+" add surround to surround text with stuff (https://github.com/tpope/vim-surround)
+" add nerd tree (https://github.com/preservim/nerdtree)
+    " <leader>n for shortcut (look at video for better one)
+" look at float terminal (https://github.com/voldikss/vim-floaterm)
+" look at git fugative for like in vim Git and other stuff (https://github.com/tpope/vim-fugitive)
+" look at polyglot for language functionality (https://github.com/sheerun/vim-polyglot)
+" look at highlight url (https://github.com/itchyny/vim-highlighturl)
+" look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
+" look at coc for code completon and ide stuff (https://github.com/neoclide/coc.nvim)
+" look at projectionist for jumping from code to tests (https://github.com/tpope/vim-projectionist)
+" look at vim test for running unit tests within vim (https://github.com/vim-test/vim-test)
+" maybe look at xml deletion stuff (https://github.com/whatyouhide/vim-textobj-xmlattr)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
 silent !mkdir -p ~/.vim/undo
+silent !mkdir -p ~/.vim/swap
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" SET
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let showbreak="↪ "
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set breakindent " indents word-wrapped lines as much as the parent line
 set confirm
 set copyindent " copy the previous indentation on autoindenting
+set directory=~/.vim/swap//
 set expandtab
-set formatoptions=l " ensures word-wrap does not split words
+set formatoptions=rol
 set history=1000 " remember more commands and search history
 set hlsearch " enable hightlighting when searching
 set ignorecase " ignore case when searching
@@ -51,16 +68,18 @@ set ruler " show percent down page
 set scrolloff=5 " keep a certain ammount of context
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=4
+set showbreak=↪\ "show line wrap
 set showcmd " show command which is being typed
 set showmatch " set show matching parenthesis
 set sidescrolloff=10
 set smartcase " search is case insensitive unless one is capital
 set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop
 set splitright
+set swapfile
 set tabstop=4
 set textwidth=80
 set title " change the terminal's title
-set undodir=$HOME/.vim/undo " where to save undo histories
+set undodir=$HOME/.vim/undo// " where to save undo histories
 set undofile " Save undos after file closes
 set undolevels=1000 " How many undos
 set undoreload=10000 " number of lines to save
@@ -92,7 +111,7 @@ nnoremap k gk
 " <space>/ will turn off highlights
 nmap <silent> <leader>/ :nohlsearch<CR>
 " shortcut to open vimrc and source it
-map <leader>vimrc :tabe $MYVIMRC<cr>
+map <leader>vimrc :e $MYVIMRC<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
@@ -112,7 +131,6 @@ endif
 " https://learnvimscriptthehardway.stevelosh.com/chapters/14.html
 augroup saving_vimrc
     autocmd!
-    autocmd BufWritePost .vimrc :echom "sourcing vimrc"
     autocmd BufWritePost .vimrc source $MYVIMRC
 augroup END
 
@@ -122,11 +140,11 @@ augroup pip_python
     autocmd filetype python set expandtab
 augroup END
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" HIGHLIGHT
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" show trailing spaces
-match ErrorMsg '\s\+$'
+augroup custom_highlighting
+    autocmd!
+    " show trailing spaces
+    autocmd VimEnter,WinEnter * match ErrorMsg '\s\+$'
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" FUNCTIONS
@@ -149,4 +167,3 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set colorcolumn=80 " color past a certain number of chars
 "highlight ColorColumn ctermbg=8 " set color of highlight to gray
-"retab
