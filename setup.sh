@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 files="vimrc zshrc zprofile bashrc profile gitconfig gitignore_global"
-repositories="CSM152A CSM148 CSM148.3 randallwc randallwc.github.io"
+repositories="CSM152A CSM148 CSM148.3 randallwc.github.io"
 
 echo "making simlinks in home dir"
 for file in $files;
