@@ -24,7 +24,8 @@ set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set expandtab
 set autoindent
 set copyindent " copy the previous indentation on autoindenting
-set scrolloff=5 " keep a certain ammount of context
+set scrolloff=10 " keep a certain ammount of context
+set sidescrolloff=5
 set list " show hidden chars
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set showmatch " set show matching parenthesis
@@ -37,7 +38,8 @@ set confirm
 
 "" PLUGINS
 filetype plugin indent on
-runtime ftplugin/man.vim " set up vim manual TODO -- document
+" set up vim manual TODO -- document
+runtime ftplugin/man.vim
 
 "" MAPS
 map <Space> <Leader>
@@ -54,8 +56,11 @@ nnoremap k gk
 " <space>/ will turn off highlights
 nmap <silent> <leader>/ :nohlsearch<CR>
 " shortcut to open vimrc and source it
-map <leader>vimrc :tabe $MYVIMRC<cr>
-autocmd bufwritepost .vimrc source $MYVIMRC && redraw!
+if has('autocmd')
+    map <leader>vimrc :tabe $MYVIMRC<cr>
+    autocmd bufwritepost .vimrc source $MYVIMRC
+    autocmd bufwritepost .vimrc redraw!
+endif
 
 "" CONDITIONAL
 if &term =~ "xterm\\|rxvt" " change cursor based on mode
