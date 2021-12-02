@@ -5,6 +5,8 @@ tap "homebrew/cask-drivers"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Color-highlighted diff(1) output
+brew "colordiff"
 # Configurable talking characters in ASCII art
 brew "cowsay"
 # GNU Emacs text editor
