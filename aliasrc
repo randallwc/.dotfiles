@@ -44,6 +44,7 @@ alias desk='cd ~/Desktop/'
 alias doc='cd ~/Documents/'
 alias down='cd ~/Downloads/'
 alias dot='cd ~/.dotfiles/'
+alias vol='cd /Volumes/'
 
 # X11 forwarding
 # export DISPLAY=:0
