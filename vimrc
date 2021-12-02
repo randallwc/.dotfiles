@@ -23,19 +23,31 @@
 " compare plugin managers
     " (https://github.com/junegunn/vim-plug)
     " (https://github.com/zsh-users/antigen)
+    " (https://github.com/VundleVim/Vundle.vim)
 " add comment fix plugin (https://github.com/tpope/vim-commentary)
-" add surround to surround text with stuff (https://github.com/tpope/vim-surround)
+" add surround to surround text with stuff
+    " (https://github.com/tpope/vim-surround)
 " add nerd tree (https://github.com/preservim/nerdtree)
     " <leader>n for shortcut (look at video for better one)
+    " syntax highlighting in vim
+        " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
 " look at float terminal (https://github.com/voldikss/vim-floaterm)
-" look at git fugative for like in vim Git and other stuff (https://github.com/tpope/vim-fugitive)
-" look at polyglot for language functionality (https://github.com/sheerun/vim-polyglot)
+" look at git fugative for like in vim Git and other stuff
+    " (https://github.com/tpope/vim-fugitive)
+" look at polyglot for language functionality
+    " (https://github.com/sheerun/vim-polyglot)
 " look at highlight url (https://github.com/itchyny/vim-highlighturl)
 " look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
-" look at coc for code completon and ide stuff (https://github.com/neoclide/coc.nvim)
-" look at projectionist for jumping from code to tests (https://github.com/tpope/vim-projectionist)
-" look at vim test for running unit tests within vim (https://github.com/vim-test/vim-test)
-" maybe look at xml deletion stuff (https://github.com/whatyouhide/vim-textobj-xmlattr)
+" look at coc for code completon and ide stuff
+    " (https://github.com/neoclide/coc.nvim)
+" look at projectionist for jumping from code to tests
+    " (https://github.com/tpope/vim-projectionist)
+" look at vim test for running unit tests within vim
+    " (https://github.com/vim-test/vim-test)
+" maybe look at xml deletion stuff
+    " (https://github.com/whatyouhide/vim-textobj-xmlattr)
+" maybe look at instant markdown creator
+    " (https://github.com/instant-markdown/vim-instant-markdown)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
@@ -60,7 +72,7 @@ set confirm
 set copyindent " copy the previous indentation on autoindenting
 set directory=~/.vim/swap//
 set expandtab
-set formatoptions=rol
+set formatoptions=jrolq
 set history=1000 " remember more commands and search history
 set hlsearch " enable hightlighting when searching
 set ignorecase " ignore case when searching
