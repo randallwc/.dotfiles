@@ -73,6 +73,7 @@ set copyindent " copy the previous indentation on autoindenting
 set directory=~/.vim/swap//
 set expandtab
 set formatoptions=jrolq
+set hidden " this lets you use buffers in the right way
 set history=1000 " remember more commands and search history
 set hlsearch " enable hightlighting when searching
 set ignorecase " ignore case when searching
