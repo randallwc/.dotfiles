@@ -44,6 +44,8 @@
     " (https://github.com/tpope/vim-projectionist)
 " look at vim test for running unit tests within vim
     " (https://github.com/vim-test/vim-test)
+" look at vim dim inactive windows
+    " (https://github.com/blueyed/vim-diminactive)
 " maybe look at xml deletion stuff
     " (https://github.com/whatyouhide/vim-textobj-xmlattr)
 " maybe look at instant markdown creator
@@ -110,12 +112,15 @@ set undoreload=10000 " number of lines to save
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " Display all matching files when we tab complete
 set wrap " enable softwrap of words
+set foldmethod=syntax " files fold based on syntax
+set nofoldenable " files not folded on open
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi StatusLine ctermfg=blue ctermbg=white guibg=None
-hi StatusLineNC ctermfg=lightmagenta ctermbg=magenta guibg=None
+hi StatusLine ctermfg=blue ctermbg=white
+hi StatusLineNC ctermfg=lightmagenta ctermbg=magenta
+hi VertSplit ctermfg=lightblue ctermbg=white
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" PLUGINS
