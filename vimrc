@@ -78,12 +78,13 @@ set history=1000 " remember more commands and search history
 set hlsearch " enable hightlighting when searching
 set ignorecase " ignore case when searching
 set incsearch " incremental searching
+set laststatus=2 " always show statusline
 set linebreak
 set linebreak " wrap long lines
 set list " show hidden chars
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set path+=** " Search down into subfolders
-set ruler " show percent down page
+set ruler " show percent down page " useless with statusline
 set scrolloff=5 " keep a certain ammount of context
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=4
@@ -94,10 +95,14 @@ set sidescrolloff=10
 set smartcase " search is case insensitive unless one is capital
 set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop
 set splitright
+set statusline=\ %f%=%m%y%r\ %P\ %l\  " show filename
 set swapfile
 set tabstop=4
 set textwidth=80
+set title
 set title " change the terminal's title
+set titlelen=70
+set titlestring=%<%F%=%P
 set undodir=$HOME/.vim/undo// " where to save undo histories
 set undofile " Save undos after file closes
 set undolevels=1000 " How many undos
@@ -105,6 +110,12 @@ set undoreload=10000 " number of lines to save
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " Display all matching files when we tab complete
 set wrap " enable softwrap of words
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" HIGHLIGHTS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+hi StatusLine ctermfg=blue ctermbg=white guibg=None
+hi StatusLineNC ctermfg=lightmagenta ctermbg=magenta guibg=None
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" PLUGINS
@@ -144,12 +155,19 @@ if &t_Co > 2 || has("gui_running") " enable syntax highlighting
     syntax on
 endif
 
+if !has('gui_running') " colored vim
+    set t_Co=256
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://learnvimscriptthehardway.stevelosh.com/chapters/14.html
 augroup saving_vimrc
     autocmd!
+    autocmd BufWritePost vimrc echom "sourcing vimrc"
+    autocmd BufWritePost vimrc source $MYVIMRC
+    autocmd BufWritePost .vimrc echom "sourcing vimrc"
     autocmd BufWritePost .vimrc source $MYVIMRC
 augroup END
 
