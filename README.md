@@ -122,6 +122,7 @@ killall Finder
 - [ ] add color to ps1 in bash but not in the bad way
 - [ ] fix the circular dependencies in rc files esp with conda
 - [ ] add better tab completion in bash
+- [ ] add right hand side of prompt
 
 ### vim
 - [ ] fix search in vim to fuzzy search
