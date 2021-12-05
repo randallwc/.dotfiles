@@ -60,6 +60,7 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 `Finder > Preferences > [do stuff here]`
 
 `Finder > View > Show Path Bar`
+
 `Finder > View > Show Status Bar`
 
 # [install miniconda](https://docs.conda.io/en/latest/miniconda.html)
