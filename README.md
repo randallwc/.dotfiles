@@ -19,10 +19,14 @@
 # link the settings file
 ```sh
 # this is to link the file
-brew bundle --file=~/.dotfiles/Brewfile 
+brew bundle --file=~/.dotfiles/Brewfile
 # and run this to update it
 brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
 ```
+
+## Spotify
+1. show advanced settings
+1. say no to opening on login
 
 # download apps from appstore
 - Scan Thing
@@ -84,6 +88,18 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
     helper = osxkeychain
 ```
 
+# Quicklook
+- use Brew to install the quicklook plugins into `~/Library/QuickLook`
+
+[ipynb quicklook](https://github.com/tuxu/ipynb-quicklook/releases)
+1. unzip
+1. move to `/Library/QuickLook`
+
+```bash
+qlmanage -r
+killall Finder
+```
+
 # TODO
 ## minor
 
@@ -100,6 +116,9 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 ### zsh
 - [ ] look into greyed out tab completion in zsh
 - [ ] look into vi mode for zsh ( add visual indicator for insert and command mode )
+
+## quicklook
+- [ ] look at the json quicklook and make it open wider
 
 ## major
 - [ ] https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot
