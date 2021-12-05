@@ -41,8 +41,14 @@ cask "google-chrome"
 cask "iterm2"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
+# QuickLook plug-in that renders source code with syntax highlighting
+cask "qlcolorcode"
+# QuickLook generator for Markdown files
+cask "qlmarkdown"
+cask "qlstephen"
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
+cask "quicklook-json"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
