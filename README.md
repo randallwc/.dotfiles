@@ -66,6 +66,9 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 - [jupyter lab](https://jupyter.org/install)
 - ipython
 
+make conda not show which env you are in your PS1
+`conda config --set auto_activate_base False`
+
 
 # enable document sync on icloud
 `System Preferences > Apple ID > iCloud Drive > Options > Desktop & Documents Folders`
