@@ -103,6 +103,14 @@ killall Finder
 # TODO
 ## minor
 
+### documentation
+ - [ ] add hyperlinks to notes
+ - [ ] clean up notes
+
+### package managers
+- [ ] add info about `brew`, `conda`, and other package managerso
+    - add commands about like clean, doctor, help
+
 ### bash
 - [ ] add color to ps1 in bash but not in the bad way
 - [ ] fix the circular dependencies in rc files esp with conda
