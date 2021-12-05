@@ -95,6 +95,9 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 1. unzip
 1. move to `/Library/QuickLook`
 
+> if on m1
+> [look here](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
+
 ```bash
 qlmanage -r
 killall Finder
@@ -129,5 +132,5 @@ killall Finder
 - [ ] look at the json quicklook and make it open wider
 
 ## major
-- [ ] https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot
+- [ ] [dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
 - [ ] clean up documentation
