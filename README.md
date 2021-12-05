@@ -131,6 +131,7 @@ killall Finder
 ### zsh
 - [ ] look into greyed out tab completion in zsh
 - [ ] look into vi mode for zsh ( add visual indicator for insert and command mode )
+- [ ] https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
 
 ## quicklook
 - [ ] look at the json quicklook and make it open wider
