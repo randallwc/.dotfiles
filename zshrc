@@ -7,9 +7,15 @@
 #       \ \____^___/\ \_\ \_\
 #         \/__//__/  \/_/\/_/
 ################################################################################
-# set up prompt (time machine_name current_directory)
-export PROMPT='%F{cyan}%5>‣>%n%>>%f %F{blue}%5>‣>%m%>>%f %F{magenta}%1~%f %# '
-export RPROMPT='%(?..%F{red}%?%f) %F{yellow}%*%f'
+# set up prompt
+# https://unix.stackexchange.com/questions/369847/how-to-configure-zsh-prompt-so-that-its-length-is-proportional-to-terminal-width
+setopt prompt_subst # real time reevaluation of prompt
+zmodload zsh/mathfunc # int function
+function widthHelper() { echo $(( int(${COLUMNS:-80}) * 25/100)) } # calc 25% of prompt
+width='$(widthHelper)'
+export PROMPT="%F{cyan}%5>‣>%n%>>%f %F{blue}%5>‣>%m%>>%f %F{magenta}%1~%f %# "
+#export PROMPT="%${width}>‣>%F{cyan}%n%f %F{blue}%m%f %>>%F{magenta}%1~%f %# "
+export RPROMPT="%(?..%F{red}[%?]%f) %F{yellow}%*%f"
 
 # case-insensitive matching only if there are no case-sensitive matches
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
