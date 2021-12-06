@@ -8,8 +8,8 @@
 #         \/__//__/  \/_/\/_/
 ################################################################################
 # set up prompt (time machine_name current_directory)
-export PROMPT='%F{cyan}%n%f %F{blue}%m%f %F{white}%?%f %F{magenta}%1~%f %# '
-export RPROMPT='%F{yellow}%*%f'
+export PROMPT='%F{cyan}%7>>%n%>>%f %F{blue}%m%f %F{magenta}%1~%f %# '
+export RPROMPT='%(?..%F{red}%?%f) %F{yellow}%*%f'
 
 # case-insensitive matching only if there are no case-sensitive matches
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
