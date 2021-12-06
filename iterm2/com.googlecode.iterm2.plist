@@ -989,7 +989,7 @@
 			<key>Show Status Bar</key>
 			<false/>
 			<key>Show Timestamps</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
