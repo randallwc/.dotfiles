@@ -67,3 +67,13 @@
 # RPROMPT+='$( [[ $CONDA_SHLVL == 1 ]] && print -P "$(basename $CONDA_DEFAULT_ENV) ")'
 # RPROMPT+='%F{yellow}%*%f' # time
 ```
+
+# VIMRC
+
+```vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" UNUSED SETTINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set colorcolumn=80 " color past a certain number of chars
+"highlight ColorColumn ctermbg=8 " set color of highlight to gray
+```

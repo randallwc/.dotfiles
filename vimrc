@@ -74,6 +74,7 @@ set confirm
 set copyindent " copy the previous indentation on autoindenting
 set directory=~/.vim/swap//
 set expandtab
+set foldmethod=syntax " files fold based on syntax
 set formatoptions=jrolq
 set hidden " this lets you use buffers in the right way
 set history=1000 " remember more commands and search history
@@ -85,6 +86,7 @@ set linebreak
 set linebreak " wrap long lines
 set list " show hidden chars
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+set nofoldenable " files not folded on open
 set path+=** " Search down into subfolders
 set ruler " show percent down page " useless with statusline
 set scrolloff=5 " keep a certain ammount of context
@@ -111,8 +113,6 @@ set undoreload=10000 " number of lines to save
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " Display all matching files when we tab complete
 set wrap " enable softwrap of words
-set foldmethod=syntax " files fold based on syntax
-set nofoldenable " files not folded on open
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" HIGHLIGHTS
@@ -202,9 +202,3 @@ function RemoveCarriageReturn()
     %s/\r*$//
     ''
 endfunction
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" UNUSED SETTINGS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set colorcolumn=80 " color past a certain number of chars
-"highlight ColorColumn ctermbg=8 " set color of highlight to gray
