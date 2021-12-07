@@ -22,7 +22,7 @@ precmd() {
 } # call this to enable showing git branch
 zstyle ':vcs_info:*' check-for-changes true
 # format how version control is displayed
-zstyle ':vcs_info:git*' formats "%F{green}[%b%f%F{red}%m%u%c%f%F{green}]%f "
+zstyle ':vcs_info:git*' formats "%F{green}%b%f%F{red}%m%u%c%f%F "
 # set up dynamic width
 # https://unix.stackexchange.com/questions/369847/how-to-configure-zsh-prompt-so-that-its-length-is-proportional-to-terminal-width
 # calc $1% of prompt
