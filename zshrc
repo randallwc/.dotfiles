@@ -11,6 +11,9 @@
 # https://unix.stackexchange.com/questions/369847/how-to-configure-zsh-prompt-so-that-its-length-is-proportional-to-terminal-width
 setopt prompt_subst # real time reevaluation of prompt
 zmodload zsh/mathfunc # int function
+autoload -Uz vcs_info # enable getting info about version control
+zstyle ':vcs_info:git*' formats "%b " # format how version control is displayed
+precmd() { vcs_info } # call this to enable showing git branch
 function widthHelper() { echo $(( int(${COLUMNS:-80}) * ${1}/100)) } # calc $1% of prompt
 outWidth='$(widthHelper 40)'
 inWidth='$(widthHelper 90)'
@@ -22,6 +25,7 @@ PROMPT+=".)" # end truncation
 PROMPT+="%F{magenta}%1~%f%<< " # pwd 1 depth
 PROMPT+="%# " # privilege group
 export RPROMPT="%(?..%F{red}[%?] %f)" # exit code displayed only if not 0
+RPROMPT+='%F{green}${vcs_info_msg_0_}%f' # show git branch iff in a repo
 RPROMPT+="%F{yellow}%*%f" # time
 
 # case-insensitive matching only if there are no case-sensitive matches
