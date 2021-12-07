@@ -11,7 +11,7 @@
 # https://unix.stackexchange.com/questions/369847/how-to-configure-zsh-prompt-so-that-its-length-is-proportional-to-terminal-width
 setopt prompt_subst # real time reevaluation of prompt
 zmodload zsh/mathfunc # int function
-function widthHelper() { echo $(( int(${COLUMNS:-80}) * ${1}/100)) } # calc 25% of prompt
+function widthHelper() { echo $(( int(${COLUMNS:-80}) * ${1}/100)) } # calc $1% of prompt
 outWidth='$(widthHelper 40)'
 inWidth='$(widthHelper 90)'
 export PROMPT="%F{cyan}%${outWidth}<◀︎<%f" # truncation based on terminal width
