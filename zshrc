@@ -11,11 +11,18 @@
 # https://unix.stackexchange.com/questions/369847/how-to-configure-zsh-prompt-so-that-its-length-is-proportional-to-terminal-width
 setopt prompt_subst # real time reevaluation of prompt
 zmodload zsh/mathfunc # int function
-function widthHelper() { echo $(( int(${COLUMNS:-80}) * 25/100)) } # calc 25% of prompt
-width='$(widthHelper)'
-export PROMPT="%F{cyan}%5>‣>%n%>>%f %F{blue}%5>‣>%m%>>%f %F{magenta}%1~%f %# "
-#export PROMPT="%${width}>‣>%F{cyan}%n%f %F{blue}%m%f %>>%F{magenta}%1~%f %# "
-export RPROMPT="%(?..%F{red}[%?]%f) %F{yellow}%*%f"
+function widthHelper() { echo $(( int(${COLUMNS:-80}) * ${1}/100)) } # calc 25% of prompt
+outWidth='$(widthHelper 40)'
+inWidth='$(widthHelper 90)'
+export PROMPT="%F{cyan}%${outWidth}<◀︎<%f" # truncation based on terminal width
+PROMPT+="%(0l." # inner truncation group
+PROMPT+="%F{cyan}%8>‣>%n%>>%f" # username truncated
+PROMPT+="%-${inWidth}(l. %F{blue}%5>‣>%m%>>%f.) " # hostname truncated
+PROMPT+=".)" # end truncation
+PROMPT+="%F{magenta}%1~%f%<< " # pwd 1 depth
+PROMPT+="%# " # priveledge group
+export RPROMPT="%(?..%F{red}[%?] %f)" # exit code displayed only if not 0
+RPROMPT+="%F{yellow}%*%f" # time
 
 # case-insensitive matching only if there are no case-sensitive matches
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
