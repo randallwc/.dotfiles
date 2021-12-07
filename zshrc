@@ -8,18 +8,23 @@
 #         \/__//__/  \/_/\/_/
 ################################################################################
 # set up prompt
-# https://unix.stackexchange.com/questions/369847/how-to-configure-zsh-prompt-so-that-its-length-is-proportional-to-terminal-width
+# https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
 setopt prompt_subst # real time reevaluation of prompt
 zmodload zsh/mathfunc # int function
 autoload -U colors && colors # enable colors
 # set up version control
 # https://arjanvandergaag.nl/blog/customize-zsh-prompt-%b%c with-vcs-info.html
+# https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
+# https://xana.scru.org/xana2/quanks/vcsinfoprompt/
 autoload -Uz vcs_info # enable getting info about version control
-precmd() { vcs_info } # call this to enable showing git branch
+precmd() {
+    vcs_info
+} # call this to enable showing git branch
 zstyle ':vcs_info:*' check-for-changes true
 # format how version control is displayed
-zstyle ':vcs_info:git*' formats "%F{green}[%b%f %F{red}%m%u%c%f%F{green}]%f "
+zstyle ':vcs_info:git*' formats "%F{green}[%b%f%F{red}%m%u%c%f%F{green}]%f "
 # set up dynamic width
+# https://unix.stackexchange.com/questions/369847/how-to-configure-zsh-prompt-so-that-its-length-is-proportional-to-terminal-width
 # calc $1% of prompt
 function widthHelper() { echo $(( int(${COLUMNS:-80}) * ${1}/100)) }
 outWidth='$(widthHelper 40)'
