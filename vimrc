@@ -101,7 +101,6 @@ set statusline=\ %f%=%m%y%r\ %P\ %l\  " show filename
 set swapfile
 set tabstop=4
 set textwidth=80
-set title
 set title " change the terminal's title
 set titlelen=70
 set titlestring=%<%F%=%P
