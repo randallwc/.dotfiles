@@ -87,7 +87,7 @@ read
 
 ## COMMANDS
 ```bash
-^-r # search through history 
+^-r # search through history
 ```
 
 ## BREW
