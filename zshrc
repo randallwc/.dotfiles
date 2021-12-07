@@ -20,7 +20,7 @@ PROMPT+="%F{cyan}%8>‣>%n%>>%f" # username truncated
 PROMPT+="%-${inWidth}(l. %F{blue}%5>‣>%m%>>%f.) " # hostname truncated
 PROMPT+=".)" # end truncation
 PROMPT+="%F{magenta}%1~%f%<< " # pwd 1 depth
-PROMPT+="%# " # priveledge group
+PROMPT+="%# " # privilege group
 export RPROMPT="%(?..%F{red}[%?] %f)" # exit code displayed only if not 0
 RPROMPT+="%F{yellow}%*%f" # time
 
