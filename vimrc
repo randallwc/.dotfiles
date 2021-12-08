@@ -139,6 +139,8 @@ nnoremap k gk
 nmap <silent> <leader>/ :nohlsearch<CR>
 " shortcut to open vimrc and source it
 map <leader>vimrc :e $MYVIMRC<cr>
+" change buffer fast
+nnoremap <leader>ls :ls<cr>:b
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
