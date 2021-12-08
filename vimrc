@@ -159,9 +159,10 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi StatusLine ctermfg=blue ctermbg=white
-hi StatusLineNC ctermfg=lightmagenta ctermbg=magenta
-hi VertSplit ctermfg=lightblue ctermbg=white
+highlight StatusLine ctermfg=blue ctermbg=white
+highlight StatusLineNC ctermfg=lightmagenta ctermbg=magenta
+highlight VertSplit ctermfg=lightblue ctermbg=white
+highlight MatchParen cterm=bold ctermfg=magenta ctermbg=lightmagenta
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
