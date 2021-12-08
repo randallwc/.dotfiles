@@ -105,7 +105,7 @@ set tabstop=4
 set textwidth=80
 set title " change the terminal's title
 set titlelen=70
-set titlestring=%<%F%=%P
+set titlestring=%<%F%=%P "filename & percent down screen
 set undodir=$HOME/.vim/undo// " where to save undo histories
 set undofile " Save undos after file closes
 set undolevels=1000 " How many undos
