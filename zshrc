@@ -11,9 +11,9 @@
 ################################################################################
 autoload -U colors && colors # enable colors
 # left prompt
-export PROMPT='%F{cyan}%7>>%n%>>%f %F{magenta}%1~%f%<< %# '
+export PROMPT='%F{cyan}%7>>%n%>>%f %F{magenta}%1~%f%<< %(?..%F{red}%? %f)%# '
 # right prompt
-export RPROMPT='%(?..%F{red}[%?] %f) %F{yellow}%*%f'
+export RPROMPT='%F{yellow}%*%f'
 
 ################################################################################
 # TAB COMPLETION
