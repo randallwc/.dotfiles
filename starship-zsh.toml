@@ -12,7 +12,7 @@ right_format = """$all$time"""
 [time]
 disabled = false
 time_format = "%I:%M:%S"
-format = "[$time]($style) "
+format = "[$time]($style)"
 
 [directory]
 truncation_length = 1
