@@ -16,7 +16,7 @@ format = "[$time]($style) "
 
 [directory]
 truncation_length = 1
-home_symbol = ""
+home_symbol = "\b"
 
 [git_branch]
 format = "[$symbol$branch]($style) "
