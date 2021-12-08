@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # add colors to ls
 os=$(uname)
