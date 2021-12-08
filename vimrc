@@ -115,13 +115,6 @@ set wildmenu " Display all matching files when we tab complete
 set wrap " enable softwrap of words
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" HIGHLIGHTS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi StatusLine ctermfg=blue ctermbg=white
-hi StatusLineNC ctermfg=lightmagenta ctermbg=magenta
-hi VertSplit ctermfg=lightblue ctermbg=white
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
@@ -156,12 +149,19 @@ if &term =~ "xterm\\|rxvt" " change cursor based on mode
 endif
 
 if &t_Co > 2 || has("gui_running") " enable syntax highlighting
-    syntax on
+    syntax enable
 endif
 
 if !has('gui_running') " colored vim
     set t_Co=256
 endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" HIGHLIGHTS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+hi StatusLine ctermfg=blue ctermbg=white
+hi StatusLineNC ctermfg=lightmagenta ctermbg=magenta
+hi VertSplit ctermfg=lightblue ctermbg=white
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
