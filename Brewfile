@@ -21,6 +21,8 @@ brew "htop"
 brew "librtlsdr"
 # Platform built on V8 to build network applications
 brew "node"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Application launcher and productivity software
