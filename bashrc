@@ -18,7 +18,3 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # aliases
 [ -r ~/.dotfiles/aliasrc ] && . ~/.dotfiles/aliasrc
-
-# source bash_profile
-# TODO -- check if should just move the conda stuff in here
-[ -r ~/.bash_profile ] && . ~/.bash_profile
