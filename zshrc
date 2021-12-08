@@ -9,12 +9,8 @@
 ################################################################################
 # SET UP PROMPT
 ################################################################################
-autoload -U colors && colors # enable colors
-# left prompt
-export PROMPT='%F{cyan}%7>>%n%>>%f %F{magenta}%1~%f%<< %(?..%F{red}%? %f)%# '
-# right prompt
-export RPROMPT='%F{yellow}%*%f'
-
+export STARSHIP_CONFIG=~/.dotfiles/starship-zsh.toml
+eval "$(starship init zsh)"
 ################################################################################
 # TAB COMPLETION
 ################################################################################

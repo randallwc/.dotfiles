@@ -7,8 +7,9 @@
 #       \ \____^___/\ \_\ \_\
 #         \/__//__/  \/_/\/_/
 ################################################################################
-# set up prompt (time machine_name current_directory)
-export PS1="\t \u \h $? \W \\$ "
+# set up prompt
+export STARSHIP_CONFIG=~/.dotfiles/starship-bash.toml
+eval "$(starship init bash)"
 
 # alias to source .zshrc
 alias src='[ -r ~/.bashrc ] && source ~/.bashrc'

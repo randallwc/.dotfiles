@@ -1,0 +1,22 @@
+# ~/.config/starship.toml
+# https://starship.rs/
+
+# no newline between prompts
+add_newline = false
+
+format = """$time$all"""
+
+[line_break]
+disabled = true
+
+[time]
+disabled = false
+time_format = "%I:%M:%S"
+format = "[$time]($style) "
+
+[directory]
+truncation_length = 1
+home_symbol = ""
+
+[git_branch]
+format = "[$symbol$branch]($style) "
