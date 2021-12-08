@@ -80,3 +80,18 @@ alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
 case $os in
     Darwin) command -v bat >/dev/null && alias cat='bat' ;;
 esac
+
+# update and clean up packages on mac
+macupdate() {
+    echo "=====deactivating conda env=====" | fmt -c -w $COLUMNS &&
+    conda deactivate &&
+    echo "=====brew commands=====" | fmt -c -w $COLUMNS &&
+    brew upgrade &&
+    brew cleanup --prune=all &&
+    brew doctor &&
+    echo "=====conda commands=====" | fmt -c -w $COLUMNS &&
+    conda activate &&
+    conda update --all -y &&
+    conda clean --all -y &&
+    echo "=====success=====" | fmt -c -w $COLUMNS
+}
