@@ -24,9 +24,13 @@ brew bundle --file=~/.dotfiles/Brewfile
 brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
 ```
 
-## Spotify
+## spotify
 1. show advanced settings
 1. say no to opening on login
+
+## messenger
+1. go to settings
+1. disable launch on startup
 
 # download apps from appstore
 - Scan Thing
@@ -94,6 +98,8 @@ make conda not show which env you are in your PS1
 
 # Quicklook
 - use Brew to install the quicklook plugins into `~/Library/QuickLook`
+
+[quick fix for ql color code on the m1](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
 
 [ipynb quicklook](https://github.com/tuxu/ipynb-quicklook/releases)
 1. unzip
