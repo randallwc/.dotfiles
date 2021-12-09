@@ -1,5 +1,4 @@
-# setting up new mac
-# install xcode
+# setting up new mac # install xcode
 `xcode-select --install`
 
 # [install rosetta](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
@@ -29,8 +28,13 @@ brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
 1. say no to opening on login
 
 ## messenger
-1. go to settings
-1. disable launch on startup
+ - go to settings > disable launch on startup
+
+## zoom
+ - settings > share screen > window size ... > maintain current size
+
+## steam
+ - settings > user & groups > remove steam from startup
 
 # download apps from appstore
 - Scan Thing
