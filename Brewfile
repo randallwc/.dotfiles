@@ -43,6 +43,8 @@ cask "google-chrome"
 cask "iterm2"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
+# Minimal installer for conda
+cask "miniconda"
 # QuickLook plug-in that renders source code with syntax highlighting
 cask "qlcolorcode"
 # QuickLook generator for Markdown files
