@@ -140,7 +140,7 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 " shortcut to open vimrc and source it
 map <leader>vimrc :e $MYVIMRC<cr>
 " change buffer fast
-nnoremap <leader>ls :ls<cr>:b
+nnoremap <leader>ls :ls<cr>:b<space>
 " create a scratch buffer
 nnoremap <leader>sb :below new <bar> :resize 5<cr>
 
