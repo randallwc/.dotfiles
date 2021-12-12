@@ -57,8 +57,3 @@ unset __conda_setup
 # ITERM2 SHELL INTEGRATION
 ################################################################################
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-case ":$PATH:" in
-    *:/usr/local/sbin:*) ;;
-    *) export PATH="/usr/local/sbin:$PATH";;
-esac
