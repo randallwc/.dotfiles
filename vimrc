@@ -142,7 +142,7 @@ map <leader>vimrc :e $MYVIMRC<cr>
 " change buffer fast
 nnoremap <leader>ls :ls<cr>:b<space>
 " create a scratch buffer
-nnoremap <leader>sb :below new <bar> :resize 5<cr>
+nnoremap <leader>sb :below 5new<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
