@@ -56,4 +56,6 @@ unset __conda_setup
 ################################################################################
 # ITERM2 SHELL INTEGRATION
 ################################################################################
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" &&
+    source "${HOME}/.iterm2_shell_integration.zsh" ||
+    echo "no iterm2 shell integration"
