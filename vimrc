@@ -141,6 +141,8 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 map <leader>vimrc :e $MYVIMRC<cr>
 " change buffer fast
 nnoremap <leader>ls :ls<cr>:b
+" create a scratch buffer
+nnoremap <leader>sb :below new <bar> :resize 5<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
