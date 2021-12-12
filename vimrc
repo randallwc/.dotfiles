@@ -9,8 +9,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""LINKS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" (plugin)
-" http://kien.github.io/ctrlp.vim/
 " (vim videos)
 " https://vimeo.com/user1690209/videos
 " (vim script book)
@@ -19,6 +17,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrl p plugin
+    " (http://kien.github.io/ctrlp.vim/)
 " document manual in vim
 " compare plugin managers
     " (https://github.com/junegunn/vim-plug)
@@ -196,13 +196,13 @@ augroup END
 "" FUNCTIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://vim.fandom.com/wiki/Remove_unwanted_spaces
-function TrimWhiteSpace()
+function! TrimWhiteSpace()
     :echom "trimming whitespace"
     %s/\s*$//
-    '' " dont jump to bottom when called
+    ''
 endfunction
 
-function RemoveCarriageReturn()
+function! RemoveCarriageReturn()
     :echom "removing carriage returns"
     %s/\r*$//
     ''
