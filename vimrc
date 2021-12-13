@@ -19,6 +19,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " look at spacevim
     " (https://spacevim.org/)
+    " (https://github.com/ctjhoa/spacevim/blob/master/PLUGINS.md)
 
 " document manual in vim
 " compare plugin managers
