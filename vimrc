@@ -17,6 +17,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" look at spacevim
+    " (https://spacevim.org/)
+
 " document manual in vim
 " compare plugin managers
     " (https://github.com/junegunn/vim-plug)
