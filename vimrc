@@ -38,6 +38,8 @@
     " (https://github.com/easymotion/vim-easymotion)
 " add git gutter
     " (https://github.com/airblade/vim-gitgutter)
+" add syntastic a syntax checker
+    " (https://github.com/vim-syntastic/syntastic)
 
 " look at ctrl p plugin
     " (http://kien.github.io/ctrlp.vim/)
