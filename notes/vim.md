@@ -43,7 +43,10 @@ cursor movement
 $                       end of line
 gg                      begining of file
 G                       end of file
-[line]G                 jump to [line] line number
+[num]G                  jump to [num] line number
+:[num]                  "
+:+[num]                 jump down [num] lines
+:-[num]                 jump up [num] lines
 ''                      jump back to the line where cursor was before
 ``                      undo last jump
 '.                      jump to last changed line (will just go to last edit)
