@@ -34,8 +34,10 @@
     " <leader>n for shortcut (look at video for better one)
     " syntax highlighting in vim
         " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
-" easy motion
+" add easy motion
     " (https://github.com/easymotion/vim-easymotion)
+" add git gutter
+    " (https://github.com/airblade/vim-gitgutter)
 
 " look at ctrl p plugin
     " (http://kien.github.io/ctrlp.vim/)
