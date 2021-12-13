@@ -2,7 +2,8 @@
 `xcode-select --install`
 
 # [install rosetta](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
-> for M1 chips
+for M1 chips
+
 `softwareupdate --install-rosetta`
 
 # symlink files
@@ -15,7 +16,7 @@
 `./setup.sh --github`
 
 # [install homebrew](https://brew.sh)
-# link the settings file
+## link the settings file
 ```sh
 # this is to link the file
 brew bundle --file=~/.dotfiles/Brewfile
@@ -54,6 +55,9 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 ```
 
 # [install logi options](https://www.logitech.com/en-us/product/options)
+
+## set up the guesture button
+![logi options image](images/logiOptions.png)
 
 # set up key board repeat
 `Keyboard > Keyboard > Key Repeat`
@@ -100,14 +104,19 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 # Quicklook
 - use Brew to install the quicklook plugins into `~/Library/QuickLook`
 
-[quick fix for ql color code on the m1](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
+## [ql color code on m1 fix](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
 
-[ipynb quicklook](https://github.com/tuxu/ipynb-quicklook/releases)
+## ql stephen fix
+```bash
+xattr -Cr ~/Library/QuickLook/QLStephen.qlgenerator
+qlmanage -r
+qlmanage -r cache
+killall Finder
+```
+
+## [ipynb quicklook](https://github.com/tuxu/ipynb-quicklook/releases)
 1. unzip
 1. move to `/Library/QuickLook`
-
-> if on m1
-> [look here](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
 
 ```bash
 qlmanage -r
