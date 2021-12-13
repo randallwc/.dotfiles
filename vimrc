@@ -34,6 +34,8 @@
     " <leader>n for shortcut (look at video for better one)
     " syntax highlighting in vim
         " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
+" easy motion
+    " (https://github.com/easymotion/vim-easymotion)
 
 " look at ctrl p plugin
     " (http://kien.github.io/ctrlp.vim/)
@@ -152,6 +154,10 @@ map <leader>vimrc :e $MYVIMRC<cr>
 nnoremap <leader>ls :ls<cr>:b<space>
 " create a scratch buffer
 nnoremap <leader>sb :below 5new<cr>
+" indenting in normal mode and command mode
+inoremap <S-Tab> <C-d>
+nnoremap <S-Tab> <<
+nnoremap <Tab> >>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
