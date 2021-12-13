@@ -40,6 +40,8 @@
     " (https://github.com/airblade/vim-gitgutter)
 " add syntastic a syntax checker
     " (https://github.com/vim-syntastic/syntastic)
+" add vinegar.vim for moving around in file tree '-' == open file ex
+    " (https://github.com/tpope/vim-vinegar)
 
 " look at ctrl p plugin
     " (http://kien.github.io/ctrlp.vim/)
