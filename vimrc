@@ -17,8 +17,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ctrl p plugin
-    " (http://kien.github.io/ctrlp.vim/)
 " document manual in vim
 " compare plugin managers
     " (https://github.com/junegunn/vim-plug)
@@ -33,6 +31,9 @@
     " <leader>n for shortcut (look at video for better one)
     " syntax highlighting in vim
         " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
+
+" look at ctrl p plugin
+    " (http://kien.github.io/ctrlp.vim/)
 " look at float terminal (https://github.com/voldikss/vim-floaterm)
 " look at git fugative for like in vim Git and other stuff
     " (https://github.com/tpope/vim-fugitive)
@@ -48,6 +49,9 @@
     " (https://github.com/vim-test/vim-test)
 " look at vim dim inactive windows
     " (https://github.com/blueyed/vim-diminactive)
+" look at undo tree
+    " (https://github.com/mbbill/undotree)
+
 " maybe look at xml deletion stuff
     " (https://github.com/whatyouhide/vim-textobj-xmlattr)
 " maybe look at instant markdown creator
