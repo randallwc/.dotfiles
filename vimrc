@@ -27,6 +27,8 @@
 " add comment fix plugin (https://github.com/tpope/vim-commentary)
 " add surround to surround text with stuff
     " (https://github.com/tpope/vim-surround)
+" add start page to vim
+    " (https://github.com/mhinz/vim-startify)
 " add nerd tree (https://github.com/preservim/nerdtree)
     " <leader>n for shortcut (look at video for better one)
     " syntax highlighting in vim
