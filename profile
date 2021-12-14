@@ -11,4 +11,7 @@
 # PATH
 ################################################################################
 # homebrew
-export PATH="/usr/local/sbin:$PATH"
+case ":$PATH:" in
+    *:/usr/local/sbin:*) ;;
+    *) export PATH="/usr/local/sbin:$PATH";;
+esac
