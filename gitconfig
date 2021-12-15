@@ -19,6 +19,10 @@
     defaultBranch = main
 [alias]
     a = add
+    aa = add .
+    ai = add -i
+    alias = config --get-regexp ^alias\\.
+    ap = add -p
     b = branch
     c = commit
     cam = commit -am
@@ -27,10 +31,13 @@
     co = checkout
     d = diff
     dc = diff --cached
-    l = log
-    lG = log --graph
-    lg = log --oneline --graph
+    f = fetch
+    l = log --all
+    lG = log --graph --decorate --name-status --all
+    lg = log --oneline --graph --decorate --all
     lo = log --oneline
     p = push
+    pp = pull
+    rem = remote -v
     s = status --show-stash
     ss = status --short
