@@ -19,16 +19,18 @@
     defaultBranch = main
 [alias]
     a = add
-    d = diff
-    dc = diff --cached
-    p = push
+    b = branch
     c = commit
-    cm = commit -m
     cam = commit -am
     camp = !git commit -am \"$1\" && git push && :
+    cm = commit -m
     co = checkout
+    d = diff
+    dc = diff --cached
+    l = log
+    lG = log --graph
+    lg = log --oneline --graph
+    lo = log --oneline
+    p = push
     s = status --show-stash
-    b = branch
-    ls = status --short
-    l = log --oneline
-    ll = log --oneline --graph
+    ss = status --short
