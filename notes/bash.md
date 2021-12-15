@@ -35,6 +35,8 @@ comm
 diff
 tr
 shuf
+cut
+fmt
 ```
 
 ## COMPUTER CONTROL
