@@ -134,19 +134,19 @@ killall Finder
 - [ ] add info about `brew`, `conda`, and other package managerso
     - add commands about like clean, doctor, help
 
+### terminal
+- [ ] [colorized man
+  pages](https://superuser.com/questions/452034/bash-colorized-man-page)
+
 ### bash
-- [ ] add color to ps1 in bash but not in the bad way
-- [ ] fix the circular dependencies in rc files esp with conda
 - [ ] add better tab completion in bash
 - [ ] add right hand side of prompt
 
 ### vim
 - [ ] fix search in vim to fuzzy search
-- [ ] shift tab to indent [link](https://vim.fandom.com/wiki/Shifting_blocks_visually)
 - [ ] read this [thing](https://vi.stackexchange.com/questions/12806/configure-which-column-gq-wraps-at)
 
 ### zsh
-- [ ] fix adding homebrew to path. check if dir exists before running.
 - [ ] look into greyed out tab completion in zsh
 - [ ] look into vi mode for zsh ( add visual indicator for insert and command mode )
 - [ ] https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
