@@ -21,7 +21,7 @@
     a = add
     aa = add .
     ai = add -i
-    alias = config --get-regexp ^alias\\.
+    alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
     ap = add -p
     b = branch
     c = commit
