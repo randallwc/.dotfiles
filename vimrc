@@ -100,7 +100,6 @@ set hlsearch " enable hightlighting when searching
 set ignorecase " ignore case when searching
 set incsearch " incremental searching
 set laststatus=2 " always show statusline
-set linebreak
 set linebreak " wrap long lines
 set list " show hidden chars
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
