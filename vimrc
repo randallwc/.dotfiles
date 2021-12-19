@@ -164,6 +164,8 @@ nnoremap <leader>sb :below 5new<cr>
 inoremap <S-Tab> <C-d>
 nnoremap <S-Tab> <<
 nnoremap <Tab> >>
+" repeat dot macro over a range
+xmap <silent> . :normal .<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
