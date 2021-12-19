@@ -25,6 +25,9 @@ brew bundle --file=~/.dotfiles/Brewfile
 brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
 ```
 
+## visual studio
+ - run `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false` for key repeat
+
 ## spotify
 1. show advanced settings
 1. say no to opening on login
