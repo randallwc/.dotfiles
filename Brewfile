@@ -3,7 +3,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/core"
-tap "saulpw/vd"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Color-highlighted diff(1) output
@@ -24,8 +23,6 @@ brew "node"
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Terminal utility for exploring and arranging tabular data
-brew "saulpw/vd/visidata"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
