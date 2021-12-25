@@ -10,8 +10,6 @@ brew "bat"
 brew "colordiff"
 # Configurable talking characters in ASCII art
 brew "cowsay"
-# GNU Emacs text editor
-brew "emacs"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 # Distributed revision control system
