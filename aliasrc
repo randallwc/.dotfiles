@@ -10,11 +10,13 @@ case $os in
 esac
 
 # ls options
-alias la='ls -a'
 alias l='ls -F'
+alias la='ls -a'
 alias ll='ls -l'
+alias llR='ls -lR'
 alias llf='ll -F'
 alias lll='ls -al'
+alias lllR='ls -alR'
 alias lllf='lll -F'
 
 # show hidden files
