@@ -14,6 +14,8 @@ eval "$(starship init zsh)"
 ################################################################################
 # TAB COMPLETION
 ################################################################################
+# https://zsh.sourceforge.io/Doc/Release/Completion-Widgets.html#Completion-Matching-Control
+# https://thevaluable.dev/zsh-completion-guide-examples/
 # case-insensitive matching only if there are no case-sensitive matches
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # tab complete select visually
