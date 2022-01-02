@@ -56,6 +56,10 @@ alias vol='cd /Volumes/'
 alias path='echo $PATH | tr : \\n | sort'
 alias pathu='path | uniq -c'
 
+# alias to output fpath
+alias fpath='echo $FPATH | tr : \\n | sort'
+alias fpathu='fpath | uniq -c'
+
 # NETWORKING ALIASES
 # start a simple http server
 sserver() {
