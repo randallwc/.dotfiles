@@ -127,6 +127,19 @@ qlmanage -r
 killall Finder
 ```
 
+# firewall
+
+[This one is a bit controversial. If you do not install software which allows network access of any kind, skip it. If you run potentially vulnerable software you don't want to be accessed from other machines, consider turning the built-in firewall on. This particularly applies if you develop network software.](https://sourabhbajaj.com/mac-setup/Security/)
+
+1. Choose Apple menu () > System Preferences, then click Security & Privacy.
+1. Click the Firewall tab.
+1. Click the Lock button, then enter an administrator name and password.
+1. Click Turn On Firewall.
+1. Click Firewall Options.
+1. Uncheck `Automatically allow signed software to receive incoming connections`.
+
+The last step disables automatic access for software from the App Store. From now on you can either add (dis)allowed programs to the list within the Firewall Options or just click on Allow\/Deny, if you get a popup asking you if a specific software may be accessed.
+
 # TODO
 ## minor
 
