@@ -15,7 +15,7 @@ eval "$(starship init zsh)"
 # TAB COMPLETION
 ################################################################################
 # case-insensitive matching only if there are no case-sensitive matches
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # tab complete select visually
 zstyle ':completion:*' menu select
 # shift tab tab completes backwards
