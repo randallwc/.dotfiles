@@ -38,6 +38,11 @@
     lo = log --oneline
     p = push
     pp = pull
-    rem = remote -v
+    remotes = remote -v
     s = status --show-stash
     ss = status --short
+[color "diff"]
+    meta = yellow bold
+    frag = cyan
+    old = red
+    new = green
