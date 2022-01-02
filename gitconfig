@@ -13,6 +13,11 @@
     editor = vim
 [color]
     ui = true
+[color "diff"]
+    meta = yellow
+    frag = cyan
+    old = red
+    new = green
 [diff]
     tool = vimdiff
 [init]
@@ -24,6 +29,7 @@
     alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
     ap = add -p
     b = branch
+    branches = branch -a
     c = commit
     cam = commit -am
     camp = !git commit -am \"$1\" && git push && :
@@ -41,8 +47,3 @@
     remotes = remote -v
     s = status --show-stash
     ss = status --short
-[color "diff"]
-    meta = yellow bold
-    frag = cyan
-    old = red
-    new = green
