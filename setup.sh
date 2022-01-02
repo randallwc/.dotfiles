@@ -13,6 +13,7 @@ do
         ln -s ~/.dotfiles/$file ~/.$file
     fi
 done
+unset file
 
 # if github dir does not exist
 if [[ ! -d ~/Github/ ]] && [[ "$1" == "--github" ]]
@@ -37,4 +38,5 @@ then
             exit 1
         fi
     done
+    unset repo
 fi

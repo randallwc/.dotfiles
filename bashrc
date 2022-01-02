@@ -32,5 +32,6 @@ then
         do
             [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
         done
+        unset COMPLETION
     fi
 fi
