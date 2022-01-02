@@ -20,6 +20,15 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 # shift tab tab completes backwards
 bindkey '^[[Z' reverse-menu-complete
+# brew completion
+if type brew &>/dev/null
+then
+    # FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    case ":$FPATH:" in
+        *:$(brew --prefix)/share/zsh/site-functions:*) ;;
+        *) FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}" ;;
+    esac
+fi
 # initialize advanced tab completion
 autoload -Uz compinit && compinit
 # tab completion with highlighting
