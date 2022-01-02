@@ -6,6 +6,8 @@
 	<true/>
 	<key>AutoCommandHistory</key>
 	<false/>
+	<key>BracketedPasteMode</key>
+	<true/>
 	<key>ConvertDosNewlines</key>
 	<true/>
 	<key>Custom Color Presets</key>
