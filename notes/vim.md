@@ -67,6 +67,8 @@ q:                      open command history
 q[letter] [keycombo]    q record command
 ^-g                     show the filename
 
+gf                      open file under cursor
+
 :                       command
 :w                      save
 :q                      quit
@@ -84,14 +86,14 @@ zz                      center view
 zb                      put cursor at bottom of screen
 zt                      put cursor at top of screen
 
->>                      indent
-<<                      unindent
+>>                      indent in command mode
+<<                      unindent in command mode
 ==                      indent to what is above
 
 INSERT MODE
 
-^-t                     indents
-^-d                     unindents
+^-t                     indents in insert mode
+^-d                     unindents in insert mode
 
 i                       insert
 I                       insert at begining of line
