@@ -106,6 +106,8 @@ C                       delete line and insert
 p                       paste buffer after cursor
 P                       paste buffer before cursor
 
+!!sh                    runs the current line in shell
+
 WINDOWS
 ^-w w                   switch windows
 ^-w [number]            switch to [number] tab
