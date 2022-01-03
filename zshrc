@@ -16,10 +16,26 @@ eval "$(starship init zsh)"
 ################################################################################
 # https://zsh.sourceforge.io/Doc/Release/Completion-Widgets.html#Completion-Matching-Control
 # https://thevaluable.dev/zsh-completion-guide-examples/
+# add other completion systems
+zstyle ':completion:*' completer _extensions _complete _approximate
 # case-insensitive matching only if there are no case-sensitive matches
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # tab complete select visually
 zstyle ':completion:*' menu select
+zstyle ':completion:*' verbose yes
+# color of descriptions
+zstyle ':completion:*:*:*:*:descriptions' format '%F{cyan}%B-- %d --%b%f'
+# explain corrections
+zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}%B-- %d (%e) --%b%f'
+# show messages
+zstyle ':completion:*:messages' format '%F{purple}%B-- %d --%b%f'
+# show when there are no matches
+zstyle ':completion:*:warnings' format '%F{magenta}%B-- no matches found --%b%f'
+# group the different type of matches under their descriptions
+zstyle ':completion:*' group-name ''
+# change type of list depending on how many matches
+zstyle ':completion:*' file-list list=20 insert=10
+
 # shift tab tab completes backwards
 bindkey '^[[Z' reverse-menu-complete
 # brew completion
@@ -33,6 +49,8 @@ then
 fi
 # initialize advanced tab completion
 autoload -Uz compinit && compinit
+# add auto complete of dot files
+_comp_options+=(globdots)
 # tab completion with highlighting
 zmodload -i zsh/complist
 
