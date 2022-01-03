@@ -187,7 +187,7 @@ endif
 "" HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight StatusLine ctermfg=blue ctermbg=white
-highlight StatusLineNC ctermfg=lightmagenta ctermbg=magenta
+highlight StatusLineNC ctermfg=white ctermbg=darkblue
 highlight VertSplit ctermfg=lightblue ctermbg=white
 highlight MatchParen cterm=bold ctermfg=magenta ctermbg=lightmagenta
 
@@ -209,10 +209,18 @@ augroup pip_python
     autocmd filetype python set expandtab
 augroup END
 
-augroup custom_highlighting
+augroup show_trailing_spaces
     autocmd!
     " show trailing spaces
     autocmd VimEnter,WinEnter * match ErrorMsg '\s\+$'
+augroup END
+
+augroup change_statusline_color
+    autocmd!
+    autocmd InsertEnter * highlight StatusLine ctermfg=magenta ctermbg=white
+    autocmd InsertEnter * highlight StatusLineNC ctermfg=white ctermbg=darkmagenta
+    autocmd InsertLeave * highlight StatusLine ctermfg=blue ctermbg=white
+    autocmd InsertLeave * highlight StatusLineNC ctermfg=white ctermbg=darkblue
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
