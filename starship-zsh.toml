@@ -20,3 +20,6 @@ home_symbol = ""
 
 [git_branch]
 format = "[$symbol$branch]($style) "
+
+[battery]
+disabled = true
