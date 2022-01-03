@@ -87,9 +87,10 @@ bc # calculator
 read
 ```
 
-## COMMANDS
+## ZSH COMMANDS
 ```bash
 ^-r # search through history
+^-x h # give information about completion system
 ```
 
 ## BREW
