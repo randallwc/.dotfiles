@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/core"
+tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Color-highlighted diff(1) output
@@ -15,8 +16,6 @@ brew "figlet"
 brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
-# Use Realtek DVB-T dongles as a cheap SDR
-brew "librtlsdr"
 # Platform built on V8 to build network applications
 brew "node"
 # Cross-shell prompt for astronauts
