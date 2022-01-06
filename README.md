@@ -152,8 +152,7 @@ The last step disables automatic access for software from the App Store. From no
     - add commands about like clean, doctor, help
 
 ### terminal
-- [ ] [colorized man
-  pages](https://superuser.com/questions/452034/bash-colorized-man-page)
+- [ ] [colorized man pages](https://superuser.com/questions/452034/bash-colorized-man-page)
 
 ### bash
 - [ ] add better tab completion in bash

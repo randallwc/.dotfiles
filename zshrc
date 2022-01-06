@@ -35,7 +35,6 @@ zstyle ':completion:*:warnings' format '%F{magenta}%B-- no matches found --%b%f'
 zstyle ':completion:*' group-name ''
 # change type of list depending on how many matches
 zstyle ':completion:*' file-list list=20 insert=10
-
 # shift tab tab completes backwards
 bindkey '^[[Z' reverse-menu-complete
 # brew completion
