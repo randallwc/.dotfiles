@@ -4,6 +4,9 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "osx-cross/arm"
+tap "osx-cross/avr"
+tap "qmk/qmk"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Color-highlighted diff(1) output
@@ -22,6 +25,8 @@ brew "node"
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Quantum Mechanical Keyboard (QMK) Firmware
+brew "qmk/qmk/qmk"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
@@ -34,6 +39,8 @@ cask "ccleaner"
 cask "cyberduck"
 # Voice and text chat software
 cask "discord"
+# Text editor
+cask "emacs"
 # Web browser
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
