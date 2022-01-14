@@ -105,6 +105,7 @@ set list " show hidden chars
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set nofoldenable " files not folded on open
 set path+=** " Search down into subfolders
+set rnu nu
 set ruler " show percent down page " useless with statusline
 set scrolloff=5 " keep a certain ammount of context
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
@@ -116,7 +117,7 @@ set sidescrolloff=10
 set smartcase " search is case insensitive unless one is capital
 set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop
 set splitright
-set statusline=\ %f%=%m%y%r\ %P\ %l\  " show filename
+set statusline=\ \%n\ %f%=%m%y%r\ %p%%\ %l:%c\ " show filename
 set swapfile
 set tabstop=4
 set textwidth=80
@@ -155,7 +156,7 @@ nnoremap k gk
 " <space>/ will turn off highlights
 nmap <silent> <leader>/ :nohlsearch<CR>
 " shortcut to open vimrc and source it
-map <leader>vimrc :e $MYVIMRC<cr>
+nnoremap <leader>vimrc :e $MYVIMRC<cr>
 " change buffer fast
 nnoremap <leader>ls :ls<cr>:b<space>
 " create a scratch buffer
@@ -166,6 +167,8 @@ nnoremap <S-Tab> <<
 nnoremap <Tab> >>
 " repeat dot macro over a range
 xmap <silent> . :normal .<cr>
+" open file explorer
+nnoremap <leader>e :E<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
