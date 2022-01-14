@@ -143,8 +143,6 @@ runtime ftplugin/man.vim
 "" MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <space> <leader>
-" force write
-cmap w!! w !sudo tee % >/dev/null
 " Easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -169,6 +167,10 @@ nnoremap <Tab> >>
 xmap <silent> . :normal .<cr>
 " open file explorer
 nnoremap <leader>e :E<cr>
+"scroll the window up and down one line at a time
+map <S-Up> <C-y>
+map <S-Down> <C-e>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
@@ -193,6 +195,9 @@ highlight StatusLine ctermfg=blue ctermbg=white
 highlight StatusLineNC ctermfg=white ctermbg=darkblue
 highlight VertSplit ctermfg=lightblue ctermbg=white
 highlight MatchParen cterm=bold ctermfg=magenta ctermbg=lightmagenta
+highlight LineNr ctermfg=grey
+highlight LineNrAbove ctermfg=darkgrey
+highlight LineNrBelow ctermfg=darkgrey
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
