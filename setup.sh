@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 files="vimrc zshrc zprofile bashrc profile gitconfig gitignore_global condarc"
-repositories="randallwc.github.io 180dab 180DA-WarmUp"
+repositories="randallwc.github.io 180dab 180DA-WarmUp CSCM121"
 
 echo "making simlinks in home dir"
 for file in $files;
