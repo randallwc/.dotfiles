@@ -56,17 +56,17 @@ g;                      jump to place of last edit (will keep going back in edit
 
 u                       undo
 g-                      undo but contains more states
-^-r                     (NORMAL) redo
-^-r[reg]                (INSERT) paste from buffer
+^r                      (NORMAL) redo
+^r[reg]                 (INSERT) paste from buffer
 g+                      redo but contains more states
 v                       visual
-^-v                     visual block
+^v                      visual block
 gv                      reselect
 
 J                       join current line and below line
 q:                      open command history
 q[letter] [keycombo]    q record command
-^-g                     show the filename
+^g                      show the filename
 
 gf                      open file under cursor
 
@@ -107,6 +107,11 @@ C                       delete line and insert
 p                       paste buffer after cursor
 P                       paste buffer before cursor
 
+VISUAL MODE
+gu                      make lowercase
+gU                      make uppercase
+:sort                   sort selected lines
+:sort u                 sort selected lines and delete repeats
 !!sh                    runs the current line in shell
 
 WINDOWS
@@ -149,6 +154,9 @@ g<tab>      go to last opened tab
 
 :messages               show current message
 K                       show help for what is under cursor
+
+^i                      Go to newer cursor position in jump list
+^o                      Go to Older cursor position in jump list
 ```
 
 ## PEP
@@ -162,30 +170,31 @@ set tabstop=4 shiftwidth=4 expandtab|retab
 # NOT FORMATTED
 
 ```
-"" COMMANDS
-" :ls
-" :b [FILESUBSTRING]
-" :find
-" :edit [file]
-" :earlier and :later
-" :reg to see buffers and "np to paste from buffer n
-" :s/old/new/g and :s/old/new/gc (for a prompt)
-" :%s/old/new/g for the whole file
-" :![command]
-" :r !ls
-" :r [File] reads file into this file
-" :w [File] write file into this file
-" :w !pbcopy " pipe current buffer into a command
-" :vimgrep pattern %
-" :vimgrep pattern % | copen
+" COMMANDS
+:ls
+:b [FILESUBSTRING]
+:find
+:edit [file]
+:earlier and :later
+:reg to see buffers and "np to paste from buffer n
+:s/old/new/g and :s/old/new/gc (for a prompt)
+:%s/old/new/g for the whole file
+:g/pat/d delete pattern
+:![command]
+:r !ls
+:r [File] reads file into this file
+:w [File] write file into this file
+:w !pbcopy " pipe current buffer into a command
+:vimgrep pattern %
+:vimgrep pattern % | copen
 
-"" KEY COMBOS
-"" CONTROL
-" ^g show file name
-" ^n auto complete ^E to select
-" ^a to increment numbers
-" ^d for command completion
-" c to delete word then enter insert mode
-" cc to delete whole line
-" R to replace text
+" KEY COMBOS
+" CONTROL
+^g show file name
+^n auto complete ^E to select
+^a to increment numbers
+^d for command completion
+c to delete word then enter insert mode
+cc to delete whole line
+R to replace text
 ```
