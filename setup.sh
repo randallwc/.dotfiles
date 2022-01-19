@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-files="vimrc zshrc zprofile bashrc profile gitconfig gitignore_global condarc"
+files="vimrc zshrc zprofile bashrc profile gitconfig gitignore_global condarc bash_profile"
 repositories="randallwc.github.io 180dab 180DA-WarmUp CSCM121"
 
 echo "making simlinks in home dir"
@@ -10,33 +10,43 @@ do
         echo "force rewrite of simlinks for file $file"
         ln -fs ~/.dotfiles/$file ~/.$file
     else
-        ln -s ~/.dotfiles/$file ~/.$file
+        if ln -s ~/.dotfiles/$file ~/.$file
+        then
+            echo "SUCCESS: linked file $file"
+        else
+            echo "FAIL: was not able to link $file"
+        fi
     fi
 done
 unset file
 
 # if github dir does not exist
-if [[ ! -d ~/Github/ ]] && [[ "$1" == "--github" ]]
+if [[ "$1" == "--github" ]]
 then
-    echo "making GitHub in home directory"
-    mkdir ~/GitHub/
-    cd ~/GitHub/
-    git --version >/dev/null 2>&1
-    if [[ $? -ne 0 ]]
+    if [[ ! -d ~/Github/ ]]
     then
-        echo "git not installed"
-        exit 1
-    fi
-    for repo in $repositories
-    do
-        echo "cloning $repo ..."
-        git clone git@github.com:randallwc/$repo
+        echo "making GitHub in home directory"
+        mkdir ~/GitHub/
+        cd ~/GitHub/
+        git --version >/dev/null 2>&1
         if [[ $? -ne 0 ]]
         then
-            echo "error occured in git clone"
-            rmdir ~/GitHub
+            echo "FAIL: git not installed"
             exit 1
         fi
-    done
-    unset repo
+        for repo in $repositories
+        do
+            echo "DEBUG: cloning $repo ..."
+            git clone git@github.com:randallwc/$repo
+            if [[ $? -ne 0 ]]
+            then
+                echo "FAIL: error occured in git clone"
+                rmdir ~/GitHub
+                exit 1
+            fi
+        done
+        unset repo
+    else
+        echo "FAIL: ~/Github/ exists"
+    fi
 fi
