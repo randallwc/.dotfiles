@@ -95,7 +95,10 @@ macupdate() {
     echo "=====brew commands=====" | fmt -c -w $COLUMNS &&
     brew upgrade &&
     brew cleanup --prune=all &&
-    brew doctor &&
+    if ! brew doctor
+    then
+        echo "=====FAIL=====brew doctor=====" | fmt -c -w $COLUMNS
+    fi
     echo "=====conda commands=====" | fmt -c -w $COLUMNS &&
     conda activate &&
     conda update --all -y &&
