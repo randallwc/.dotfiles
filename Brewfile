@@ -31,6 +31,8 @@ brew "qmk/qmk/qmk"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
 # Scriptable scratchpad for developers
 cask "boop"
 # Remove junk and unused files
