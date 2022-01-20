@@ -198,6 +198,8 @@ highlight MatchParen cterm=bold ctermfg=magenta ctermbg=lightmagenta
 highlight LineNr ctermfg=grey
 highlight LineNrAbove ctermfg=darkgrey
 highlight LineNrBelow ctermfg=darkgrey
+highlight IncSearch cterm=bold ctermfg=white ctermbg=172
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
