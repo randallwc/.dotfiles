@@ -105,3 +105,6 @@ macupdate() {
     conda clean --all -y &&
     echo "=====success=====" | fmt -c -w $COLUMNS
 }
+
+# get ip
+alias publicip='curl ifconfig.me'
