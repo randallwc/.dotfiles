@@ -16,6 +16,7 @@ format = "[$time]($style) "
 
 [directory]
 truncation_length = 1
+home_symbol="\b"
 
 [git_branch]
 format = "[$symbol$branch]($style) "
@@ -24,8 +25,9 @@ format = "[$symbol$branch]($style) "
 disabled = true
 
 [hostname]
-style="bold dimmed grey"
+style="bold green"
 format = "[$hostname]($style) "
 
 [username]
-format = "[$user]($style) "
+style_user="bold green"
+format = "[$user@]($style)"

@@ -4,7 +4,7 @@
 # no newline between prompts
 add_newline = false
 
-format = """$character"""
+format = """$username$hostname$character"""
 
 # move the rest of the prompt to the right
 right_format = """$all$time"""
@@ -16,6 +16,7 @@ format = "[$time]($style)"
 
 [directory]
 truncation_length = 1
+home_symbol=""
 
 [git_branch]
 format = "[$symbol$branch]($style) "
@@ -24,8 +25,9 @@ format = "[$symbol$branch]($style) "
 disabled = true
 
 [hostname]
-style="bold dimmed grey"
+style="bold green"
 format = "[$hostname]($style) "
 
 [username]
-format = "[$user]($style) "
+style_user="bold green"
+format = "[$user@]($style)"
