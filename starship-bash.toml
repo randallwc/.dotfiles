@@ -25,4 +25,4 @@ format = "[$symbol$branch]($style) "
 disabled = true
 
 [hostname]
-format =  "[$hostname]($style) in "
+format =  "[$hostname]($style) "
