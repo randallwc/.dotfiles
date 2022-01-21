@@ -24,6 +24,7 @@ format = "[$symbol$branch]($style) "
 disabled = true
 
 [hostname]
+style="bold dimmed grey"
 format = "[$hostname]($style) "
 
 [username]
