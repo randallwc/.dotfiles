@@ -27,4 +27,4 @@ disabled = true
 format = "[$hostname]($style) "
 
 [username]
-format = "[$user]($style)@"
+format = "[$user]($style) "
