@@ -148,9 +148,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-" go down even when lines wrap
-nnoremap j gj
-nnoremap k gk
 " <space>/ will turn off highlights
 nmap <silent> <leader>/ :nohlsearch<CR>
 " shortcut to open vimrc and source it
@@ -170,7 +167,6 @@ nnoremap <leader>e :E<cr>
 "scroll the window up and down one line at a time
 map <S-Up> <C-y>
 map <S-Down> <C-e>
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
