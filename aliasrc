@@ -4,7 +4,7 @@
 os=$(uname)
 case $os in
     MING*) alias ls='ls --color=auto' ;;
-    Linux) alias ls='ls --color-auto';;
+    Linux) alias ls='ls --color=auto';;
     Darwin) alias ls='ls -G' ;;
     *) alias ls='ls --color=auto' ;;
 esac
