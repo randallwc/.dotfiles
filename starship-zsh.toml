@@ -23,3 +23,6 @@ format = "[$symbol$branch]($style) "
 
 [battery]
 disabled = true
+
+[hostname]
+format =  "[$hostname]($style) in "
