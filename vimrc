@@ -22,13 +22,6 @@
     " (https://github.com/ctjhoa/spacevim/blob/master/PLUGINS.md)
 
 " document manual in vim
-" compare plugin managers
-    " (https://github.com/junegunn/vim-plug)
-    " (https://github.com/zsh-users/antigen)
-    " (https://github.com/VundleVim/Vundle.vim)
-" add comment fix plugin (https://github.com/tpope/vim-commentary)
-" add surround to surround text with stuff
-    " (https://github.com/tpope/vim-surround)
 " add start page to vim
     " (https://github.com/mhinz/vim-startify)
 " add nerd tree (https://github.com/preservim/nerdtree)
@@ -131,13 +124,6 @@ set undoreload=10000 " number of lines to save
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " Display all matching files when we tab complete
 set wrap " enable softwrap of words
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" PLUGINS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype plugin indent on
-" set up vim manual
-runtime ftplugin/man.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" MAPS
@@ -244,3 +230,43 @@ function! RemoveCarriageReturn()
     %s/\r*$//
     ''
 endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" PLUGINS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on
+" set up vim manual
+runtime ftplugin/man.vim
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" VIM PLUG
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/junegunn/vim-plug/
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'https://github.com/tpope/vim-surround'
+
+Plug 'https://github.com/tpope/vim-commentary'
+
+Plug 'https://github.com/junegunn/vim-easy-align'
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+Plug 'https://github.com/nixon/vim-vmath'
+vmap <expr>  ++  VMATH_YankAndAnalyse()
+nmap         ++  vip++
+
+call plug#end()
