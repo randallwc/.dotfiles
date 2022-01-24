@@ -181,6 +181,7 @@ highlight LineNr ctermfg=grey
 highlight LineNrAbove ctermfg=darkgrey
 highlight LineNrBelow ctermfg=darkgrey
 highlight IncSearch cterm=bold ctermfg=white ctermbg=172
+let g:markdown_fenced_languages = [ 'html', 'python', 'ruby', 'vim', 'bash', 'sh', 'css']
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -266,7 +267,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 Plug 'https://github.com/nixon/vim-vmath'
-vmap <expr>  ++  VMATH_YankAndAnalyse()
-nmap         ++  vip++
+vmap <expr> ++ VMATH_YankAndAnalyse()
+nmap ++ vip++
 
 call plug#end()
