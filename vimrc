@@ -259,6 +259,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/tpope/vim-surround'
 
 Plug 'https://github.com/tpope/vim-commentary'
+augroup commentary
+    autocmd!
+    autocmd FileType c setlocal commentstring=//\ %s
+augroup END
 
 Plug 'https://github.com/junegunn/vim-easy-align'
 " Start interactive EasyAlign in visual mode (e.g. vipga)
