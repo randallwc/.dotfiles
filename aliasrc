@@ -109,10 +109,13 @@ macupdate() {
 # get ip
 alias publicip='curl ifconfig.me'
 
-# nibble compiler alias
+# nibble aliases
 nibblec() {
-    ghub &&
-    cd qmk_firmware/ &&
-    make nullbitsco/nibble:$1 &&
-    lllf *.hex
+    pushd ~/GitHub/qmk_firmware &&
+    if make nullbitsco/nibble:$1
+    then
+        lllf *.hex
+    fi
+    popd
 }
+alias nibbled='ghub && cd qmk_firmware/keyboards/nullbitsco/nibble/'
