@@ -119,3 +119,6 @@ nibblec() {
     popd
 }
 alias nibbled='ghub && cd qmk_firmware/keyboards/nullbitsco/nibble/'
+
+# json format
+alias jsonformat='python3 -m json.tool'
