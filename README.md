@@ -143,6 +143,9 @@ The last step disables automatic access for software from the App Store. From no
 # TODO
 ## minor
 
+## setup.sh
+ - [ ] add auto generation of gitlocal based on the machine
+
 ### documentation
  - [ ] add hyperlinks to notes
  - [ ] clean up notes
