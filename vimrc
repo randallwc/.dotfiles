@@ -113,7 +113,7 @@ set splitright
 set statusline=\ \%n\ %f%=%m%y%r\ %p%%\ %l:%c\ " show filename
 set swapfile
 set tabstop=4
-set textwidth=80
+set textwidth=72
 set title " change the terminal's title
 set titlelen=70
 set titlestring=%<%F%=%P "filename & percent down screen
