@@ -153,6 +153,13 @@ nnoremap <leader>e :E<cr>
 "scroll the window up and down one line at a time
 map <S-Up> <C-y>
 map <S-Down> <C-e>
+" reselect pasted text
+nnoremap <leader>gp `[v`]
+" close window with leader
+map <leader>c <C-w>c
+" split window with leader
+map <leader>ws <C-w>s
+map <leader>wv <C-w>v
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
