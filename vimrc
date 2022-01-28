@@ -112,7 +112,7 @@ set splitright
 set statusline=\ \%n\ %f%=%m%y%r\ %p%%\ %l:%c\ " show filename
 set swapfile
 set tabstop=4
-set textwidth=72
+set textwidth=80
 set title " change the terminal's title
 set titlelen=70
 set titlestring=%<%F%=%P "filename & percent down screen
@@ -123,6 +123,7 @@ set undoreload=10000 " number of lines to save
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " Display all matching files when we tab complete
 set wrap " enable softwrap of words
+set colorcolumn=80
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" MAPS
@@ -181,7 +182,7 @@ highlight LineNrAbove ctermfg=darkgrey
 highlight LineNrBelow ctermfg=darkgrey
 highlight IncSearch cterm=bold ctermfg=white ctermbg=172
 let g:markdown_fenced_languages = [ 'html', 'python', 'ruby', 'vim', 'bash', 'sh', 'css']
-
+highlight ColorColumn ctermbg=236
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
