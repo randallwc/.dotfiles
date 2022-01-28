@@ -157,6 +157,8 @@ map <S-Down> <C-e>
 nnoremap <leader>gp `[v`]
 " close window with leader
 map <leader>c <C-w>c
+" quit with leader
+map <leader>q :q<cr>
 " split window with leader
 map <leader>ws <C-w>s
 map <leader>wv <C-w>v
