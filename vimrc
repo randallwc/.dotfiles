@@ -21,7 +21,6 @@
     " (https://spacevim.org/)
     " (https://github.com/ctjhoa/spacevim/blob/master/PLUGINS.md)
 
-" document manual in vim
 " add start page to vim
     " (https://github.com/mhinz/vim-startify)
 " add nerd tree (https://github.com/preservim/nerdtree)
@@ -246,7 +245,7 @@ endfunction
 "" PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
-" set up vim manual
+" set up vim manual (:Man [func])
 runtime ftplugin/man.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
