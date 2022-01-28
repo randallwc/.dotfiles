@@ -199,4 +199,9 @@ c to delete word then enter insert mode
 cc to delete whole line
 R to replace text
 g?? to do rot13
+
+gv highlight last highlighted thing
+1v highlight last highlighted thing?
+
+gi go into insert mode right where you were last in insert mode
 ```
