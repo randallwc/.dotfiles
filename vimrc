@@ -30,8 +30,6 @@
         " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
 " add easy motion
     " (https://github.com/easymotion/vim-easymotion)
-" add git gutter
-    " (https://github.com/airblade/vim-gitgutter)
 " add syntastic a syntax checker
     " (https://github.com/vim-syntastic/syntastic)
 " add vinegar.vim for moving around in file tree '-' == open file ex
@@ -39,13 +37,14 @@
 
 " look at ctrl p plugin
     " (http://kien.github.io/ctrlp.vim/)
+" look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
+
 " look at float terminal (https://github.com/voldikss/vim-floaterm)
 " look at git fugative for like in vim Git and other stuff
     " (https://github.com/tpope/vim-fugitive)
 " look at polyglot for language functionality
     " (https://github.com/sheerun/vim-polyglot)
 " look at highlight url (https://github.com/itchyny/vim-highlighturl)
-" look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
 " look at coc for code completon and ide stuff
     " (https://github.com/neoclide/coc.nvim)
 " look at projectionist for jumping from code to tests
@@ -273,5 +272,14 @@ nmap ga <Plug>(EasyAlign)
 Plug 'https://github.com/nixon/vim-vmath'
 vmap <expr> ++ VMATH_YankAndAnalyse()
 nmap ++ vip++
+
+Plug 'https://github.com/ap/vim-css-color'
+
+Plug 'https://github.com/airblade/vim-gitgutter'
+highlight SignColumn ctermbg=none guibg=none
+set foldtext=gitgutter#fold#foldtext()
+highlight GitGutterAdd    cterm=bold ctermfg=green
+highlight GitGutterChange cterm=bold ctermfg=214
+highlight GitGutterDelete cterm=bold ctermfg=red
 
 call plug#end()
