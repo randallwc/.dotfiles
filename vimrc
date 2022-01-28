@@ -109,6 +109,7 @@ set showmatch " set show matching parenthesis
 set sidescrolloff=10
 set smartcase " search is case insensitive unless one is capital
 set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop
+set softtabstop=4
 set splitright
 set statusline=\ \%n\ %f%=%m%y%r\ %p%%\ %l:%c\ " show filename
 set swapfile
