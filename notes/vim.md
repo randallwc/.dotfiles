@@ -193,8 +193,10 @@ set tabstop=4 shiftwidth=4 expandtab|retab
 ^g show file name
 ^n auto complete ^E to select
 ^a to increment numbers
+g^a to increment numbers in visual mode and increase each line by line
 ^d for command completion
 c to delete word then enter insert mode
 cc to delete whole line
 R to replace text
+g?? to do rot13
 ```
