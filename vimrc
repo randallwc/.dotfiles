@@ -80,6 +80,7 @@ endif
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set breakindent " indents word-wrapped lines as much as the parent line
+set colorcolumn=80
 set confirm
 set copyindent " copy the previous indentation on autoindenting
 set directory=~/.vim/swap//
@@ -123,7 +124,6 @@ set undoreload=10000 " number of lines to save
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " Display all matching files when we tab complete
 set wrap " enable softwrap of words
-set colorcolumn=80
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" MAPS
