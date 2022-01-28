@@ -288,5 +288,6 @@ Plug 'https://github.com/airblade/vim-gitgutter'
     highlight GitGutterDelete cterm=bold ctermfg=red
     let g:gitgutter_sign_modified_removed = '±'
 Plug 'https://github.com/cespare/vim-toml'
+Plug 'https://github.com/mhinz/vim-startify'
 
 call plug#end()
