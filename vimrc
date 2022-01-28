@@ -264,30 +264,26 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/tpope/vim-surround'
-
 Plug 'https://github.com/tpope/vim-commentary'
-augroup commentary
-    autocmd!
-    autocmd FileType c setlocal commentstring=//\ %s
-augroup END
-
+    augroup commentary
+        autocmd!
+        autocmd FileType c setlocal commentstring=//\ %s
+    augroup END
 Plug 'https://github.com/junegunn/vim-easy-align'
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
+    " Start interactive EasyAlign in visual mode (e.g. vipga)
+    xmap ga <Plug>(EasyAlign)
+    " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+    nmap ga <Plug>(EasyAlign)
 Plug 'https://github.com/nixon/vim-vmath'
-vmap <expr> ++ VMATH_YankAndAnalyse()
-nmap ++ vip++
-
+    vmap <expr> ++ VMATH_YankAndAnalyse()
+    nmap ++ vip++
 Plug 'https://github.com/ap/vim-css-color'
-
 Plug 'https://github.com/airblade/vim-gitgutter'
-highlight SignColumn ctermbg=none guibg=none
-set foldtext=gitgutter#fold#foldtext()
-highlight GitGutterAdd    cterm=bold ctermfg=green
-highlight GitGutterChange cterm=bold ctermfg=214
-highlight GitGutterDelete cterm=bold ctermfg=red
+    highlight SignColumn ctermbg=none guibg=none
+    set foldtext=gitgutter#fold#foldtext()
+    highlight GitGutterAdd    cterm=bold ctermfg=green
+    highlight GitGutterChange cterm=bold ctermfg=214
+    highlight GitGutterDelete cterm=bold ctermfg=red
+    let g:gitgutter_sign_modified_removed = '±'
 
 call plug#end()
