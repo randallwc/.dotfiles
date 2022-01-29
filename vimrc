@@ -149,7 +149,7 @@ nnoremap <Tab> >>
 " repeat dot macro over a range
 xmap <silent> . :normal .<cr>
 " open file explorer
-nnoremap <leader>e :E<cr>
+nnoremap <leader>e :Explore<cr>
 "scroll the window up and down one line at a time
 map <S-Up> <C-y>
 map <S-Down> <C-e>
