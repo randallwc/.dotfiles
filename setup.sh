@@ -50,3 +50,6 @@ then
         echo "FAIL: ~/Github/ exists"
     fi
 fi
+
+unset files
+unset repositories
