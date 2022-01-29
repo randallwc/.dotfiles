@@ -83,6 +83,7 @@ set colorcolumn=80
 set confirm
 set copyindent " copy the previous indentation on autoindenting
 set directory=~/.vim/swap//
+set encoding=UTF-8
 set expandtab
 set foldmethod=syntax " files fold based on syntax
 set formatoptions=jrolq
