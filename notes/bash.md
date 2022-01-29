@@ -59,6 +59,7 @@ $0  # name of the script
 $#  # number of positional parameters
 $$  # pid of the current shell
 $@  # array-like construct of all positional parameters
+printenv
 ```
 
 ## USERS & PERMS
@@ -88,9 +89,10 @@ read
 ```
 
 ## ZSH COMMANDS
-```bash
-^-r # search through history
-^-x h # give information about completion system
+```
+^r # search through history
+^x h # give information about completion system
+^q save command for one command later
 ```
 
 ## BREW
