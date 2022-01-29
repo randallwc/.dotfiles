@@ -272,9 +272,7 @@ Plug 'https://github.com/tpope/vim-commentary'
         autocmd FileType c setlocal commentstring=//\ %s
     augroup END
 Plug 'https://github.com/junegunn/vim-easy-align'
-    " Start interactive EasyAlign in visual mode (e.g. vipga)
     xmap ga <Plug>(EasyAlign)
-    " Start interactive EasyAlign for a motion/text object (e.g. gaip)
     nmap ga <Plug>(EasyAlign)
 Plug 'https://github.com/nixon/vim-vmath'
     vmap <expr> ++ VMATH_YankAndAnalyse()
