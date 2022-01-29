@@ -63,6 +63,16 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
 ```
 
+[font](https://www.jetbrains.com/lp/mono/)
+
+- open `Font Book` and press `+`
+- select the whole folder and add it
+
+> RECOMMENDED SETTINGS FOR THE FONT
+>
+> Size: 13
+> Line spacing: 1.2
+
 # [install logi options](https://www.logitech.com/en-us/product/options)
 
 ## set up the guesture button
