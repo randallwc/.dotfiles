@@ -63,6 +63,7 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/
 defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
 ```
 
+## install jetbrains mono manually (or just use homebrew)
 [font](https://www.jetbrains.com/lp/mono/)
 
 - open `Font Book` and press `+`
