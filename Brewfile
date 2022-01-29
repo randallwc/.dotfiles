@@ -2,6 +2,7 @@ tap "beeftornado/rmtree"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "osx-cross/arm"
@@ -43,6 +44,8 @@ cask "cyberduck"
 cask "discord"
 # Text editor
 cask "emacs"
+# Typeface made for developers
+cask "font-jetbrains-mono"
 # Web browser
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
