@@ -2,7 +2,8 @@
 # install xcode
 `xcode-select --install`
 
-# [install rosetta](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
+# [install
+rosetta](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
 for M1 chips
 
 `softwareupdate --install-rosetta`
@@ -12,7 +13,8 @@ for M1 chips
 
 # set up github links
 
-[create git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[create git ssh
+key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 `./setup.sh --github`
 
@@ -26,7 +28,8 @@ brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
 ```
 
 ## visual studio
- - run `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false` for key repeat
+ - run `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool
+   false` for key repeat
 
 ## spotify
 1. show advanced settings
@@ -49,7 +52,9 @@ brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
 - Good Notes
 
 # enable 3 finger drag
-`System Preferences > Accessibility > Pointer Control > Mouse & Trackpad > Trackpad Options > Enable Dragging > Three Finger Drag`
+
+`System Preferences > Accessibility > Pointer Control > Mouse & Trackpad >
+Trackpad Options > Enable Dragging > Three Finger Drag`
 
 # iTerm2 Settings
 ```sh
@@ -79,13 +84,20 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 
 `Finder > View > Show Status Bar`
 
+## optional
+
+`defaults write com.apple.finder AppleShowAllFiles YES` to have it auto show
+hidden files
+
 # [miniconda](https://docs.conda.io/en/latest/miniconda.html)
 > installed with homebrew
 - [jupyter lab](https://jupyter.org/install)
 - ipython
 
 # enable document sync on icloud
-`System Preferences > Apple ID > iCloud Drive > Options > Desktop & Documents Folders`
+
+`System Preferences > Apple ID > iCloud Drive > Options > Desktop & Documents
+Folders`
 
 # disable icloud optimization
 `System Preferences > Apple ID > iCloud and disable Optimize Mac Storage`
@@ -108,7 +120,8 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 # Quicklook
 - use Brew to install the quicklook plugins into `~/Library/QuickLook`
 
-## [ql color code on m1 fix](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
+## [ql color code on m1
+fix](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
 
 ## ql stephen fix
 ```bash
@@ -129,16 +142,24 @@ killall Finder
 
 # firewall
 
-[This one is a bit controversial. If you do not install software which allows network access of any kind, skip it. If you run potentially vulnerable software you don't want to be accessed from other machines, consider turning the built-in firewall on. This particularly applies if you develop network software.](https://sourabhbajaj.com/mac-setup/Security/)
+[This one is a bit controversial. If you do not install software which allows
+network access of any kind, skip it. If you run potentially vulnerable software
+you don't want to be accessed from other machines, consider turning the built-in
+firewall on. This particularly applies if you develop network
+software.](https://sourabhbajaj.com/mac-setup/Security/)
 
 1. Choose Apple menu () > System Preferences, then click Security & Privacy.
 1. Click the Firewall tab.
 1. Click the Lock button, then enter an administrator name and password.
 1. Click Turn On Firewall.
 1. Click Firewall Options.
-1. Uncheck `Automatically allow signed software to receive incoming connections`.
+1. Uncheck `Automatically allow signed software to receive incoming
+   connections`.
 
-The last step disables automatic access for software from the App Store. From now on you can either add (dis)allowed programs to the list within the Firewall Options or just click on Allow\/Deny, if you get a popup asking you if a specific software may be accessed.
+The last step disables automatic access for software from the App Store. From
+now on you can either add (dis)allowed programs to the list within the Firewall
+Options or just click on Allow\/Deny, if you get a popup asking you if a
+specific software may be accessed.
 
 # TODO
 ## minor
@@ -155,7 +176,8 @@ The last step disables automatic access for software from the App Store. From no
     - add commands about like clean, doctor, help
 
 ### terminal
-- [ ] [colorized man pages](https://superuser.com/questions/452034/bash-colorized-man-page)
+- [ ] [colorized man
+  pages](https://superuser.com/questions/452034/bash-colorized-man-page)
 
 ### bash
 - [ ] add better tab completion in bash
@@ -163,16 +185,20 @@ The last step disables automatic access for software from the App Store. From no
 
 ### vim
 - [ ] fix search in vim to fuzzy search
-- [ ] read this [thing](https://vi.stackexchange.com/questions/12806/configure-which-column-gq-wraps-at)
+- [ ] read this
+  [thing](https://vi.stackexchange.com/questions/12806/configure-which-column-gq-wraps-at)
 
 ### zsh
 - [ ] look into greyed out tab completion in zsh
-- [ ] look into vi mode for zsh ( add visual indicator for insert and command mode )
-- [ ] https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
+- [ ] look into vi mode for zsh ( add visual indicator for insert and command
+  mode )
+- [ ]
+  https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
 
 ## quicklook
 - [ ] look at the json quicklook and make it open wider
 
 ## major
-- [ ] [dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
+- [ ]
+  [dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
 - [ ] clean up documentation
