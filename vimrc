@@ -287,5 +287,35 @@ Plug 'https://github.com/airblade/vim-gitgutter'
     let g:gitgutter_sign_modified_removed = '±'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/mhinz/vim-startify'
+    let g:startify_bookmarks =
+                \ [
+                \     { "v": "~/.vimrc" },
+                \     { "z": "~/.zshrc" }
+                \ ]
+    let g:startify_change_to_vcs_root = 0
+    let g:ascii = [
+          \ ' __      __  ______',
+          \ '/\ \  __/\ \/\  __  \',
+          \ '\ \ \/\ \ \ \ \ \_\  \',
+          \ ' \ \ \ \ \ \ \ \  _  /',
+          \ '  \ \ \_/ \_\ \ \ \\  \',
+          \ '   \ \____^___/\ \_\ \_\',
+          \ '     \/__//__/  \/_/\/_/'
+          \]
+    let g:startify_custom_header = 'startify#pad(g:ascii)'
+    let g:startify_custom_footer = "startify#pad(startify#fortune#boxed())"
+    let g:startify_fortune_use_unicode = 1
+    " if has('nvim')
+    "   autocmd TabNewEntered * Startify
+    " else
+    "   autocmd BufWinEnter *
+    "         \ if !exists('t:startify_new_tab')
+    "         \     && empty(expand('%'))
+    "         \     && empty(&l:buftype)
+    "         \     && &l:modifiable |
+    "         \   let t:startify_new_tab = 1 |
+    "         \   Startify |
+    "         \ endif
+    " endif
 
 call plug#end()
