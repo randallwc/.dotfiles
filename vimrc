@@ -64,11 +64,10 @@
 "" ENV
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-
+" make directories
 if !isdirectory($HOME . '/.vim/undo')
     call mkdir($HOME . '/.vim/undo', 'p')
 endif
-
 if !isdirectory($HOME . '/.vim/swap')
     call mkdir($HOME . '/.vim/swap', 'p')
 endif
@@ -83,7 +82,7 @@ set colorcolumn=80
 set confirm
 set copyindent " copy the previous indentation on autoindenting
 set directory=~/.vim/swap//
-set encoding=UTF-8
+set encoding=utf-8
 set expandtab
 set foldmethod=syntax " files fold based on syntax
 set formatoptions=jrolq
@@ -97,7 +96,7 @@ set linebreak " wrap long lines
 set list " show hidden chars
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set nofoldenable " files not folded on open
-set path+=** " Search down into subfolders
+set path+=** " search down into subfolders
 set rnu nu
 set ruler " show percent down page " useless with statusline
 set scrolloff=5 " keep a certain ammount of context
@@ -119,64 +118,62 @@ set title " change the terminal's title
 set titlelen=70
 set titlestring=%<%F%=%P "filename & percent down screen
 set undodir=$HOME/.vim/undo// " where to save undo histories
-set undofile " Save undos after file closes
-set undolevels=1000 " How many undos
+set undofile " save undos after file closes
+set undolevels=1000 " how many undos
 set undoreload=10000 " number of lines to save
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set wildmenu " Display all matching files when we tab complete
+set wildmenu " display all matching files when we tab complete
 set wrap " enable softwrap of words
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" LEADER MAPS
 map <space> <leader>
-" Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-" <space>/ will turn off highlights
-nmap <silent> <leader>/ :nohlsearch<CR>
-" shortcut to open vimrc and source it
 nnoremap <leader>vimrc :e $MYVIMRC<cr>
-" change buffer fast
 nnoremap <leader>ls :ls<cr>:b<space>
-" create a scratch buffer
 nnoremap <leader>sb :below 5new<cr>
-" indenting in normal mode and command mode
-inoremap <S-Tab> <C-d>
-nnoremap <S-Tab> <<
-nnoremap <Tab> >>
+nmap <leader>e <esc>:Explore<cr>
+" reselect pasted text
+nmap <leader>gp `[v`]
+nmap <leader>q :q<cr>
+nmap <leader>ws <c-w>s
+nmap <leader>wv <c-w>v
+" open empty tab
+nmap <leader>t :tabnew<cr>
+"" OTHER MAPS
+" easy window navigation
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+nmap <silent> <leader>/ :nohlsearch<cr>
+" indenting
+inoremap <s-tab> <c-d>
+nnoremap <s-tab> <<
+nnoremap <tab> >>
+vnoremap <s-tab> <gv
+vnoremap <tab> >gv
 " repeat dot macro over a range
 xmap <silent> . :normal .<cr>
-" open file explorer
-nnoremap <leader>e :Explore<cr>
-"scroll the window up and down one line at a time
-map <S-Up> <C-y>
-map <S-Down> <C-e>
-" reselect pasted text
-nnoremap <leader>gp `[v`]
-" close window with leader
-map <leader>c <C-w>c
-" quit with leader
-map <leader>q :q<cr>
-" split window with leader
-map <leader>ws <C-w>s
-map <leader>wv <C-w>v
+" scroll window
+map <s-up> <c-y>
+map <s-down> <c-e>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if &term =~ "xterm\\|rxvt" " change cursor based on mode
+" change cursor based on mode
+if &term =~ "xterm\\|rxvt"
     let &t_SI="\<Esc>[3 q" " start insert mode, blinking underline cursor
     let &t_EI="\<Esc>[1 q" " end insert mode, blinking block
 endif
-
-if &t_Co > 2 || has("gui_running") " enable syntax highlighting
+" enable syntax highlighting
+if &t_Co > 2 || has("gui_running")
     syntax enable
 endif
-
-if !has('gui_running') " colored vim
+" colored vim
+if !has('gui_running')
     set t_Co=256
 endif
 
@@ -205,19 +202,16 @@ augroup saving_vimrc
     autocmd BufWritePost .vimrc echom "sourcing vimrc"
     autocmd BufWritePost .vimrc source $MYVIMRC
 augroup END
-
 augroup pip_python
     autocmd!
     autocmd filetype python :echom "expanding tabs in python file"
     autocmd filetype python set expandtab
 augroup END
-
 augroup show_trailing_spaces
     autocmd!
     " show trailing spaces
     autocmd VimEnter,WinEnter * match ErrorMsg '\s\+$'
 augroup END
-
 augroup change_statusline_color
     autocmd!
     autocmd InsertEnter * highlight StatusLine ctermfg=magenta ctermbg=white
@@ -235,7 +229,6 @@ function! TrimWhiteSpace()
     %s/\s*$//
     ''
 endfunction
-
 function! RemoveCarriageReturn()
     :echom "removing carriage returns"
     %s/\r*$//
@@ -253,19 +246,17 @@ runtime ftplugin/man.vim
 "" VIM PLUG
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://github.com/junegunn/vim-plug/
-" Install vim-plug if not found
+" install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
-
-" Run PlugInstall if there are missing plugins
+" run pluginstall if there are missing plugins
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
-
+" start vim plug list
 call plug#begin('~/.vim/plugged')
-
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-commentary'
     augroup commentary
@@ -288,35 +279,36 @@ Plug 'https://github.com/airblade/vim-gitgutter'
     let g:gitgutter_sign_modified_removed = '±'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/mhinz/vim-startify'
+    " dont use "qeibsvt"
     let g:startify_bookmarks =
-                \ [
-                \     { "v": "~/.vimrc" },
-                \     { "z": "~/.zshrc" }
-                \ ]
+        \ [
+        \     { "X": "~/.vimrc" },
+        \     { "Y": "~/.bashrc" },
+        \     { "Z": "~/.zshrc" },
+        \ ]
     let g:startify_change_to_vcs_root = 0
+    " TODO pull ascii art randomly out of file
     let g:ascii = [
-          \ ' __      __  ______',
-          \ '/\ \  __/\ \/\  __  \',
-          \ '\ \ \/\ \ \ \ \ \_\  \',
-          \ ' \ \ \ \ \ \ \ \  _  /',
-          \ '  \ \ \_/ \_\ \ \ \\  \',
-          \ '   \ \____^___/\ \_\ \_\',
-          \ '     \/__//__/  \/_/\/_/'
-          \]
+        \ ' __      __  ______',
+        \ '/\ \  __/\ \/\  __  \',
+        \ '\ \ \/\ \ \ \ \ \_\  \',
+        \ ' \ \ \ \ \ \ \ \  _  /',
+        \ '  \ \ \_/ \_\ \ \ \\  \',
+        \ '   \ \____^___/\ \_\ \_\',
+        \ '     \/__//__/  \/_/\/_/'
+        \ ]
     let g:startify_custom_header = 'startify#pad(g:ascii)'
     let g:startify_custom_footer = "startify#pad(startify#fortune#boxed())"
     let g:startify_fortune_use_unicode = 1
-    " if has('nvim')
-    "   autocmd TabNewEntered * Startify
-    " else
-    "   autocmd BufWinEnter *
-    "         \ if !exists('t:startify_new_tab')
-    "         \     && empty(expand('%'))
-    "         \     && empty(&l:buftype)
-    "         \     && &l:modifiable |
-    "         \   let t:startify_new_tab = 1 |
-    "         \   Startify |
-    "         \ endif
-    " endif
-
+    let g:startify_lists = [
+        \ { 'type': 'dir',       'header': ['   Most Recently Used in '. getcwd()] },
+        \ { 'type': 'files',     'header': ['   Most Recently Used']},
+        \ { 'type': 'sessions',  'header': ['   Sessions']},
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']},
+        \ { 'type': 'commands',  'header': ['   Commands']},
+        \ ]
+    let g:startify_session_persistence = 1
+    map <leader>st :Startify<cr>
+    map <leader>ss :SSave<cr>
+    map <leader>sl :SLoad<cr>
 call plug#end()
