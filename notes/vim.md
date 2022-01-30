@@ -204,4 +204,6 @@ gv highlight last highlighted thing
 1v highlight last highlighted thing?
 
 gi go into insert mode right where you were last in insert mode
+:set spell " check spelling in file
+z= get spelling suggestions
 ```
