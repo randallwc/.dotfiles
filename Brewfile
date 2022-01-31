@@ -20,6 +20,8 @@ brew "figlet"
 brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
+# GUI for vim, made for macOS
+brew "macvim"
 # Platform built on V8 to build network applications
 brew "node"
 # Cross-shell prompt for astronauts

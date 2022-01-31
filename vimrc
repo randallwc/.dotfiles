@@ -180,16 +180,17 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-highlight StatusLine ctermfg=blue ctermbg=white
-highlight StatusLineNC ctermfg=white ctermbg=darkblue
-highlight VertSplit ctermfg=lightblue ctermbg=white
+highlight StatusLine ctermfg=blue ctermbg=white guifg=white guibg=#1e90ff
+highlight StatusLineNC ctermfg=white ctermbg=darkblue guifg=darkblue guibg=white
+highlight VertSplit ctermfg=lightblue ctermbg=white guifg=white guibg=lightblue
 highlight MatchParen cterm=bold ctermfg=magenta ctermbg=lightmagenta
-highlight LineNr ctermfg=grey
-highlight LineNrAbove ctermfg=darkgrey
-highlight LineNrBelow ctermfg=darkgrey
-highlight IncSearch cterm=bold ctermfg=white ctermbg=172
+highlight LineNr ctermfg=grey guifg=#a9a9a9 guibg=NONE
+highlight LineNrAbove ctermfg=darkgrey guifg=#696969
+highlight LineNrBelow ctermfg=darkgrey guifg=#696969
+highlight Search guibg=yellow
+highlight IncSearch cterm=bold ctermfg=white ctermbg=172 gui=bold guifg=white guibg=orange
 let g:markdown_fenced_languages = [ 'html', 'python', 'ruby', 'vim', 'bash', 'sh', 'css']
-highlight ColorColumn ctermbg=236
+highlight ColorColumn ctermbg=236 guibg=#4d4d4d
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
@@ -271,11 +272,11 @@ Plug 'https://github.com/nixon/vim-vmath'
     nmap ++ vip++
 Plug 'https://github.com/ap/vim-css-color'
 Plug 'https://github.com/airblade/vim-gitgutter'
-    highlight SignColumn ctermbg=none guibg=none
+    highlight SignColumn ctermbg=NONE guibg=NONE
     set foldtext=gitgutter#fold#foldtext()
-    highlight GitGutterAdd    cterm=bold ctermfg=green
-    highlight GitGutterChange cterm=bold ctermfg=214
-    highlight GitGutterDelete cterm=bold ctermfg=red
+    highlight GitGutterAdd    cterm=bold ctermfg=green gui=bold guifg=green
+    highlight GitGutterChange cterm=bold ctermfg=214 gui=bold guifg=orange
+    highlight GitGutterDelete cterm=bold ctermfg=red gui=bold guifg=red
     let g:gitgutter_sign_modified_removed = '±'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/mhinz/vim-startify'
@@ -312,3 +313,17 @@ Plug 'https://github.com/mhinz/vim-startify'
     map <leader>ss :SSave<cr>
     map <leader>sl :SLoad<cr>
 call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" GUI
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("gui_running")
+    if has('win32') || has('win64')
+        set guifont=Consolas:h12
+    elseif has('gui_macvim')
+        set guifont=JetBrains\ Mono:h13
+        set macligatures
+    else " linux
+        set guifont=Monospace\ 12
+    endif
+endif
