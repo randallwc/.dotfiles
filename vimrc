@@ -339,4 +339,9 @@ if exists('##TextYankPost')
     let g:highlightedyank_highlight_duration = 300
     highlight HighlightedyankRegion cterm=reverse gui=reverse
 endif
+Plug 'https://github.com/Yggdroot/indentLine', {'on':'IndentLinesToggle'}
+    autocmd! User indentLine doautocmd indentLine Syntax
+    let g:indentLine_enabled = 0
+    let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+    map <leader>ie :IndentLinesToggle<cr>
 call plug#end()
