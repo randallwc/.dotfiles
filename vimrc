@@ -286,7 +286,7 @@ Plug 'https://github.com/ap/vim-css-color'
 Plug 'https://github.com/airblade/vim-gitgutter'
     highlight SignColumn ctermbg=NONE guibg=NONE
     set foldtext=gitgutter#fold#foldtext()
-    highlight GitGutterAdd    cterm=bold ctermfg=green gui=bold guifg=green
+    highlight GitGutterAdd cterm=bold ctermfg=green gui=bold guifg=green
     highlight GitGutterChange cterm=bold ctermfg=214 gui=bold guifg=orange
     highlight GitGutterDelete cterm=bold ctermfg=red gui=bold guifg=red
     let g:gitgutter_sign_modified_removed = '±'
