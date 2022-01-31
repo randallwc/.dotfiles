@@ -344,4 +344,5 @@ Plug 'https://github.com/Yggdroot/indentLine', {'on':'IndentLinesToggle'}
     let g:indentLine_enabled = 0
     let g:indentLine_char_list = ['|', '¦', '┆', '┊']
     map <leader>ie :IndentLinesToggle<cr>
+Plug 'https://github.com/rhysd/git-messenger.vim'
 call plug#end()
