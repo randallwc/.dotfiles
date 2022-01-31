@@ -326,6 +326,8 @@ Plug 'https://github.com/mhinz/vim-startify'
     map <leader>st :Startify<cr>
     map <leader>ss :SSave<cr>
     map <leader>sl :SLoad<cr>
+Plug 'https://github.com/junegunn/vim-peekaboo'
+    let g:peekaboo_delay=500
 if exists('##TextYankPost')
     Plug 'machakann/vim-highlightedyank'
     let g:highlightedyank_highlight_duration = 300
