@@ -244,6 +244,18 @@ filetype plugin indent on
 runtime ftplugin/man.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" GUI
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has('win32') || has('win64')
+    set guifont=Consolas:h12
+elseif has('gui_macvim')
+    set guifont=JetBrains\ Mono:h13
+    set macligatures
+else " linux
+    set guifont=Monospace\ 12
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" VIM PLUG
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://github.com/junegunn/vim-plug/
@@ -312,18 +324,9 @@ Plug 'https://github.com/mhinz/vim-startify'
     map <leader>st :Startify<cr>
     map <leader>ss :SSave<cr>
     map <leader>sl :SLoad<cr>
-call plug#end()
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" GUI
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("gui_running")
-    if has('win32') || has('win64')
-        set guifont=Consolas:h12
-    elseif has('gui_macvim')
-        set guifont=JetBrains\ Mono:h13
-        set macligatures
-    else " linux
-        set guifont=Monospace\ 12
-    endif
+if exists('##TextYankPost')
+    Plug 'machakann/vim-highlightedyank'
+    let g:highlightedyank_highlight_duration = 300
+    highlight HighlightedyankRegion cterm=reverse gui=reverse
 endif
+call plug#end()
