@@ -295,9 +295,11 @@ Plug 'https://github.com/mhinz/vim-startify'
     " dont use "qeibsvt"
     let g:startify_bookmarks =
         \ [
-        \     { "X": "~/.vimrc" },
-        \     { "Y": "~/.bashrc" },
-        \     { "Z": "~/.zshrc" },
+        \     { "x": "~/.vimrc" },
+        \     { "y": "~/.bashrc" },
+        \     { "z": "~/.zshrc" },
+        \     { "d": "~/.dotfiles"},
+        \     { "g": "~/Github"},
         \ ]
     let g:startify_change_to_vcs_root = 0
     " TODO pull ascii art randomly out of file
