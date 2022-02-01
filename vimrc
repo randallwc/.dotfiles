@@ -180,6 +180,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme default
 highlight StatusLine ctermfg=blue ctermbg=white guifg=white guibg=#1e90ff
 highlight StatusLineNC ctermfg=white ctermbg=darkblue guifg=darkblue guibg=white
 highlight VertSplit ctermfg=lightblue ctermbg=white guifg=white guibg=lightblue
