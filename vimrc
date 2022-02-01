@@ -313,10 +313,10 @@ Plug 'https://github.com/mhinz/vim-startify'
         \ '     \/__//__/  \/_/\/_/'
         \ ]
     let g:startify_custom_header = 'startify#pad(g:ascii)'
-    let g:startify_custom_footer = "startify#pad(startify#fortune#boxed())"
+    let g:startify_custom_footer = 'startify#pad(startify#fortune#boxed())'
     let g:startify_fortune_use_unicode = 1
     let g:startify_lists = [
-        \ { 'type': 'dir',       'header': ['   Most Recently Used in '. getcwd()] },
+        \ { 'type': 'dir',       'header': ['   Most Recently Used in '.getcwd()]},
         \ { 'type': 'files',     'header': ['   Most Recently Used']},
         \ { 'type': 'sessions',  'header': ['   Sessions']},
         \ { 'type': 'bookmarks', 'header': ['   Bookmarks']},
