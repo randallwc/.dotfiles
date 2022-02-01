@@ -336,7 +336,7 @@ Plug 'https://github.com/mbbill/undotree', {'on':'UndotreeToggle'}
     let g:undotree_SetFocusWhenToggle = 1
 if exists('##TextYankPost')
     Plug 'machakann/vim-highlightedyank'
-    let g:highlightedyank_highlight_duration = 300
+    let g:highlightedyank_highlight_duration = 100
     highlight HighlightedyankRegion cterm=reverse gui=reverse
 endif
 Plug 'https://github.com/Yggdroot/indentLine', {'on':'IndentLinesToggle'}
