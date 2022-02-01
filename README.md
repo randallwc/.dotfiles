@@ -209,6 +209,9 @@ specific software may be accessed.
 ## quicklook
 - [ ] look at the json quicklook and make it open wider
 
+## aliasrc
+- [ ] make mac aliases only define on macs
+
 ## major
 - [ ]
   [dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
