@@ -112,7 +112,7 @@ macupdate() {
 # get ip
 alias publicip='curl ifconfig.me'
 
-# nibble aliases
+# nibble compile
 nibblec() {
     pushd ~/GitHub/qmk_firmware &&
     if make nullbitsco/nibble:$1
@@ -121,6 +121,8 @@ nibblec() {
     fi
     popd
 }
+
+# nibble directory
 alias nibbled='ghub && cd qmk_firmware/keyboards/nullbitsco/nibble/'
 
 # json format
