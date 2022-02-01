@@ -20,8 +20,6 @@ brew "figlet"
 brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
-# GUI for vim, made for macOS
-brew "macvim"
 # Platform built on V8 to build network applications
 brew "node"
 # Cross-shell prompt for astronauts
@@ -52,6 +50,8 @@ cask "font-jetbrains-mono"
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Text editor
+cask "macvim"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
 # Minimal installer for conda
