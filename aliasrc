@@ -93,20 +93,27 @@ esac
 
 # update and clean up packages on mac
 macupdate() {
-    echo "=====deactivating conda env=====" | fmt -c -w $COLUMNS &&
+    echo "===deactivating conda env===" | fmt -c -w $COLUMNS &&
     conda deactivate &&
-    echo "=====brew commands=====" | fmt -c -w $COLUMNS &&
+    echo "===brew commands===" | fmt -c -w $COLUMNS &&
     brew upgrade &&
     brew cleanup --prune=all &&
     if ! brew doctor
     then
-        echo "=====FAIL=====brew doctor=====" | fmt -c -w $COLUMNS
+        echo "===FAIL===brew doctor===" | fmt -c -w $COLUMNS
     fi
-    echo "=====conda commands=====" | fmt -c -w $COLUMNS &&
+    echo "===conda commands===" | fmt -c -w $COLUMNS &&
     conda activate &&
     conda update --all -y &&
     conda clean --all -y &&
-    echo "=====success=====" | fmt -c -w $COLUMNS
+    echo "===success===" | fmt -c -w $COLUMNS &&
+    brewDeps=$(brew leaves --installed-as-dependency)
+    if [[ $(printf "%s" ${brewDeps} | wc -l) -ne 0 ]]
+    then
+        echo "===uninstall the following===" | fmt -c -w $COLUMNS &&
+        echo ${brewDeps}
+    fi
+    unset brewDeps
 }
 
 # get ip
