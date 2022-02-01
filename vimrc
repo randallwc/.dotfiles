@@ -303,7 +303,6 @@ Plug 'https://github.com/mhinz/vim-startify'
         \     { "g": "~/Github"},
         \ ]
     let g:startify_change_to_vcs_root = 0
-    " TODO pull ascii art randomly out of file
     let g:ascii = [
         \ ' __      __  ______',
         \ '/\ \  __/\ \/\  __  \',
