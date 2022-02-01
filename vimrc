@@ -330,7 +330,7 @@ Plug 'https://github.com/mhinz/vim-startify'
 Plug 'https://github.com/junegunn/vim-peekaboo'
     let g:peekaboo_delay=500
 Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
-Plug 'https://github.com/mbbill/undotree'
+Plug 'https://github.com/mbbill/undotree', {'on':'UndotreeToggle'}
     let g:undotree_WindowLayout = 2
     let g:undotree_ShortIndicators = 1
     nnoremap U :UndotreeToggle<cr>
