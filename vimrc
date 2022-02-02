@@ -222,15 +222,17 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://vim.fandom.com/wiki/Remove_unwanted_spaces
 function! TrimWhiteSpace()
-    :echom "trimming whitespace"
-    %s/\s*$//
+    echom "trimming whitespace"
+    silent %s/\s*$//
     ''
 endfunction
+command TrimWhiteSpace :call TrimWhiteSpace()
 function! RemoveCarriageReturn()
-    :echom "removing carriage returns"
-    %s/\r*$//
+    echom "removing carriage returns"
+    silent %s/\r*$//
     ''
 endfunction
+command RemoveCarriageReturn :call RemoveCarriageReturn()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" PLUGINS
