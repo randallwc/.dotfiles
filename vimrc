@@ -13,45 +13,37 @@
 " https://vimeo.com/user1690209/videos
 " (vim script book)
 " https://learnvimscriptthehardway.stevelosh.com/
+" (https://spacevim.org/)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" look at spacevim
-    " (https://spacevim.org/)
-    " (https://github.com/ctjhoa/spacevim/blob/master/PLUGINS.md)
-
-" syntax highlighting in vim
-    " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
-" add easy motion
-    " (https://github.com/easymotion/vim-easymotion)
-" add syntastic a syntax checker
-    " (https://github.com/vim-syntastic/syntastic)
-" add vinegar.vim for moving around in file tree '-' == open file ex
-    " (https://github.com/tpope/vim-vinegar)
-" make your own text objects
-    " (https://vimawesome.com/plugin/textobj-user)
-
+" CHOOSE A FUZZY FILE FINDER
 " look at ctrl p plugin
     " (http://kien.github.io/ctrlp.vim/)
 " look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
 
-" look at float terminal (https://github.com/voldikss/vim-floaterm)
-" look at git fugative for like in vim Git and other stuff
-    " (https://github.com/tpope/vim-fugitive)
+" SYNTAX PLUGINS
+" syntax highlighting in vim
+    " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
+" add syntastic a syntax checker
+    " (https://github.com/vim-syntastic/syntastic)
 " look at polyglot for language functionality
     " (https://github.com/sheerun/vim-polyglot)
 " look at coc for code completon and ide stuff
     " (https://github.com/neoclide/coc.nvim)
+
+" MOVING AROUND
+" make your own text objects
+    " (https://vimawesome.com/plugin/textobj-user)
 " look at projectionist for jumping from code to tests
     " (https://github.com/tpope/vim-projectionist)
 " look at vim test for running unit tests within vim
     " (https://github.com/vim-test/vim-test)
+
+" look at float terminal (https://github.com/voldikss/vim-floaterm)
 " look at vim dim inactive windows
     " (https://github.com/blueyed/vim-diminactive)
-
-" maybe look at xml deletion stuff
-    " (https://github.com/whatyouhide/vim-textobj-xmlattr)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
