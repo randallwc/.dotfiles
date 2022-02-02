@@ -343,6 +343,7 @@ Plug 'https://github.com/Yggdroot/indentLine', {'on':'IndentLinesToggle'}
     let g:indentLine_char_list = ['|', '¦', '┆', '┊']
     map <leader>ie :IndentLinesToggle<cr>
 Plug 'https://github.com/rhysd/git-messenger.vim'
+Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/preservim/nerdtree', {'on':'NERDTreeToggle'}
     nnoremap <leader>n :NERDTreeToggle<CR>
 call plug#end()
