@@ -389,6 +389,18 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Badge Font</key>
+			<string>JetBrainsMonoRoman-Bold</string>
+			<key>Badge Max Height</key>
+			<real>0.20000000000000001</real>
+			<key>Badge Max Width</key>
+			<real>0.5</real>
+			<key>Badge Right Margin</key>
+			<real>10</real>
+			<key>Badge Text</key>
+			<string></string>
+			<key>Badge Top Margin</key>
+			<real>10</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
