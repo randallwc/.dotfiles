@@ -115,6 +115,7 @@ set wrap " enable softwrap of words
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" LEADER MAPS
 map <space> <leader>
+let g:mapleader=" "
 nnoremap <leader>vimrc :e $MYVIMRC<cr>
 nnoremap <leader>ls :ls<cr>:b<space>
 nnoremap <leader>sb :below 5new<cr>
@@ -351,4 +352,8 @@ Plug 'https://github.com/preservim/nerdtree', {'on':'NERDTreeToggle'}
             \| endif
     augroup END
 Plug 'https://github.com/junegunn/gv.vim'
+    nmap <leader>gl :GV<cr>
+Plug 'https://github.com/easymotion/vim-easymotion'
+    nmap s <Plug>(easymotion-overwin-f)
+    nmap s <Plug>(easymotion-overwin-f2)
 call plug#end()
