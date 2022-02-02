@@ -144,6 +144,7 @@ xmap <silent> . :normal .<cr>
 " scroll window
 map <s-up> <c-y>
 map <s-down> <c-e>
+nnoremap Y y$
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
