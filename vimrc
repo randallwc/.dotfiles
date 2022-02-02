@@ -358,4 +358,5 @@ Plug 'https://github.com/preservim/nerdtree', {'on':'NERDTreeToggle'}
             \|   execute 'autocmd! nerd_loader'
             \| endif
     augroup END
+Plug 'https://github.com/junegunn/gv.vim'
 call plug#end()
