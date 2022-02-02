@@ -124,7 +124,6 @@ map <space> <leader>
 nnoremap <leader>vimrc :e $MYVIMRC<cr>
 nnoremap <leader>ls :ls<cr>:b<space>
 nnoremap <leader>sb :below 5new<cr>
-nmap <leader>e <esc>:Explore<cr>
 " reselect pasted text
 nmap <leader>gp `[v`]
 nmap <leader>q :q<cr>
@@ -336,4 +335,6 @@ Plug 'https://github.com/Yggdroot/indentLine', {'on':'IndentLinesToggle'}
     let g:indentLine_char_list = ['|', '¦', '┆', '┊']
     map <leader>ie :IndentLinesToggle<cr>
 Plug 'https://github.com/rhysd/git-messenger.vim'
+Plug 'https://github.com/preservim/nerdtree', {'on':'NERDTreeToggle'}
+    nnoremap <leader>n :NERDTreeToggle<CR>
 call plug#end()
