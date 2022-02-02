@@ -354,6 +354,6 @@ Plug 'https://github.com/preservim/nerdtree', {'on':'NERDTreeToggle'}
 Plug 'https://github.com/junegunn/gv.vim'
     nmap <leader>gl :GV<cr>
 Plug 'https://github.com/easymotion/vim-easymotion'
-    nmap s <Plug>(easymotion-overwin-f)
-    nmap s <Plug>(easymotion-overwin-f2)
+    nmap <leader>s <Plug>(easymotion-overwin-f)
+    nmap <leader>S <Plug>(easymotion-overwin-f2)
 call plug#end()
