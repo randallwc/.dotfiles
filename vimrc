@@ -293,7 +293,6 @@ Plug 'https://github.com/mhinz/vim-startify'
         \     { "y": "~/.bashrc" },
         \     { "z": "~/.zshrc" },
         \     { "d": "~/.dotfiles"},
-        \     { "g": "~/Github"},
         \ ]
     let g:startify_change_to_vcs_root = 0
     let g:ascii = [
