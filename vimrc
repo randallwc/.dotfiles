@@ -29,6 +29,8 @@
     " (https://github.com/vim-syntastic/syntastic)
 " add vinegar.vim for moving around in file tree '-' == open file ex
     " (https://github.com/tpope/vim-vinegar)
+" make your own text objects
+    " (https://vimawesome.com/plugin/textobj-user)
 
 " look at ctrl p plugin
     " (http://kien.github.io/ctrlp.vim/)
