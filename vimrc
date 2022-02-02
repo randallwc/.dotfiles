@@ -350,4 +350,12 @@ Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/preservim/nerdtree', {'on':'NERDTreeToggle'}
     nnoremap <leader>n :NERDTreeToggle<CR>
+    augroup nerd_loader
+        autocmd!
+        autocmd BufEnter,BufNew *
+            \  if isdirectory(expand('<amatch>'))
+            \|   call plug#load('nerdtree')
+            \|   execute 'autocmd! nerd_loader'
+            \| endif
+    augroup END
 call plug#end()
