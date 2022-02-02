@@ -59,7 +59,7 @@ $0  # name of the script
 $#  # number of positional parameters
 $$  # pid of the current shell
 $@  # array-like construct of all positional parameters
-printenv
+printenv || env
 ```
 
 ## USERS & PERMS
