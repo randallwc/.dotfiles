@@ -21,12 +21,8 @@
     " (https://spacevim.org/)
     " (https://github.com/ctjhoa/spacevim/blob/master/PLUGINS.md)
 
-" add start page to vim
-    " (https://github.com/mhinz/vim-startify)
-" add nerd tree (https://github.com/preservim/nerdtree)
-    " <leader>n for shortcut (look at video for better one)
-    " syntax highlighting in vim
-        " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
+" syntax highlighting in vim
+    " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
 " add easy motion
     " (https://github.com/easymotion/vim-easymotion)
 " add syntastic a syntax checker
@@ -43,7 +39,6 @@
     " (https://github.com/tpope/vim-fugitive)
 " look at polyglot for language functionality
     " (https://github.com/sheerun/vim-polyglot)
-" look at highlight url (https://github.com/itchyny/vim-highlighturl)
 " look at coc for code completon and ide stuff
     " (https://github.com/neoclide/coc.nvim)
 " look at projectionist for jumping from code to tests
@@ -52,13 +47,9 @@
     " (https://github.com/vim-test/vim-test)
 " look at vim dim inactive windows
     " (https://github.com/blueyed/vim-diminactive)
-" look at undo tree
-    " (https://github.com/mbbill/undotree)
 
 " maybe look at xml deletion stuff
     " (https://github.com/whatyouhide/vim-textobj-xmlattr)
-" maybe look at instant markdown creator
-    " (https://github.com/instant-markdown/vim-instant-markdown)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
