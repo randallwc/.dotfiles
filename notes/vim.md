@@ -207,4 +207,5 @@ gv highlight last highlighted thing
 gi go into insert mode right where you were last in insert mode
 :set spell " check spelling in file
 z= get spelling suggestions
+:w !diff % - " get the diff of current with saved
 ```
