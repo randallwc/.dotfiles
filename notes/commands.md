@@ -81,7 +81,10 @@ awk
 sha
 sha256
 bc # calculator
+nohup command & # run the command in the background and not stop even if you quit
 ```
+
+https://linuxize.com/post/how-to-run-linux-commands-in-background
 
 ## user input
 ```bash
