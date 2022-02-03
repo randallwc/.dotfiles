@@ -126,6 +126,9 @@ nmap <leader>ws <c-w>s
 nmap <leader>wv <c-w>v
 " open empty tab
 nmap <leader>t :tabnew<cr>
+nmap <leader>bn :bnext<cr>
+nmap <leader>bp :bprevious<cr>
+nmap <leader>bd :bdelete<cr>
 "" OTHER MAPS
 " easy window navigation
 map <c-h> <c-w>h
