@@ -291,7 +291,7 @@ Plug 'https://github.com/airblade/vim-gitgutter'
     nmap <leader>gqf :GitGutterQuickFix \| copen<cr>
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/mhinz/vim-startify'
-    " dont use "qeibsvt"
+    " dont use 'qeibsvt'
     let g:startify_bookmarks =
         \ [
         \     { "x": "~/.vimrc" },
