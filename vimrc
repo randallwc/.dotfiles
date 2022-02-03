@@ -124,18 +124,17 @@ nmap <leader>gp `[v`]
 nmap <leader>q :q<cr>
 nmap <leader>ws <c-w>s
 nmap <leader>wv <c-w>v
-" open empty tab
 nmap <leader>t :tabnew<cr>
 nmap <leader>bn :bnext<cr>
 nmap <leader>bp :bprevious<cr>
 nmap <leader>bd :bdelete<cr>
+nmap <leader>/ :nohlsearch<cr>
 "" OTHER MAPS
 " easy window navigation
 map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
-nmap <silent> <leader>/ :nohlsearch<cr>
 " indenting
 inoremap <s-tab> <c-d>
 nnoremap <s-tab> <<
@@ -143,7 +142,7 @@ nnoremap <tab> >>
 vnoremap <s-tab> <gv
 vnoremap <tab> >gv
 " repeat dot macro over a range
-xmap <silent> . :normal .<cr>
+xmap . :normal .<cr>
 " scroll window
 map <s-up> <c-y>
 map <s-down> <c-e>
