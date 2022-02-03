@@ -996,8 +996,10 @@
 			<false/>
 			<key>Send Code When Idle</key>
 			<false/>
-			<key>Send New Output Alert</key>
+			<key>Send Idle Alert</key>
 			<true/>
+			<key>Send New Output Alert</key>
+			<false/>
 			<key>Session Close Undo Timeout</key>
 			<integer>10</integer>
 			<key>Shortcut</key>
