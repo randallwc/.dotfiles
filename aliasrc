@@ -28,16 +28,36 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# my aliases
-# alias sshb='ssh debian@192.168.1.104'
-# alias sshbu='ssh debian@192.168.7.2'
-# alias sshbi='ssh debian@99.0.60.235 -p 22'
-alias sshc='ssh culver9'
-alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
+# NETWORKING ALIASES
+# start a simple http server
+sserver() {
+    local p=8080
+    if [ "$#" -eq 1 ]; then
+        p=$1
+    fi
+    printf "http://%s:%s\n" $(hostname) $p && sudo python3 -m http.server $p
+}
+# get local ip
+alias localip='ipconfig getifaddr en0'
+# mac addresses
+alias macaddrs='arp -a'
+# get ip
+alias publicip='curl ifconfig.me'
 
-# c is now clear
+# ssh aliases
+# beaglebone
+# alias sshbi='ssh debian@$(publicip)'
+# alias sshbl='ssh debian@192.168.1.104'
+# alias sshbu='ssh debian@192.168.7.2'
+# ucla
+alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
+alias sshc='ssh culver9'
+# raspberry pi zero
+alias sshzi='ssh pi@$(publicip)'
+alias sshzl='ssh pi@192.168.1.90'
+alias sshzu='ssh pi@raspberrypi.local'
+
 alias c='clear'
-# e is exit
 alias e='exit'
 
 # alias for quick changing directories
@@ -60,77 +80,66 @@ alias pathu='path | uniq -c'
 alias fpath='echo $FPATH | tr : \\n | sort'
 alias fpathu='fpath | uniq -c'
 
-# NETWORKING ALIASES
-# start a simple http server
-sserver() {
-    local p=8080
-    if [ "$#" -eq 1 ]; then
-        p=$1
-    fi
-    printf "http://%s:%s\n" $(hostname) $p && sudo python3 -m http.server $p
-}
-# get local ip
-alias localip='ipconfig getifaddr en0'
-# mac addresses
-alias macaddrs='arp -a'
-
 # keep display awake
 alias nosleep='caffeinate -d'
 
-# brew deps tree
-alias bdt='brew deps --tree --installed'
-
-# update brew bundle
-alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
-
-# brew leaves
-alias bl='brew leaves'
-
-# replace cat with bat
+# mac only aliases
 case $os in
-    Darwin) command -v bat >/dev/null && alias cat='bat' ;;
+    Darwin)
+        # replace cat with bat
+        command -v bat >/dev/null && alias cat='bat'
+
+        # brew deps tree
+        alias bdt='brew deps --tree --installed'
+
+        # update brew bundle
+        alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
+
+        # brew leaves
+        alias bl='brew leaves'
+
+        # update and clean up packages on mac
+        macupdate() {
+            echo "===deactivating conda env===" | fmt -c -w $COLUMNS &&
+            conda deactivate &&
+            echo "===brew commands===" | fmt -c -w $COLUMNS &&
+            brew update &&
+            brew upgrade &&
+            brew cleanup --prune=all &&
+            if ! brew doctor
+            then
+                echo "===FAIL===brew doctor===" | fmt -c -w $COLUMNS
+            fi
+            echo "===conda commands===" | fmt -c -w $COLUMNS &&
+            conda activate &&
+            conda upgrade conda -y &&
+            conda update --all -y &&
+            conda clean --all -y &&
+            echo "===success===" | fmt -c -w $COLUMNS &&
+            brewDeps=$(brew leaves --installed-as-dependency)
+            if [[ $(printf "%s" ${brewDeps} | wc -l) -ne 0 ]]
+            then
+                echo "===uninstall the following===" | fmt -c -w $COLUMNS &&
+                echo ${brewDeps}
+            fi
+            unset brewDeps
+        }
+
+        # nibble compile
+        nibblec() {
+            pushd ~/GitHub/qmk_firmware &&
+            if make nullbitsco/nibble:$1
+            then
+                lllf *.hex
+            fi
+            popd
+        }
+
+        # nibble directory
+        alias nibbled='ghub && cd qmk_firmware/keyboards/nullbitsco/nibble/'
+
+        ;;
 esac
-
-# update and clean up packages on mac
-macupdate() {
-    echo "===deactivating conda env===" | fmt -c -w $COLUMNS &&
-    conda deactivate &&
-    echo "===brew commands===" | fmt -c -w $COLUMNS &&
-    brew upgrade &&
-    brew cleanup --prune=all &&
-    if ! brew doctor
-    then
-        echo "===FAIL===brew doctor===" | fmt -c -w $COLUMNS
-    fi
-    echo "===conda commands===" | fmt -c -w $COLUMNS &&
-    conda activate &&
-    conda update --all -y &&
-    conda clean --all -y &&
-    echo "===success===" | fmt -c -w $COLUMNS &&
-    brewDeps=$(brew leaves --installed-as-dependency)
-    if [[ $(printf "%s" ${brewDeps} | wc -l) -ne 0 ]]
-    then
-        echo "===uninstall the following===" | fmt -c -w $COLUMNS &&
-        echo ${brewDeps}
-    fi
-    unset brewDeps
-}
-
-# get ip
-alias publicip='curl ifconfig.me'
-
-# nibble compile
-nibblec() {
-    pushd ~/GitHub/qmk_firmware &&
-    if make nullbitsco/nibble:$1
-    then
-        lllf *.hex
-    fi
-    popd
-}
-
-# nibble directory
-alias nibbled='ghub && cd qmk_firmware/keyboards/nullbitsco/nibble/'
 
 # json format
 alias jsonformat='python3 -m json.tool'
