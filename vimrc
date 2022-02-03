@@ -320,6 +320,7 @@ Plug 'https://github.com/mhinz/vim-startify'
         \ { 'type': 'commands',  'header': ['   Commands']},
         \ ]
     let g:startify_session_persistence = 1
+    let g:startify_session_before_save = [ 'silent! tabdo NERDTreeClose' ]
     map <leader>st :Startify<cr>
     map <leader>ss :SSave<cr>
     map <leader>sl :SLoad<cr>
