@@ -138,3 +138,6 @@ esac
 
 # json format
 alias jsonformat='python3 -m json.tool'
+
+# make tree output in color
+alias tree='tree -C'
