@@ -45,17 +45,12 @@ alias macaddrs='arp -a'
 alias publicip='curl ifconfig.me'
 
 # ssh aliases
-# beaglebone
-# alias sshbi='ssh debian@$(publicip)'
-# alias sshbl='ssh debian@192.168.1.104'
-# alias sshbu='ssh debian@192.168.7.2'
 # ucla
 alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
 alias sshc='ssh culver9'
 # raspberry pi zero
 alias sshzi='ssh pi@$(publicip)'
-alias sshzl='ssh pi@192.168.1.90'
-alias sshzu='ssh pi@raspberrypi.local'
+alias sshz='ssh pi@raspberrypi.local'
 
 alias c='clear'
 alias e='exit'
