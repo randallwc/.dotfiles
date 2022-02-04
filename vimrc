@@ -200,8 +200,7 @@ augroup saving_vimrc
 augroup END
 augroup pip_python
     autocmd!
-    autocmd filetype python :echom "expanding tabs in python file"
-    autocmd filetype python set expandtab
+    autocmd filetype python :IndentLinesToggle
 augroup END
 augroup show_trailing_spaces
     autocmd!

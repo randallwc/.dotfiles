@@ -22,6 +22,8 @@ brew "git"
 brew "htop"
 # Platform built on V8 to build network applications
 brew "node"
+# Cross-platform library for audio I/O
+brew "portaudio"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
