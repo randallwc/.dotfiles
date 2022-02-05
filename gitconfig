@@ -47,3 +47,4 @@
     remotes = remote -v
     s = status --show-stash
     ss = status --short
+    sss = status --short --show-stash
