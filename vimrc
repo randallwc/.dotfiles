@@ -148,7 +148,9 @@ xmap . :normal .<cr>
 map <s-up> <c-y>
 map <s-down> <c-e>
 nnoremap Y y$
-nnoremap yil ^yg_
+" inner line
+xnoremap <silent> il <Esc>^vg_
+onoremap <silent> il :<C-U>normal! ^vg_<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
