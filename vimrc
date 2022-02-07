@@ -61,6 +61,7 @@ endif
 "" SET
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set autoindent
+set autoread
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set breakindent " indents word-wrapped lines as much as the parent line
 set colorcolumn=80
