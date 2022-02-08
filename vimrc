@@ -117,7 +117,6 @@ set wrap " enable softwrap of words
 "" LEADER MAPS
 map <space> <leader>
 let g:mapleader=" "
-nnoremap <leader>vimrc :e $MYVIMRC<cr>
 nnoremap <leader>ls :ls<cr>:b<space>
 nnoremap <leader>sb :below 5new<cr>
 " reselect pasted text
@@ -125,11 +124,15 @@ nmap <leader>gp `[v`]
 nmap <leader>q :q<cr>
 nmap <leader>ws <c-w>s
 nmap <leader>wv <c-w>v
+nmap <leader>w= <c-w>=
+nmap <leader>w+ <c-w>+
 nmap <leader>t :tabnew<cr>
 nmap <leader>bn :bnext<cr>
 nmap <leader>bp :bprevious<cr>
 nmap <leader>bd :bdelete<cr>
 nmap <leader>/ :nohlsearch<cr>
+nmap <leader>co :copen<cr>
+nmap <leader>cc :cclose<cr>
 "" OTHER MAPS
 " easy window navigation
 map <c-h> <c-w>h
