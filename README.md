@@ -172,6 +172,12 @@ now on you can either add (dis)allowed programs to the list within the Firewall
 Options or just click on Allow\/Deny, if you get a popup asking you if a
 specific software may be accessed.
 
+# chrome
+
+1. System Preferences > Keyboard > Shortcuts > App Shortcuts > Google Chrome.app
+1. `Enter Full Screen` ^⌘F
+1. `Exit Full Screen` ^⌘F
+
 # TODO
 ## minor
 
