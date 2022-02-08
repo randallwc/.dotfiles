@@ -2,8 +2,8 @@
 # install xcode
 `xcode-select --install`
 
-# [install
-rosetta](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
+# install rosetta
+[here](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
 for M1 chips
 
 `softwareupdate --install-rosetta`
@@ -131,8 +131,8 @@ Folders`
 # Quicklook
 - use Brew to install the quicklook plugins into `~/Library/QuickLook`
 
-## [ql color code on m1
-fix](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
+## ql color code on m1 fix
+[here](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
 
 ## ql stephen fix
 ```bash
@@ -187,8 +187,7 @@ specific software may be accessed.
     - add commands about like clean, doctor, help
 
 ### terminal
-- [ ] [colorized man
-  pages](https://superuser.com/questions/452034/bash-colorized-man-page)
+- [ ] [colorized man pages](https://superuser.com/questions/452034/bash-colorized-man-page)
 
 ### bash
 - [ ] add better tab completion in bash
@@ -196,20 +195,17 @@ specific software may be accessed.
 
 ### vim
 - [ ] fix search in vim to fuzzy search
-- [ ] read this
-  [thing](https://vi.stackexchange.com/questions/12806/configure-which-column-gq-wraps-at)
+- [ ] read this [thing](https://vi.stackexchange.com/questions/12806/configure-which-column-gq-wraps-at)
 
 ### zsh
 - [ ] look into greyed out tab completion in zsh
 - [ ] look into vi mode for zsh ( add visual indicator for insert and command
   mode )
-- [ ]
-  https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
+- [ ] https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
 
 ## quicklook
 - [ ] look at the json quicklook and make it open wider
 
 ## major
-- [ ]
-  [dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
+- [ ] [dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
 - [ ] clean up documentation
