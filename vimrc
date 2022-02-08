@@ -371,4 +371,5 @@ Plug 'https://github.com/junegunn/gv.vim'
 Plug 'https://github.com/easymotion/vim-easymotion'
     nmap s <Plug>(easymotion-overwin-f)
     nmap s <Plug>(easymotion-overwin-f2)
+Plug 'https://github.com/tpope/vim-abolish'
 call plug#end()
