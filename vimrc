@@ -237,6 +237,12 @@ function! RemoveCarriageReturn()
     ''
 endfunction
 command RemoveCarriageReturn :call RemoveCarriageReturn()
+function! CombineWhiteSpace()
+    echom "combining white space"
+    silent v/./,/./-j
+    ''
+endfunction
+command CombineWhiteSpace :call CombineWhiteSpace()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" PLUGINS
