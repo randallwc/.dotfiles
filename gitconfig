@@ -65,7 +65,6 @@
     shs = show --stat
     sl = shortlog
     ss = status --short
-    sss = status --short --show-stash
     st = stash
     stl = stash list
     sts = stash show -p
