@@ -215,3 +215,4 @@ specific software may be accessed.
 ## major
 - [ ] [dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
 - [ ] clean up documentation
+- [ ] QMK leader key
