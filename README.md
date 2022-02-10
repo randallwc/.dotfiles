@@ -192,10 +192,6 @@ specific software may be accessed.
  - [ ] add hyperlinks to notes
  - [ ] clean up notes
 
-### package managers
-- [ ] add info about `brew`, `conda`, and other package managerso
-    - add commands about like clean, doctor, help
-
 ### terminal
 - [ ] [colorized man pages](https://superuser.com/questions/452034/bash-colorized-man-page)
 
