@@ -178,6 +178,10 @@ specific software may be accessed.
 1. `Enter Full Screen` ^⌘F
 1. `Exit Full Screen` ^⌘F
 
+# do not disturb
+1. System Preferences > Keyboard > Shortcuts > Mission Control
+1. Turn Do Not Disturb On/Off ⌃⌥⌘D
+
 # TODO
 ## minor
 
