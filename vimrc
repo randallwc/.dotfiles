@@ -19,31 +19,26 @@
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CHOOSE A FUZZY FILE FINDER
-" look at ctrl p plugin
-    " (http://kien.github.io/ctrlp.vim/)
+" look at ctrl p plugin (http://kien.github.io/ctrlp.vim/)
 " look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
 
 " SYNTAX PLUGINS
-" syntax highlighting in vim
-    " (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
-" add syntastic a syntax checker
-    " (https://github.com/vim-syntastic/syntastic)
-" look at polyglot for language functionality
-    " (https://github.com/sheerun/vim-polyglot)
-" look at coc for code completon and ide stuff
-    " (https://github.com/neoclide/coc.nvim)
+" syntax highlighting in vim (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
+" add syntastic a syntax checker (https://github.com/vim-syntastic/syntastic)
+" look at polyglot for language functionality (https://github.com/sheerun/vim-polyglot)
+
+" CODE COMPLETION
+" look at coc for code completon and ide stuff (https://github.com/neoclide/coc.nvim)
+" LSP language completion
+" CTags GNU global tags
 
 " MOVING AROUND
-" make your own text objects
-    " (https://vimawesome.com/plugin/textobj-user)
-" look at projectionist for jumping from code to tests
-    " (https://github.com/tpope/vim-projectionist)
-" look at vim test for running unit tests within vim
-    " (https://github.com/vim-test/vim-test)
+" make your own text objects (https://vimawesome.com/plugin/textobj-user)
+" look at projectionist for jumping from code to tests (https://github.com/tpope/vim-projectionist)
+" look at vim test for running unit tests within vim (https://github.com/vim-test/vim-test)
 
 " look at float terminal (https://github.com/voldikss/vim-floaterm)
-" look at vim dim inactive windows
-    " (https://github.com/blueyed/vim-diminactive)
+" look at vim dim inactive windows (https://github.com/blueyed/vim-diminactive)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
