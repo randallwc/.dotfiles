@@ -192,8 +192,9 @@ set tabstop=4 shiftwidth=4 expandtab|retab
 " CONTROL
 ^g show file name
 ^n auto complete ^E to select
-^a to increment numbers
+^a to increment numbers (visual/normal)
 g^a to increment numbers in visual mode and increase each line by line
+^a to insert last inserted text (insert)
 ^x to decrement a number in a line
 ^d for command completion
 c to delete word then enter insert mode
