@@ -122,8 +122,10 @@ WINDOWS
 ^w =                   make all windows equal
 ^w [num] +             increase window height
 ^w [num] -             decrease window height
+[num]^w _              set current window height to N
 ^w [num] <             decrease current window width N columns
 ^w [num] >             increase current window width N columns
+[num]^w |              set current window width to N
 ^w H                   move current window to the left
 ^w J                   move current window to the bottom
 ^w K                   move current window to the top

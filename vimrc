@@ -115,7 +115,8 @@ set wrap " enable softwrap of words
 map <space> <leader>
 let g:mapleader=" "
 nnoremap <leader>ls :ls<cr>:b<space>
-nnoremap <leader>sb :below 5new<cr>
+nnoremap <leader>sb :below botright 5new<cr>
+nnoremap <leader>te :below botright term<cr>
 " reselect pasted text
 nmap <leader>gp `[v`]
 nmap <leader>q :q<cr>
@@ -123,7 +124,7 @@ nmap <leader>ws <c-w>s
 nmap <leader>wv <c-w>v
 nmap <leader>w= <c-w>=
 nmap <leader>w+ <c-w>+
-nmap <leader>t :tabnew<cr>
+nmap <leader>tn :tabnew<cr>
 nmap <leader>bn :bnext<cr>
 nmap <leader>bp :bprevious<cr>
 nmap <leader>bd :bdelete<cr>
