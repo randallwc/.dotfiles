@@ -93,8 +93,8 @@ zt                      put cursor at top of screen
 
 INSERT MODE
 
-^-t                     indents in insert mode
-^-d                     unindents in insert mode
+^t                     indents in insert mode
+^d                     unindents in insert mode
 
 i                       insert
 I                       insert at begining of line
@@ -115,26 +115,26 @@ gU                      make uppercase
 !!sh                    runs the current line in shell
 
 WINDOWS
-^-w w                   switch windows
-^-w [number]            switch to [number] tab
-^-w [hjkl<^v>]          switch to tab pointed to
-^-w t                   go to top window
-^-w =                   make all windows equal
-^-w [num] +             increase window height
-^-w [num] -             decrease window height
-^-w [num] <             decrease current window width N columns
-^-w [num] >             increase current window width N columns
-^-w H                   move current window to the left
-^-w J                   move current window to the bottom
-^-w K                   move current window to the top
-^-w L                   move current window to the right
-^-w P                   go to previous window
-^-w c                   close window
-^-w q                   quit current window
-^-w o                   close all but current window
-^-w r                   rotate windows downward
-^-w s                   split window horizontally
-^-w v                   split window vertically
+^w w                   switch windows
+^w [number]            switch to [number] tab
+^w [hjkl<^v>]          switch to tab pointed to
+^w t                   go to top window
+^w =                   make all windows equal
+^w [num] +             increase window height
+^w [num] -             decrease window height
+^w [num] <             decrease current window width N columns
+^w [num] >             increase current window width N columns
+^w H                   move current window to the left
+^w J                   move current window to the bottom
+^w K                   move current window to the top
+^w L                   move current window to the right
+^w P                   go to previous window
+^w c                   close window
+^w q                   quit current window
+^w o                   close all but current window
+^w r                   rotate windows downward
+^w s                   split window horizontally
+^w v                   split window vertically
 
 TABS
 gt      next tab
