@@ -29,6 +29,7 @@
 
 " CODE COMPLETION
 " look at coc for code completon and ide stuff (https://github.com/neoclide/coc.nvim)
+" You Complete Me (https://github.com/ycm-core/YouCompleteMe)
 " LSP language completion
 " CTags GNU global tags
 
@@ -39,6 +40,7 @@
 
 " look at float terminal (https://github.com/voldikss/vim-floaterm)
 " look at vim dim inactive windows (https://github.com/blueyed/vim-diminactive)
+" look at tagbar a class outline viewer for Vim (https://github.com/preservim/tagbar)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
