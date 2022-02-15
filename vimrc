@@ -276,10 +276,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-commentary'
-    augroup commentary
-        autocmd!
-        autocmd FileType c setlocal commentstring=//\ %s
-    augroup END
 Plug 'https://github.com/junegunn/vim-easy-align'
     xmap ga <Plug>(EasyAlign)
     nmap ga <Plug>(EasyAlign)
@@ -371,3 +367,9 @@ Plug 'https://github.com/tpope/vim-abolish'
 Plug 'https://github.com/AndrewRadev/splitjoin.vim', {'for': ['python','c','sh']}
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 call plug#end()
+
+" moved this outside of plug because it was not working otherwise
+augroup tpope_commentary
+    autocmd!
+    autocmd FileType c setlocal commentstring=//\ %s
+augroup END
