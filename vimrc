@@ -125,8 +125,6 @@ nmap <leader>wv <c-w>v
 nmap <leader>w= <c-w>=
 nmap <leader>w+ <c-w>+
 nmap <leader>tn :tabnew<cr>
-nmap <leader>bn :bnext<cr>
-nmap <leader>bp :bprevious<cr>
 nmap <leader>bd :bdelete<cr>
 nmap <leader>/ :nohlsearch<cr>
 nmap <leader>co :copen<cr>
