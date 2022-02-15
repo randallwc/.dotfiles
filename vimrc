@@ -369,4 +369,5 @@ Plug 'https://github.com/easymotion/vim-easymotion'
     nmap s <Plug>(easymotion-overwin-f2)
 Plug 'https://github.com/tpope/vim-abolish'
 Plug 'https://github.com/AndrewRadev/splitjoin.vim', {'for': ['python','c','sh']}
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 call plug#end()
