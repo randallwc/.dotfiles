@@ -53,8 +53,8 @@ int   graph_refresh     = 1000;  // In milliseconds, determines the graph-line f
 int   icon_med_wpm      = 50;    // WPM required to display the medium snail
 int   icon_fast_wpm     = 72;    // WPM required to display the fast snail
 // Layer names:  Should be exactly 5 characters in length if vertical display, or 6 characters if horizontal
-#define MA_LAYER_NAME     "QWERTY" // Layer _MA name
-#define L1_LAYER_NAME     "FUNC  " // Layer _L1 name
+#define MA_LAYER_NAME     " will " // Layer _MA name
+#define L1_LAYER_NAME     " func " // Layer _L1 name
 #define L2_LAYER_NAME     "NUMPAD" // Layer _L2 name
 #define L3_LAYER_NAME     "FUNCTN" // Layer _L3 name
 /*================================================================================================================*/
