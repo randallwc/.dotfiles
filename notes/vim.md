@@ -110,7 +110,9 @@ P                       paste buffer before cursor
 
 VISUAL MODE
 gu                      make lowercase
+guu                     make linelowercase
 gU                      make uppercase
+gUU                     make line uppercase
 :sort                   sort selected lines
 :sort u                 sort selected lines and delete repeats
 !!sh                    runs the current line in shell
@@ -185,12 +187,24 @@ COMMANDS
 
 CONTROL COMMANDS
 ^a                      to increment numbers (visual/normal)
-^a                      to insert last inserted text (insert)
 ^d                      for command completion
 ^g                      show file name
-^n                      auto complete ^E to select
 ^x                      to decrement a number in a line
 
+AUTO COMPLETION
+^a                      to insert last inserted text (insert)
+SIMPLE WORD COMPLETION
+^n                      auto complete (^E to not select anything)
+^p                      auto complete previous
+TAG COMPLETION (ctags)
+^x^]                    using ctags you can complete in relation to them
+FILENAME COMPLETION
+^c^f                    complete paths relative to the current working directory
+CONTEXT-AWARE WORD COMPLETION
+^x^p                    it will complete repeated sentences backward
+^x^n                    it will complete repeated sentences forward
+CONTEXT-AWARE LINE COMPLETION (Vim's filetype plugins enabled)
+^x^o                    omnicomplete - complete language keywords and built in classes or functions
 
 G COMMANDS
 g??                     do rot13
@@ -214,7 +228,7 @@ zC                      close all folds
 REPLACE COMMANDS
 R                       to replace text
 c                       to delete word then enter insert mode
-cc                      to delete whole line
+cc                      to delete whole line and go into insert mode
 ```
 
 ## PEP
