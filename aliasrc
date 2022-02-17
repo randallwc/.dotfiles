@@ -133,6 +133,12 @@ case $os in
         # nibble directory
         alias nibbled='ghub && cd qmk_firmware/keyboards/nullbitsco/nibble/'
 
+        # enable airport utility
+        alias airport='/Sy*/L*/Priv*/Apple8*/V*/C*/R*/airport'
+
+        # alias to find wifi name
+        alias wifiname='airport -I | grep -E "\s+SSID:"'
+
         ;;
 esac
 
