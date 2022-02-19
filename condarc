@@ -1,2 +1,6 @@
 auto_activate_base: true
 changeps1: false
+channel_priority: strict
+channels:
+  - conda-forge
+  - defaults
