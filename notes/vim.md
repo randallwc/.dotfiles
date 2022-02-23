@@ -53,6 +53,7 @@ G                       end of file
 g;                      jump to place of last edit (will keep going back in edits)
 %                       jump to other bracket
 *                       search for word under cursor
+#                       search for word under cursor backwards
 
 u                       undo
 g-                      undo but contains more states
