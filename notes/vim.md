@@ -121,7 +121,8 @@ gUU                     make line uppercase
 WINDOWS
 ^w w                    switch windows
 ^w [number]             switch to [number] tab
-^w [hjkl<^v>]           switch to tab pointed to
+^w [hjkl]               switch to tab pointed to
+^w [HJKL]               move current window to
 ^w t                    go to top window
 ^w =                    make all windows equal
 ^w [num] +              increase window height
@@ -130,10 +131,6 @@ WINDOWS
 ^w [num] <              decrease current window width N columns
 ^w [num] >              increase current window width N columns
 [num]^w |               set current window width to N
-^w H                    move current window to the left
-^w J                    move current window to the bottom
-^w K                    move current window to the top
-^w L                    move current window to the right
 ^w P                    go to previous window
 ^w c                    close window
 ^w q                    quit current window
@@ -141,6 +138,7 @@ WINDOWS
 ^w r                    rotate windows downward
 ^w s                    split window horizontally
 ^w v                    split window vertically
+^w T                    move current window to new tab
 
 TABS
 gt                      next tab
