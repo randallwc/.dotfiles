@@ -114,9 +114,11 @@ gu                      make lowercase
 guu                     make linelowercase
 gU                      make uppercase
 gUU                     make line uppercase
+gq                      format hightlighted section
 :sort                   sort selected lines
 :sort u                 sort selected lines and delete repeats
 !!sh                    runs the current line in shell
+o                       jump to other side of highlight
 
 WINDOWS
 ^w w                    switch windows
@@ -183,6 +185,8 @@ COMMANDS
 :copen                  open quickfix list
 :cclose                 close quickfix list
 :w !diff % -            get the diff of current with saved
+:make                   run make
+:scriptnames            show what is sourced on startup
 
 CONTROL COMMANDS
 ^a                      to increment numbers (visual/normal)
