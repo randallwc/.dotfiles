@@ -5,6 +5,7 @@ tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "mongodb/brew"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "qmk/qmk"
@@ -28,6 +29,8 @@ brew "portaudio"
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
 # Application launcher and productivity software
@@ -50,6 +53,8 @@ cask "emacs"
 cask "font-jetbrains-mono"
 # Web browser
 cask "google-chrome"
+# Client for the Google Drive storage service
+cask "google-drive"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Text editor
