@@ -29,6 +29,8 @@ brew "portaudio"
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # Quantum Mechanical Keyboard (QMK) Firmware
