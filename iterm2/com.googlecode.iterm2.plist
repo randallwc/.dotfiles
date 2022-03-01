@@ -997,7 +997,7 @@
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Send Idle Alert</key>
-			<true/>
+			<false/>
 			<key>Send New Output Alert</key>
 			<false/>
 			<key>Session Close Undo Timeout</key>
