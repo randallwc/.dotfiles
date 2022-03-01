@@ -366,7 +366,6 @@ Plug 'https://github.com/easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-abolish'
 Plug 'https://github.com/AndrewRadev/splitjoin.vim', {'for': ['python','c','sh']}
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-Plug 'https://github.com/tacahiroy/ctrlp-funky'
 call plug#end()
 
 " moved this outside of plug because it was not working otherwise
