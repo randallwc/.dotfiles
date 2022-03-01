@@ -65,6 +65,8 @@ cask "macvim"
 cask "messenger"
 # Minimal installer for conda
 cask "miniconda"
+# IDE for professional Python development
+cask "pycharm"
 # QuickLook plug-in that renders source code with syntax highlighting
 cask "qlcolorcode"
 # QuickLook generator for Markdown files
