@@ -47,7 +47,7 @@
     dt = difftool
     dw = diff --word-diff=color
     f = fetch
-    fp = fetch --prune
+    fp = fetch --prune --all
     g = grep
     h = help
     l = log --all
