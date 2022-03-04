@@ -1,0 +1,93 @@
+" ~/.ideavimrc
+"     __      __  ______
+"    /\ \  __/\ \/\  __  \
+"    \ \ \/\ \ \ \ \ \_\  \
+"     \ \ \ \ \ \ \ \  _  /
+"      \ \ \_/ \_\ \ \ \\  \
+"       \ \____^___/\ \_\ \_\
+"         \/__//__/  \/_/\/_/
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LINKS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://betterprogramming.pub/the-essential-ideavim-plugins-f939b4325180
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LEADER
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader=' '
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SET
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set number
+set incsearch hlsearch
+set ignorecase smartcase
+set clipboard=unnamed
+set sidescrolloff=10
+set scrolloff=5
+set nu rnu
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGINS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set commentary
+set surround
+set ReplaceWithRegister
+set NERDTree
+    map <leader>n :NERDTreeToggle<cr>
+set argtextobj
+set highlightedyank
+    let g:highlightedyank_highlight_duration = "100"
+    let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MAPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" easy window navigation
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+nnoremap Y y$
+" inner line
+xnoremap <silent> il <Esc>^vg_
+onoremap <silent> il :<C-U>normal! ^vg_<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" IDEA MAPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap [c :action VcsShowPrevChangeMarker<cr>
+nnoremap ]c :action VcsShowNextChangeMarker<cr>
+nnoremap [d :action QuickImplementations<cr>
+nnoremap ]d :action QuickImplementations<cr>
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
+
+" LEADER MAPS
+" nnoremap <leader><leader> :action SearchEverywhere<cr>
+" nnoremap <leader>ff :action FindInPath<cr>
+" nnoremap <leader>fu :action FindUsages<cr>
+" nnoremap <leader>su :action ShowUsages<cr>
+" nnoremap <leader>cv :action ChangeView<cr>
+" nnoremap <leader>bb :action ToggleLineBreakpoint<cr>
+" nnoremap <leader>br :action ViewBreakpoints<cr>
+" nnoremap <leader>ic :action InspectCode<cr>
+" nnoremap <leader>oi :action OptimizeImports<cr>
+" nnoremap <leader>re :action RenameElement<cr>
+" nnoremap <leader>rf :action RenameFile<cr>
+" nnoremap <leader>gq :action ReformatCode<cr>
+" nnoremap <leader>mv :action ActivateMavenProjectsToolWindow<cr>
+" nnoremap <leader>dd :action Debug<cr>
+" nnoremap <leader>dc :action ChooseDebugConfiguration<cr>
+" nnoremap <leader>rr :action Run<cr>
+" nnoremap <leader>rc :action ChooseRunConfiguration<cr>
+" nnoremap <leader>q  :action CloseActiveTab<cr>
+" nnoremap <leader>ga :action GotoAction<cr>
+" nnoremap <leader>gi :action GotoImplementation<cr>
+" nnoremap <leader>gs :action GotoSuperMethod<cr>
+" nnoremap <leader>gd :action GotoDeclaration<cr>
+" nnoremap <leader>gt :action GotoTest<cr>
+" nnoremap <leader>gr :action GotoRelated<cr>
+" nnoremap <leader>gb :action Annotate<cr>
+" nnoremap <leader>tl Vy<cr>:action ActivateTerminalToolWindow<cr>
+" vnoremap <leader>tl y<cr>:action ActivateTerminalToolWindow<cr>
