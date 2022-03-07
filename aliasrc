@@ -58,6 +58,7 @@ alias e='exit'
 # alias for quick changing directories
 alias ghub='cd ~/GitHub/'
 alias ucla='cd ~/Documents/ucla/4th\ yr/2nd\ qtr'
+alias team3='cd ~/GitHub/Team3/'
 alias desk='cd ~/Desktop/'
 alias doc='cd ~/Documents/'
 alias down='cd ~/Downloads/'
