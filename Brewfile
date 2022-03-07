@@ -41,6 +41,8 @@ brew "qmk/qmk/qmk"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Multi-track audio editor and recorder
+cask "audacity"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Scriptable scratchpad for developers
