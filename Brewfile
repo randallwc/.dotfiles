@@ -17,6 +17,8 @@ brew "colordiff"
 brew "cowsay"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
