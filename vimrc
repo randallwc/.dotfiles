@@ -188,6 +188,7 @@ highlight Search guibg=yellow
 highlight IncSearch cterm=bold ctermfg=white ctermbg=172 gui=bold guifg=white guibg=orange
 let g:markdown_fenced_languages = [ 'html', 'python', 'ruby', 'vim', 'bash', 'sh', 'css']
 highlight ColorColumn ctermbg=236 guibg=#4d4d4d
+highlight SpellBad ctermfg=white
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
