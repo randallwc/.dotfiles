@@ -41,7 +41,7 @@ sserver() {
 alias localip='ipconfig getifaddr en0'
 # mac addresses
 alias macaddrs='arp -a'
-# get ip
+# get IP
 alias publicip='curl ifconfig.me'
 
 # ssh aliases
@@ -95,28 +95,47 @@ case $os in
         alias bl='brew leaves'
 
         # update and clean up packages on mac
+        # https://misc.flogisoft.com/bash/tip_colors_and_formatting
+        centerandcolor() {
+            echo -n "\e[1m" && # begin bold
+            case $2 in
+                blue) echo -n "\e[34m" ;;
+                red) echo -n "\e[31m" ;;
+                green) echo -n "\e[32m" ;;
+                dgray) echo -n "\e[90m" ;;
+                lgray) echo -n "\e[37m" ;;
+                *) echo "invalid color" && exit 1 ;;
+            esac
+            echo -n "===$1===" | fmt -c -w $COLUMNS &&
+            echo -n "\e[0m" # end color
+        }
         macupdate() {
-            echo "===deactivating conda env===" | fmt -c -w $COLUMNS &&
+            centerandcolor "deactivating conda environment" dgray &&
             conda deactivate &&
-            echo "===brew commands===" | fmt -c -w $COLUMNS &&
+            centerandcolor "brew commands" dgray &&
+            centerandcolor "brew update" blue &&
             brew update &&
+            centerandcolor "brew upgrade" blue &&
             brew upgrade &&
+            centerandcolor "brew cleanup" blue &&
             brew cleanup --prune=all &&
+            centerandcolor "brew doctor" blue &&
             if ! brew doctor
             then
-                echo "===FAIL===brew doctor===" | fmt -c -w $COLUMNS
+                centerandcolor "FAIL brew doctor" red &&
             fi
-            echo "===conda commands===" | fmt -c -w $COLUMNS &&
+            centerandcolor "conda commands" dgray &&
             conda activate &&
-            conda upgrade conda -y &&
+            centerandcolor "conda update" blue &&
             conda update --all -y &&
+            centerandcolor "conda clean" blue &&
             conda clean --all -y &&
-            echo "===success===" | fmt -c -w $COLUMNS &&
+            centerandcolor "success" green &&
             brewDeps=$(brew leaves --installed-as-dependency)
             if [[ $(printf "%s" ${brewDeps} | wc -l) -ne 0 ]]
             then
-                echo "===uninstall the following===" | fmt -c -w $COLUMNS &&
-                echo ${brewDeps}
+                centerandcolor "uninstall the following" red &&
+                echo ${brewDeps} &&
             fi
             unset brewDeps
         }
@@ -137,7 +156,7 @@ case $os in
         # enable airport utility
         alias airport='/Sy*/L*/Priv*/Apple8*/V*/C*/R*/airport'
 
-        # alias to find wifi name
+        # alias to find WiFi name
         alias wifiname='airport -I | grep -E "\s+SSID:"'
 
         ;;
