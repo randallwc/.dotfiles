@@ -24,7 +24,8 @@
     defaultBranch = main
 [alias]
     a = add
-    aa = add .
+    aa = add -A
+    ad = add .
     ai = add -i
     alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
     ap = add -p

@@ -167,3 +167,6 @@ alias jsonformat='python3 -m json.tool'
 
 # make tree output in color
 alias tree='tree -C'
+
+# cd to git current git root
+alias gr='cd $(git rev-parse --show-toplevel)'
