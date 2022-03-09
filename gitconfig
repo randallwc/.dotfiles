@@ -48,6 +48,7 @@
     dt = difftool
     dw = diff --word-diff=color
     f = fetch
+    fa = fetch --all
     fp = fetch --prune --all
     g = grep
     h = help
@@ -60,6 +61,7 @@
     mt = mergetool
     p = push
     pl = pull
+    pla = pull --all
     r = reset
     remotes = remote -v
     s = status --show-stash
