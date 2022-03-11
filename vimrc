@@ -262,8 +262,8 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" VIM PLUG
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://github.com/junegunn/vim-plug/
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -277,7 +277,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-commentary'
-Plug 'https://github.com/junegunn/vim-easy-align'
+Plug 'https://github.com/junegunn/vim-easy-align', {'on':'<Plug>(EasyAlign)'}
     xmap ga <Plug>(EasyAlign)
     nmap ga <Plug>(EasyAlign)
 Plug 'https://github.com/nixon/vim-vmath'
@@ -345,7 +345,8 @@ Plug 'https://github.com/Yggdroot/indentLine', {'on':'IndentLinesToggle'}
     let g:indentLine_enabled = 0
     let g:indentLine_char_list = ['|', '¦', '┆', '┊']
     map <leader>ie :IndentLinesToggle<cr>
-Plug 'https://github.com/rhysd/git-messenger.vim'
+Plug 'https://github.com/rhysd/git-messenger.vim', {'on':'<Plug>(git-messenger)'}
+    nmap <leader>gm <Plug>(git-messenger)
 Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'https://github.com/tpope/vim-fugitive'
@@ -370,6 +371,9 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/vim-scripts/argtextobj.vim'
 call plug#end()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" FIXES
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " moved this outside of plug because it was not working otherwise
 augroup tpope_commentary
     autocmd!
