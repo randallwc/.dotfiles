@@ -53,6 +53,8 @@ cask "ccleaner"
 cask "cyberduck"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerized applications and microservices
+cask "docker"
 # Text editor
 cask "emacs"
 # Typeface made for developers
