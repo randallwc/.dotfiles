@@ -27,6 +27,8 @@ brew "htop"
 brew "node"
 # Cross-platform library for audio I/O
 brew "portaudio"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
+brew "prettier"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
@@ -47,8 +49,6 @@ cask "audacity"
 cask "balenaetcher"
 # Scriptable scratchpad for developers
 cask "boop"
-# Remove junk and unused files
-cask "ccleaner"
 # Server and cloud storage browser
 cask "cyberduck"
 # Voice and text chat software
@@ -63,6 +63,7 @@ cask "font-jetbrains-mono"
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
+cask "ipynb-quicklook"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Text editor
@@ -71,8 +72,8 @@ cask "macvim"
 cask "messenger"
 # Minimal installer for conda
 cask "miniconda"
-# IDE for Python programming - Community Edition
-cask "pycharm-ce"
+# IDE for professional Python development
+cask "pycharm"
 # QuickLook plug-in that renders source code with syntax highlighting
 cask "qlcolorcode"
 # QuickLook generator for Markdown files
