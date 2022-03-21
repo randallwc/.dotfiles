@@ -39,7 +39,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______)
 };
 
+static uint16_t key_timer;
+static void refresh_rgb(void);
+static void check_rgb_timeout(void);
+bool is_rgb_timeout = false;
+
+void refresh_rgb() {
+  key_timer = timer_read();
+  if (is_rgb_timeout) {
+    is_rgb_timeout = false;
+    rgblight_wakeup();
+  }
+}
+
+void check_rgb_timeout() {
+  if (!is_rgb_timeout && timer_elapsed(key_timer) > RGBLIGHT_TIMEOUT) {
+    rgblight_suspend();
+    is_rgb_timeout = true;
+  }
+}
+
+void housekeeping_task_user(void) {
+  #ifdef RGBLIGHT_TIMEOUT
+  check_rgb_timeout();
+  #endif
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  #ifdef RGBLIGHT_TIMEOUT
+  if (record->event.pressed) refresh_rgb();
+  #endif
   // Send keystrokes to host keyboard, if connected (see readme)
   process_record_remote_kb(keycode, record);
   switch(keycode) {
@@ -103,18 +132,19 @@ void change_RGB(bool clockwise) {
 }
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
+  #ifdef RGBLIGHT_TIMEOUT
+  refresh_rgb();
+  #endif
   if (layer_state_is(1)) {
     //change RGB settings
     change_RGB(clockwise);
   }
-  else {
-    if (clockwise) {
-      tap_code(KC_VOLU);
+  else if (clockwise) {
+    tap_code(KC_VOLU);
   } else {
-      tap_code(KC_VOLD);
-    }
+    tap_code(KC_VOLD);
   }
-    return true;
+  return true;
 }
 
 void matrix_init_user(void) {
