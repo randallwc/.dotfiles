@@ -11,12 +11,16 @@ tap "osx-cross/avr"
 tap "qmk/qmk"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Remove large files or passwords from Git history like git-filter-branch
+brew "bfg"
 # Color-highlighted diff(1) output
 brew "colordiff"
 # Configurable talking characters in ASCII art
 brew "cowsay"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+# CLI program that accepts piped input and presents files for selection
+brew "fpp"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -35,6 +39,8 @@ brew "starship"
 brew "tree"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
+# Watch files and take action when they change
+brew "watchman"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # Quantum Mechanical Keyboard (QMK) Firmware
