@@ -19,7 +19,6 @@
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CHOOSE A FUZZY FILE FINDER
-" look at ctrl p plugin (http://kien.github.io/ctrlp.vim/)
 " look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
 
 " SYNTAX PLUGINS
@@ -27,19 +26,11 @@
 " add syntastic a syntax checker (https://github.com/vim-syntastic/syntastic)
 " look at polyglot for language functionality (https://github.com/sheerun/vim-polyglot)
 
-" CODE COMPLETION
-" look at coc for code completon and ide stuff (https://github.com/neoclide/coc.nvim)
-" You Complete Me (https://github.com/ycm-core/YouCompleteMe)
-" LSP language completion
-" CTags GNU global tags
-
 " MOVING AROUND
 " make your own text objects (https://vimawesome.com/plugin/textobj-user)
 " look at projectionist for jumping from code to tests (https://github.com/tpope/vim-projectionist)
 " look at vim test for running unit tests within vim (https://github.com/vim-test/vim-test)
 
-" look at float terminal (https://github.com/voldikss/vim-floaterm)
-" look at vim dim inactive windows (https://github.com/blueyed/vim-diminactive)
 " look at tagbar a class outline viewer for Vim (https://github.com/preservim/tagbar)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -186,7 +177,15 @@ highlight LineNrAbove ctermfg=darkgrey guifg=#696969
 highlight LineNrBelow ctermfg=darkgrey guifg=#696969
 highlight Search guibg=yellow
 highlight IncSearch cterm=bold ctermfg=white ctermbg=172 gui=bold guifg=white guibg=orange
-let g:markdown_fenced_languages = [ 'html', 'python', 'ruby', 'vim', 'bash', 'sh', 'css']
+let g:markdown_fenced_languages = [
+            \ 'html',
+            \ 'python',
+            \ 'ruby',
+            \ 'vim',
+            \ 'bash',
+            \ 'sh',
+            \ 'css',
+            \ ]
 highlight ColorColumn ctermbg=236 guibg=#4d4d4d
 highlight SpellBad ctermfg=white
 
