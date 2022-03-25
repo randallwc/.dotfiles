@@ -70,12 +70,15 @@ set linebreak " wrap long lines
 set list " show hidden chars
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set nofoldenable " files not folded on open
+set nowrap " disable softwrap of words
 set path+=** " search down into subfolders
 set rnu nu
 set ruler " show percent down page " useless with statusline
 set scrolloff=5 " keep a certain ammount of context
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=4
+set shortmess+=c
+set shortmess-=S
 set showbreak=↪\ "show line wrap
 set showcmd " show command which is being typed
 set showmatch " set show matching parenthesis
@@ -95,9 +98,9 @@ set undodir=$HOME/.vim/undo// " where to save undo histories
 set undofile " save undos after file closes
 set undolevels=1000 " how many undos
 set undoreload=10000 " number of lines to save
+set updatetime=300
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " display all matching files when we tab complete
-set wrap " enable softwrap of words
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" MAPS
@@ -188,6 +191,12 @@ let g:markdown_fenced_languages = [
             \ ]
 highlight ColorColumn ctermbg=236 guibg=#4d4d4d
 highlight SpellBad ctermfg=white
+highlight Pmenu guibg=#d7e5dc gui=NONE ctermbg=darkgrey ctermfg=lightgrey
+highlight PmenuSel guibg=#b7c7b7 gui=NONE ctermfg=lightgrey ctermbg=blue
+highlight PmenuSbar guibg=#bcbcbc ctermfg=magenta
+highlight PmenuThumb guibg=#585858 ctermbg=lightgrey
+highlight FgCocErrorFloatBgCocFloating cterm=bold ctermfg=red ctermbg=darkgrey guifg=#ff0000 guibg=#d7e5dc
+highlight FgCocHintFloatBgCocFloating cterm=bold ctermfg=lightblue ctermbg=darkgrey guifg=#15aabf guibg=#d7e5dc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
@@ -272,108 +281,249 @@ endif
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
-" start vim plug list
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/tpope/vim-surround'
-Plug 'https://github.com/tpope/vim-commentary'
-Plug 'https://github.com/junegunn/vim-easy-align', {'on':'<Plug>(EasyAlign)'}
-    xmap ga <Plug>(EasyAlign)
-    nmap ga <Plug>(EasyAlign)
-Plug 'https://github.com/nixon/vim-vmath'
-    vmap <expr> ++ VMATH_YankAndAnalyse()
-    nmap ++ vip++
-Plug 'https://github.com/ap/vim-css-color'
+Plug 'https://github.com/Yggdroot/indentLine',       {'on':'IndentLinesToggle'}
 Plug 'https://github.com/airblade/vim-gitgutter'
-    highlight! link SignColumn LineNr
-    set foldtext=gitgutter#fold#foldtext()
-    highlight GitGutterAdd cterm=bold ctermfg=green gui=bold guifg=green
-    highlight GitGutterChange cterm=bold ctermfg=214 gui=bold guifg=orange
-    highlight GitGutterDelete cterm=bold ctermfg=red gui=bold guifg=red
-    let g:gitgutter_sign_modified_removed = '±'
-    nmap <leader>gqf :GitGutterQuickFix \| copen<cr>
+Plug 'https://github.com/ap/vim-css-color'
 Plug 'https://github.com/cespare/vim-toml'
-Plug 'https://github.com/mhinz/vim-startify'
-    " dont use 'qeibsvt'
-    let g:startify_bookmarks =
-        \ [
-        \     { "x": "~/.vimrc" },
-        \     { "y": "~/.bashrc" },
-        \     { "z": "~/.zshrc" },
-        \     { "d": "~/.dotfiles"},
-        \ ]
-    let g:startify_change_to_vcs_root = 0
-    let g:ascii = [
-        \ ' __      __  ______',
-        \ '/\ \  __/\ \/\  __  \',
-        \ '\ \ \/\ \ \ \ \ \_\  \',
-        \ ' \ \ \ \ \ \ \ \  _  /',
-        \ '  \ \ \_/ \_\ \ \ \\  \',
-        \ '   \ \____^___/\ \_\ \_\',
-        \ '     \/__//__/  \/_/\/_/'
-        \ ]
-    let g:startify_custom_header = 'startify#pad(g:ascii)'
-    let g:startify_custom_footer = 'startify#pad(startify#fortune#boxed())'
-    let g:startify_fortune_use_unicode = 1
-    let g:startify_lists = [
-        \ { 'type': 'dir',       'header': ['   Most Recently Used in '.getcwd()]},
-        \ { 'type': 'files',     'header': ['   Most Recently Used']},
-        \ { 'type': 'sessions',  'header': ['   Sessions']},
-        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']},
-        \ { 'type': 'commands',  'header': ['   Commands']},
-        \ ]
-    let g:startify_session_persistence = 1
-    let g:startify_session_before_save = [ 'silent! tabdo NERDTreeClose' ]
-    map <leader>st :Startify<cr>
-    map <leader>ss :SSave<cr>
-    map <leader>sl :SLoad<cr>
-Plug 'https://github.com/junegunn/vim-peekaboo'
-    let g:peekaboo_delay=500
-Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
-Plug 'https://github.com/mbbill/undotree', {'on':'UndotreeToggle'}
-    let g:undotree_WindowLayout = 2
-    let g:undotree_ShortIndicators = 1
-    nnoremap U :UndotreeToggle<cr>
-    let g:undotree_SetFocusWhenToggle = 1
-if exists('##TextYankPost')
-    Plug 'machakann/vim-highlightedyank'
-    let g:highlightedyank_highlight_duration = 100
-    highlight HighlightedyankRegion cterm=reverse gui=reverse
-endif
-Plug 'https://github.com/Yggdroot/indentLine', {'on':'IndentLinesToggle'}
-    autocmd! User indentLine doautocmd indentLine Syntax
-    let g:indentLine_enabled = 0
-    let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-    map <leader>ie :IndentLinesToggle<cr>
-Plug 'https://github.com/rhysd/git-messenger.vim', {'on':'<Plug>(git-messenger)'}
-    nmap <leader>gm <Plug>(git-messenger)
-Plug 'https://github.com/tpope/vim-repeat'
-Plug 'https://github.com/tpope/vim-unimpaired'
-Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'https://github.com/preservim/nerdtree', {'on':'NERDTreeToggle'}
-    nnoremap <leader>n :NERDTreeToggle<CR>
-    augroup nerd_loader
-        autocmd!
-        autocmd BufEnter,BufNew *
-            \  if isdirectory(expand('<amatch>'))
-            \|   call plug#load('nerdtree')
-            \|   execute 'autocmd! nerd_loader'
-            \| endif
-    augroup END
-Plug 'https://github.com/junegunn/gv.vim'
-    nmap <leader>gl :GV<cr>
-Plug 'https://github.com/easymotion/vim-easymotion'
-    nmap s <Plug>(easymotion-overwin-f)
-    nmap s <Plug>(easymotion-overwin-f2)
-Plug 'https://github.com/tpope/vim-abolish'
-Plug 'https://github.com/AndrewRadev/splitjoin.vim', {'for': ['python','c','sh']}
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/easymotion/vim-easymotion'
+Plug 'https://github.com/junegunn/gv.vim'
+Plug 'https://github.com/junegunn/vim-easy-align',   {'on':'<Plug>(EasyAlign)'}
+Plug 'https://github.com/junegunn/vim-peekaboo'
+Plug 'https://github.com/machakann/vim-highlightedyank'
+Plug 'https://github.com/mbbill/undotree',           {'on':'UndotreeToggle'}
+Plug 'https://github.com/mhinz/vim-startify'
+Plug 'https://github.com/neoclide/coc.nvim',         {'branch': 'release'}
+Plug 'https://github.com/nixon/vim-vmath'
+Plug 'https://github.com/preservim/nerdtree',        {'on':'NERDTreeToggle'}
+Plug 'https://github.com/rhysd/git-messenger.vim',   {'on':'<Plug>(git-messenger)'}
+Plug 'https://github.com/tpope/vim-abolish'
+Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/tpope/vim-repeat'
+Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/tpope/vim-unimpaired'
+Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
 Plug 'https://github.com/vim-scripts/argtextobj.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" FIXES
+"" PLUGIN SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" moved this outside of plug because it was not working otherwise
+"" EasyAlign
+""""""""""""
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+""""""""""""
+"" VIM-VMATH
+""""""""""""
+vmap <expr> ++ VMATH_YankAndAnalyse()
+nmap ++ vip++
+""""""""""""""""
+"" VIM-GITGUTTER
+""""""""""""""""
+highlight! link SignColumn LineNr
+set foldtext=gitgutter#fold#foldtext()
+highlight GitGutterAdd cterm=bold ctermfg=green gui=bold guifg=green
+highlight GitGutterChange cterm=bold ctermfg=214 gui=bold guifg=orange
+highlight GitGutterDelete cterm=bold ctermfg=red gui=bold guifg=red
+let g:gitgutter_sign_modified_removed = '±'
+nmap <leader>gqf :GitGutterQuickFix \| copen<cr>
+"""""""""""""""
+"" VIM-STARTIFY
+"""""""""""""""
+" dont use 'qeibsvt'
+let g:startify_bookmarks =
+    \ [
+    \     { "x": "~/.vimrc" },
+    \     { "y": "~/.bashrc" },
+    \     { "z": "~/.zshrc" },
+    \     { "d": "~/.dotfiles"},
+    \ ]
+let g:startify_change_to_vcs_root = 0
+let g:ascii = [
+    \ ' __      __  ______',
+    \ '/\ \  __/\ \/\  __  \',
+    \ '\ \ \/\ \ \ \ \ \_\  \',
+    \ ' \ \ \ \ \ \ \ \  _  /',
+    \ '  \ \ \_/ \_\ \ \ \\  \',
+    \ '   \ \____^___/\ \_\ \_\',
+    \ '     \/__//__/  \/_/\/_/'
+    \ ]
+let g:startify_custom_header = 'startify#pad(g:ascii)'
+let g:startify_custom_footer = 'startify#pad(startify#fortune#boxed())'
+let g:startify_fortune_use_unicode = 1
+let g:startify_lists = [
+    \ { 'type': 'dir', 'header': ['   Most Recently Used in '.getcwd()]},
+    \ { 'type': 'files', 'header': ['   Most Recently Used']},
+    \ { 'type': 'sessions', 'header': ['   Sessions']},
+    \ { 'type': 'bookmarks', 'header': ['   Bookmarks']},
+    \ { 'type': 'commands', 'header': ['   Commands']},
+    \ ]
+let g:startify_session_persistence = 1
+let g:startify_session_before_save = [ 'silent! tabdo NERDTreeClose' ]
+map <leader>st :Startify<cr>
+map <leader>ss :SSave<cr>
+map <leader>sl :SLoad<cr>
+"""""""""""""""
+"" VIM-PEEKABOO
+"""""""""""""""
+let g:peekaboo_delay=500
+"""""""""""
+"" UNDOTREE
+"""""""""""
+let g:undotree_WindowLayout = 2
+let g:undotree_ShortIndicators = 1
+nnoremap U :UndotreeToggle<cr>
+let g:undotree_SetFocusWhenToggle = 1
+""""""""""""""""""
+"" HIGHLIGHTEDYANK
+""""""""""""""""""
+let g:highlightedyank_highlight_duration = 100
+highlight HighlightedyankRegion cterm=reverse gui=reverse
+"""""""""""""
+"" INDENTLINE
+"""""""""""""
+autocmd! User indentLine doautocmd indentLine Syntax
+let g:indentLine_enabled = 0
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_bgcolor_term = 0
+map <leader>ie :IndentLinesToggle<cr>
+""""""""""""""""
+"" GIT-MESSENGER
+""""""""""""""""
+nmap <leader>gm <Plug>(git-messenger)
+"""""""""""
+"" nerdtree
+"""""""""""
+nnoremap <leader>n :NERDTreeToggle<CR>
+augroup nerd_loader
+    autocmd!
+    autocmd BufEnter,BufNew *
+        \  if isdirectory(expand('<amatch>'))
+        \|   call plug#load('nerdtree')
+        \|   execute 'autocmd! nerd_loader'
+        \| endif
+augroup END
+"""""""""
+"" GV.VIM
+"""""""""
+nmap <leader>gl :GV<cr>
+"""""""""""""""""
+"" VIM-EASYMOTION
+"""""""""""""""""
+nmap s <Plug>(easymotion-overwin-f)
+nmap s <Plug>(easymotion-overwin-f2)
+"""""""""""
+"" COC.NVIM
+"""""""""""
+let g:coc_global_extensions = [
+            \ 'coc-calc',
+            \ 'coc-clangd',
+            \ 'coc-css',
+            \ 'coc-html',
+            \ 'coc-json',
+            \ 'coc-pairs',
+            \ 'coc-pyright',
+            \ 'coc-sh',
+            \ 'coc-sql',
+            \ 'coc-tsserver',
+            \ 'coc-vimlsp',
+            \ ]
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+    set signcolumn=number
+else
+    set signcolumn=yes
+endif
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" Use <c-space> to trigger completion.
+if has('nvim')
+    inoremap <silent><expr> <c-space> coc#refresh()
+else
+    inoremap <silent><expr> <c-@> coc#refresh()
+endif
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" GoTo code navigation.
+nmap <silent> <leader>cd <Plug>(coc-definition)
+nmap <silent> <leader>ct <Plug>(coc-type-definition)
+nmap <silent> <leader>ci <Plug>(coc-implementation)
+nmap <silent> <leader>cr <Plug>(coc-references)
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
+endfunction
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Symbol renaming.
+nmap <leader>re <Plug>(coc-rename)
+" Formatting selected code.
+xmap <leader>cf  <Plug>(coc-format-selected)
+nmap <leader>cf  <Plug>(coc-format)
+augroup coc_augroup
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder.
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+" Applying codeAction to the selected region.
+" Example: `<leader>caap` for current paragraph
+xmap <leader>ca  <Plug>(coc-codeaction-selected)
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ca  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>cx  <Plug>(coc-fix-current)
+" Run the Code Lens action on the current line.
+nmap <leader>cl  <Plug>(coc-codelens-action)
+" Map function and class text objects
+" NOTE: Requires 'textDocument.documentSymbol'
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
+" Mappings for CoCList
+nnoremap <silent> <leader>cld  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>cle  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>clc  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>clo  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>cls  :<C-u>CocList -I symbols<cr>
+""""""""""""""
+"" Commentary
+""""""""""""""
 augroup tpope_commentary
     autocmd!
     autocmd FileType c setlocal commentstring=//\ %s
