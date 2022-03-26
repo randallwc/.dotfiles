@@ -459,7 +459,7 @@ nmap     <leader>gt <Plug>(coc-type-definition)
 nmap     <leader>gi <Plug>(coc-implementation)
 nmap     <leader>gr <Plug>(coc-references)
 nnoremap K          :call <SID>show_documentation()<CR>
-nmap     <leader>rn <Plug>(coc-rename)
+nmap     <leader>re <Plug>(coc-rename)
 xmap     <leader>cf <Plug>(coc-format-selected)
 nmap     <leader>cf <Plug>(coc-format-selected)
 xmap     <leader>ca <Plug>(coc-codeaction-selected)
