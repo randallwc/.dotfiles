@@ -202,6 +202,7 @@ highlight PmenuSbar guibg=#bcbcbc ctermfg=magenta
 highlight PmenuThumb guibg=#585858 ctermbg=lightgrey
 highlight FgCocErrorFloatBgCocFloating cterm=bold ctermfg=red ctermbg=darkgrey guifg=#ff0000 guibg=#d7e5dc
 highlight FgCocHintFloatBgCocFloating cterm=bold ctermfg=lightblue ctermbg=darkgrey guifg=#15aabf guibg=#d7e5dc
+highlight FgCocWarningFloatBgCocFloating cterm=bold ctermfg=214 ctermbg=242 guifg=#ff922b guibg=#d7e5dc
 highlight CursorColumn cterm=bold term=reverse ctermfg=blue ctermbg=NONE guibg=Grey40
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -294,6 +295,7 @@ Plug 'https://github.com/ap/vim-css-color'
 Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/easymotion/vim-easymotion'
+Plug 'https://github.com/honza/vim-snippets'
 Plug 'https://github.com/junegunn/gv.vim'
 Plug 'https://github.com/junegunn/vim-easy-align',   {'on':'<Plug>(EasyAlign)'}
 Plug 'https://github.com/junegunn/vim-peekaboo'
@@ -427,14 +429,13 @@ nmap s <Plug>(easymotion-overwin-f2)
 """ EXTENSIONS
 """"""""""""""
 let g:coc_global_extensions = [
-            \ 'coc-calc',
             \ 'coc-clangd',
             \ 'coc-css',
             \ 'coc-html',
             \ 'coc-json',
-            \ 'coc-pairs',
             \ 'coc-pyright',
             \ 'coc-sh',
+            \ 'coc-snippets',
             \ 'coc-sql',
             \ 'coc-tsserver',
             \ 'coc-vimlsp',
@@ -442,7 +443,11 @@ let g:coc_global_extensions = [
 """""""""""
 """ KEYMAPS
 """""""""""
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 if has('nvim')
     inoremap <silent><expr> <c-space> coc#refresh()
@@ -451,7 +456,8 @@ else
 endif
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() :
+            \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 nmap     [g         <Plug>(coc-diagnostic-prev)
 nmap     ]g         <Plug>(coc-diagnostic-next)
 nmap     <leader>gd <Plug>(coc-definition)
@@ -462,6 +468,7 @@ nnoremap K          :call <SID>show_documentation()<CR>
 nmap     <leader>re <Plug>(coc-rename)
 xmap     <leader>cf <Plug>(coc-format-selected)
 nmap     <leader>cf <Plug>(coc-format-selected)
+nmap     <leader>cF <Plug>(coc-format)
 xmap     <leader>ca <Plug>(coc-codeaction-selected)
 nmap     <leader>ca <Plug>(coc-codeaction-selected)
 nmap     <leader>ct <Plug>(coc-codeaction)
@@ -489,6 +496,7 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
     vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
     vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
+let g:coc_snippet_next = '<tab>'
 """"""""""""""""""""
 """ HELPER FUNCTIONS
 """"""""""""""""""""
