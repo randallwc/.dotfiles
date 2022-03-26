@@ -101,6 +101,11 @@ set undoreload=10000 " number of lines to save
 set updatetime=300
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " display all matching files when we tab complete
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+    set signcolumn=number
+else
+    set signcolumn=yes
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" MAPS
@@ -419,6 +424,8 @@ nmap s <Plug>(easymotion-overwin-f2)
 """""""""""
 "" COC.NVIM
 """""""""""
+""" EXTENSIONS
+""""""""""""""
 let g:coc_global_extensions = [
             \ 'coc-calc',
             \ 'coc-clangd',
@@ -432,21 +439,11 @@ let g:coc_global_extensions = [
             \ 'coc-tsserver',
             \ 'coc-vimlsp',
             \ ]
-if has("nvim-0.5.0") || has("patch-8.1.1564")
-    set signcolumn=number
-else
-    set signcolumn=yes
-endif
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+"""""""""""
+""" KEYMAPS
+"""""""""""
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-" Use <c-space> to trigger completion.
 if has('nvim')
     inoremap <silent><expr> <c-space> coc#refresh()
 else
@@ -454,17 +451,51 @@ else
 endif
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-" GoTo code navigation.
-nmap <silent> <leader>gd <Plug>(coc-definition)
-nmap <silent> <leader>gt <Plug>(coc-type-definition)
-nmap <silent> <leader>gi <Plug>(coc-implementation)
-nmap <silent> <leader>gr <Plug>(coc-references)
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+nmap     [g         <Plug>(coc-diagnostic-prev)
+nmap     ]g         <Plug>(coc-diagnostic-next)
+nmap     <leader>gd <Plug>(coc-definition)
+nmap     <leader>gt <Plug>(coc-type-definition)
+nmap     <leader>gi <Plug>(coc-implementation)
+nmap     <leader>gr <Plug>(coc-references)
+nnoremap K          :call <SID>show_documentation()<CR>
+nmap     <leader>rn <Plug>(coc-rename)
+xmap     <leader>cf <Plug>(coc-format-selected)
+nmap     <leader>cf <Plug>(coc-format-selected)
+xmap     <leader>ca <Plug>(coc-codeaction-selected)
+nmap     <leader>ca <Plug>(coc-codeaction-selected)
+nmap     <leader>ct <Plug>(coc-codeaction)
+nmap     <leader>cq <Plug>(coc-fix-current)
+nmap     <leader>cl <Plug>(coc-codelens-action)
+nnoremap <leader>cd :<C-u>CocList diagnostics<cr>
+nnoremap <leader>ce :<C-u>CocList extensions<cr>
+nnoremap <leader>cm :<C-u>CocList commands<cr>
+nnoremap <leader>co :<C-u>CocList outline<cr>
+nnoremap <leader>cs :<C-u>CocList -I symbols<cr>
+xmap     if         <Plug>(coc-funcobj-i)
+omap     if         <Plug>(coc-funcobj-i)
+xmap     af         <Plug>(coc-funcobj-a)
+omap     af         <Plug>(coc-funcobj-a)
+xmap     ic         <Plug>(coc-classobj-i)
+omap     ic         <Plug>(coc-classobj-i)
+xmap     ac         <Plug>(coc-classobj-a)
+omap     ac         <Plug>(coc-classobj-a)
+" <C-f> and <C-b> scroll float windows/popups
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
+""""""""""""""""""""
+""" HELPER FUNCTIONS
+""""""""""""""""""""
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 function! s:show_documentation()
     if (index(['vim','help'], &filetype) >= 0)
         execute 'h '.expand('<cword>')
@@ -474,13 +505,11 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
+""""""""""""""
+""" AUTOGROUPS
+""""""""""""""
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-" Formatting selected code.
-xmap <leader>cf  <Plug>(coc-format-selected)
-nmap <leader>cf  <Plug>(coc-format)
 augroup coc_augroup
     autocmd!
     " Setup formatexpr specified filetype(s).
@@ -488,40 +517,6 @@ augroup coc_augroup
     " Update signature help on jump placeholder.
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
-" Applying codeAction to the selected region.
-" Example: `<leader>caap` for current paragraph
-xmap <leader>ca  <Plug>(coc-codeaction-selected)
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ca  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>cx  <Plug>(coc-fix-current)
-" Run the Code Lens action on the current line.
-nmap <leader>cl  <Plug>(coc-codelens-action)
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol'
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
-" Remap <C-f> and <C-b> for scroll float windows/popups.
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
-" Mappings for CoCList
-nnoremap <silent> <leader>cld  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <leader>cle  :<C-u>CocList extensions<cr>
-nnoremap <silent> <leader>clc  :<C-u>CocList commands<cr>
-nnoremap <silent> <leader>clo  :<C-u>CocList outline<cr>
-nnoremap <silent> <leader>cls  :<C-u>CocList -I symbols<cr>
 """"""""""""""
 "" Commentary
 """"""""""""""
