@@ -127,8 +127,6 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 " indenting
-nnoremap <s-tab> <<
-nnoremap <tab> >>
 vnoremap <s-tab> <gv
 vnoremap <tab> >gv
 vnoremap < <gv
