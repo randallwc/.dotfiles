@@ -442,6 +442,7 @@ inoremap <silent><expr> <TAB>
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+let g:coc_snippet_next = '<tab>'
 " if pmenu visible then go up else send <c-h> == backspace
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " TODO -- not working -- close pmenu on escape
@@ -470,7 +471,8 @@ xmap     <leader>ca <Plug>(coc-codeaction-selected)
 nmap     <leader>ca <Plug>(coc-codeaction-selected)
 nmap     <leader>ct <Plug>(coc-codeaction)
 nmap     <leader>cq <Plug>(coc-fix-current)
-nmap     <leader>cl <Plug>(coc-codelens-action)
+" code lens is only neovim because of virtual text
+" nmap     <leader>cl <Plug>(coc-codelens-action)
 nnoremap <leader>cd :<C-u>CocList diagnostics<cr>
 nnoremap <leader>ce :<C-u>CocList extensions<cr>
 nnoremap <leader>cm :<C-u>CocList commands<cr>
@@ -493,7 +495,6 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
     vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
     vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
-let g:coc_snippet_next = '<tab>'
 """"""""""""""""""""
 """ HELPER FUNCTIONS
 """"""""""""""""""""
