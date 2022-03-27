@@ -447,6 +447,7 @@ let g:coc_snippet_next = '<tab>'
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " TODO -- not working -- close pmenu on escape
 " inoremap <expr><Esc> pumvisible() ? "\<C-e>" : "\<esc>"
+" <c-space> will start completion
 if has('nvim')
     inoremap <silent><expr> <c-space> coc#refresh()
 else
