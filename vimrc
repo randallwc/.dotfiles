@@ -135,11 +135,12 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 " indenting
-inoremap <s-tab> <c-d>
 nnoremap <s-tab> <<
 nnoremap <tab> >>
 vnoremap <s-tab> <gv
 vnoremap <tab> >gv
+vnoremap < <gv
+vnoremap > >gv
 " repeat dot macro over a range
 xmap . :normal .<cr>
 " scroll window
@@ -443,12 +444,15 @@ let g:coc_global_extensions = [
 """""""""""
 """ KEYMAPS
 """""""""""
+" tab goes to next match or next snippet jump
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" close pmenu on escape
+inoremap <silent><expr> <esc> pumvisible() ? "\<C-e>" : "\<esc>"
 if has('nvim')
     inoremap <silent><expr> <c-space> coc#refresh()
 else
