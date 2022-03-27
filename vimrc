@@ -110,7 +110,7 @@ nnoremap <leader>sb :below botright 5new<cr>
 nnoremap <leader>te :below botright term<cr>
 " reselect pasted text
 nmap <leader>gp `[v`]
-nmap <leader>q :q<cr>
+nmap <leader>qq :q<cr>
 nmap <leader>ws <c-w>s
 nmap <leader>wv <c-w>v
 nmap <leader>w= <c-w>=
@@ -118,8 +118,8 @@ nmap <leader>w+ <c-w>+
 nmap <leader>tn :tabnew<cr>
 nmap <leader>bd :bdelete<cr>
 nmap <leader>/ :nohlsearch<cr>
-nmap <leader>co :copen<cr>
-nmap <leader>cc :cclose<cr>
+nmap <leader>qo :copen<cr>
+nmap <leader>qc :cclose<cr>
 "" OTHER MAPS
 " easy window navigation
 map <c-h> <c-w>h
@@ -442,9 +442,10 @@ inoremap <silent><expr> <TAB>
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+" if pmenu visible then go up else send <c-h> == backspace
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" close pmenu on escape
-inoremap <silent><expr> <esc> pumvisible() ? "\<C-e>" : "\<esc>"
+" TODO -- not working -- close pmenu on escape
+" inoremap <expr><Esc> pumvisible() ? "\<C-e>" : "\<esc>"
 if has('nvim')
     inoremap <silent><expr> <c-space> coc#refresh()
 else
