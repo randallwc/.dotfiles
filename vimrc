@@ -18,20 +18,12 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CHOOSE A FUZZY FILE FINDER
 " look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
 
-" SYNTAX PLUGINS
-" syntax highlighting in vim (https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
-" add syntastic a syntax checker (https://github.com/vim-syntastic/syntastic)
-" look at polyglot for language functionality (https://github.com/sheerun/vim-polyglot)
-
-" MOVING AROUND
-" make your own text objects (https://vimawesome.com/plugin/textobj-user)
-" look at projectionist for jumping from code to tests (https://github.com/tpope/vim-projectionist)
-" look at vim test for running unit tests within vim (https://github.com/vim-test/vim-test)
-
-" look at tagbar a class outline viewer for Vim (https://github.com/preservim/tagbar)
+" COC
+" coc-pairs - tab out of pairs
+" maybe shift enter to move to next line even though there was a match
+" fix pylint for extra warnings
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
