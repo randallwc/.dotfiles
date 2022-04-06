@@ -107,7 +107,7 @@ map <space> <leader>
 let g:mapleader=" "
 nnoremap <leader>ls :ls<cr>:b<space>
 nnoremap <leader>sb :below botright 5new<cr>
-nnoremap <leader>te :below botright term<cr>
+nnoremap <leader>te :setlocal mouse=a<cr> :below botright term<cr>
 " reselect pasted text
 nmap <leader>gp `[v`]
 nmap <leader>qq :q<cr>
