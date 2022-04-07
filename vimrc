@@ -458,7 +458,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() :
             \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 nmap     [g         <Plug>(coc-diagnostic-prev)
 nmap     ]g         <Plug>(coc-diagnostic-next)
-nmap     <leader>gd <Plug>(coc-definition)
+nmap     gd         <Plug>(coc-definition)
 nmap     <leader>gt <Plug>(coc-type-definition)
 nmap     <leader>gi <Plug>(coc-implementation)
 nmap     <leader>gr <Plug>(coc-references)
