@@ -18,6 +18,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/vim-airline/vim-airline
 " look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
 
 " COC
@@ -431,9 +432,9 @@ let g:coc_global_extensions = [
             \ 'coc-tsserver',
             \ 'coc-vimlsp',
             \ ]
-"""""""""""
-""" KEYMAPS
-"""""""""""
+"""""""""""""""
+""" COC KEYMAPS
+"""""""""""""""
 " tab goes to next match or next snippet jump
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -494,9 +495,9 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
     vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
     vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
-""""""""""""""""""""
-""" HELPER FUNCTIONS
-""""""""""""""""""""
+""""""""""""""""""""""""
+""" COC HELPER FUNCTIONS
+""""""""""""""""""""""""
 function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
@@ -510,9 +511,9 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
-""""""""""""""
-""" AUTOGROUPS
-""""""""""""""
+""""""""""""""""""
+""" COC AUTOGROUPS
+""""""""""""""""""
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 augroup coc_augroup
