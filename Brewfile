@@ -63,8 +63,7 @@ cask "discord"
 cask "docker"
 # Text editor
 cask "emacs"
-# Typeface made for developers
-cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
 # Web browser
 cask "google-chrome"
 # Client for the Google Drive storage service
