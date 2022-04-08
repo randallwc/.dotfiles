@@ -431,6 +431,7 @@ let g:coc_global_extensions = [
             \ 'coc-sql',
             \ 'coc-tsserver',
             \ 'coc-vimlsp',
+            \ 'coc-diagnostic',
             \ ]
 """""""""""""""
 """ COC KEYMAPS

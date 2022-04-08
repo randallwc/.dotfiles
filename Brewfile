@@ -33,10 +33,16 @@ brew "node"
 brew "portaudio"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Vim script Language Lint
+brew "vint", args: ["HEAD"]
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Watch files and take action when they change
