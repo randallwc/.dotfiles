@@ -13,10 +13,16 @@ tap "qmk/qmk"
 brew "bat"
 # Remove large files or passwords from Git history like git-filter-branch
 brew "bfg"
+# New way to see and navigate directory trees
+brew "broot"
+# Cross-platform make
+brew "cmake"
 # Color-highlighted diff(1) output
 brew "colordiff"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 # CLI program that accepts piped input and presents files for selection
