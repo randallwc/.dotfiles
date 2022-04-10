@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-files="vimrc zshrc zprofile bashrc profile gitconfig gitignore_global condarc bash_profile ideavimrc"
+files="vimrc zshrc zprofile bashrc profile gitconfig gitignore_global condarc bash_profile ideavimrc pylintrc"
 repositories="randallwc.github.io 180DA-WarmUp"
 
 echo "making simlinks in home dir"
