@@ -1,4 +1,13 @@
 #!/bin/env bash
+# ~/.dotfiles/aliasrc
+#     __      __  ______
+#    /\ \  __/\ \/\  __  \
+#    \ \ \/\ \ \ \ \ \_\  \
+#     \ \ \ \ \ \ \ \  _  /
+#      \ \ \_/ \_\ \ \ \\  \
+#       \ \____^___/\ \_\ \_\
+#         \/__//__/  \/_/\/_/
+################################################################################
 
 # add colors to ls
 os=$(uname)
@@ -122,7 +131,7 @@ case $os in
             centerandcolor "brew doctor" blue &&
             if ! brew doctor
             then
-                centerandcolor "FAIL brew doctor" red &&
+                centerandcolor "FAIL brew doctor" red
             fi
             centerandcolor "conda commands" dgray &&
             conda activate &&
@@ -132,10 +141,10 @@ case $os in
             conda clean --all -y &&
             centerandcolor "success" green &&
             brewDeps=$(brew leaves --installed-as-dependency)
-            if [[ $(printf "%s" ${brewDeps} | wc -l) -ne 0 ]]
+            if [[ $(printf "%s" "${brewDeps}" | wc -l) -ne 0 ]]
             then
                 centerandcolor "uninstall the following" red &&
-                echo ${brewDeps} &&
+                echo "${brewDeps}"
             fi
             unset brewDeps
         }
@@ -143,11 +152,11 @@ case $os in
         # nibble compile
         nibblec() {
             pushd ~/GitHub/qmk_firmware &&
-            if make nullbitsco/nibble:$1
+            if make nullbitsco/nibble:"$1"
             then
                 lllf *.hex
             fi
-            popd
+            popd || exit 1
         }
 
         # nibble directory
