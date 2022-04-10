@@ -26,3 +26,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+################################################################################
+# BROOT
+################################################################################
+test -e "${HOME}/.config/broot/launcher/bash/br" &&
+    source "${HOME}/.config/broot/launcher/bash/br" ||
+    echo "no broot"
