@@ -168,6 +168,11 @@ case $os in
         # alias to find WiFi name
         alias wifiname='airport -I | grep -E "\s+SSID:"'
 
+        # Open man page as PDF
+        manpdf() {
+            man -t "${1}" | open -f -a /System/Applications/Preview.app/
+        }
+
         ;;
 esac
 
