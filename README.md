@@ -183,6 +183,7 @@ specific software may be accessed.
 1. Turn Do Not Disturb On/Off ⌃⌥⌘D
 
 # hack for macvim to find homebrew paths for coc.nvim
+> https://superuser.com/questions/31353/path-in-vim-doesnt-match-terminal
 - `sudo vim /etc/paths.d/conda_paths`
 - `:r ! echo $PATHS | tr : \\n`
 - just keep the miniconda paths
