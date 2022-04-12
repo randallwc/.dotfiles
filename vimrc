@@ -425,7 +425,7 @@ let g:coc_global_extensions = [
             \ 'coc-css',
             \ 'coc-html',
             \ 'coc-json',
-            \ 'coc-pyright',
+            \ 'coc-jedi',
             \ 'coc-sh',
             \ 'coc-snippets',
             \ 'coc-sql',
