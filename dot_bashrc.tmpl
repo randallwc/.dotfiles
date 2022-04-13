@@ -19,7 +19,7 @@ alias src='[ -r ~/.bashrc ] && source ~/.bashrc'
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # aliases
-[ -r {{ .chezmoi.sourceDir }}/aliasrc ] && . {{ .chezmoi.sourceDir }}/aliasrc 
+[ -r ~/.aliasrc ] && . ~/.aliasrc
 
 # brew completion
 if type brew &>/dev/null

@@ -62,7 +62,7 @@ alias src='[ -r ~/.zshrc ] && . ~/.zshrc'
 # make bash help command work in zsh
 help() { bash -c "help $1" }
 # aliases
-[ -r {{ .chezmoi.sourceDir }}/aliasrc ] && . {{ .chezmoi.sourceDir }}/aliasrc
+[ -r ~/.aliasrc ] && . ~/.aliasrc
 
 ################################################################################
 # HISTORY
