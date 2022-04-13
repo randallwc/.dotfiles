@@ -44,7 +44,7 @@ sserver() {
     if [ "$#" -eq 1 ]; then
         p=$1
     fi
-    printf "http://%s:%s\n" $(hostname) $p && sudo python3 -m http.server $p
+    printf "http://%s:%s\n" "$(hostname)" "$p" && sudo python3 -m http.server $p
 }
 # get local ip
 alias localip='ipconfig getifaddr en0'
@@ -98,7 +98,7 @@ case $os in
         alias bdt='brew deps --tree --installed'
 
         # update brew bundle
-        alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
+        alias bbd='brew bundle dump --force --describe --file={{ .chezmoi.sourceDir }}/Brewfile'
 
         # brew leaves
         alias bl='brew leaves'

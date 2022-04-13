@@ -9,7 +9,7 @@
 #         \/__//__/  \/_/\/_/
 ################################################################################
 # set up prompt
-export STARSHIP_CONFIG=~/.dotfiles/starship-bash.toml
+export STARSHIP_CONFIG={{ .chezmoi.sourceDir }}/starship-bash.toml
 eval "$(starship init bash)"
 
 # alias to source .zshrc
@@ -19,7 +19,7 @@ alias src='[ -r ~/.bashrc ] && source ~/.bashrc'
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # aliases
-[ -r ~/.dotfiles/aliasrc ] && . ~/.dotfiles/aliasrc
+[ -r {{ .chezmoi.sourceDir }}/aliasrc ] && . {{ .chezmoi.sourceDir }}/aliasrc 
 
 # brew completion
 if type brew &>/dev/null
