@@ -1,0 +1,11 @@
+Brewfile
+README.md
+aliasrc
+setup.sh
+starship-bash.toml
+starship-zsh.toml
+
+images/
+iterm2/
+notes/
+qmk/
