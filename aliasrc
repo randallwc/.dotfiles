@@ -44,7 +44,7 @@ sserver() {
     if [ "$#" -eq 1 ]; then
         p=$1
     fi
-    printf "http://%s:%s\n" $(hostname) $p && sudo python3 -m http.server $p
+    printf "http://%s:%s\n" "$(hostname)" "$p" && sudo python3 -m http.server "$p"
 }
 # get local ip
 alias localip='ipconfig getifaddr en0'
