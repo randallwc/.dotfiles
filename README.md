@@ -22,9 +22,9 @@ key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/gen
 ## link the settings file
 ```sh
 # this is to link the file
-brew bundle --file=$(chezmoi source-path)/Brewfile
+brew bundle --file=~/.dotfiles/Brewfile
 # and run this to update it
-brew bundle dump --force --describe --file=$(chezmoi source-path)/Brewfile
+brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
 ```
 
 ## visual studio
@@ -59,7 +59,7 @@ Trackpad Options > Enable Dragging > Three Finger Drag`
 # iTerm2 Settings
 ```sh
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$(chezmoi source-path)/iterm2"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
 defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
 ```
 

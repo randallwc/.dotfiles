@@ -4,7 +4,7 @@
 # no newline between prompts
 add_newline = false
 
-format = """$shlvl$username$hostname$character"""
+format = """$username$hostname$character"""
 
 # move the rest of the prompt to the right
 right_format = """$all$time"""
@@ -31,9 +31,3 @@ format = "[$hostname]($style) "
 [username]
 style_user="bold green"
 format = "[$user@]($style)"
-
-[shlvl]
-disabled = false
-style = "bold red"
-format = "[$shlvl]($style) "
-threshold = 2

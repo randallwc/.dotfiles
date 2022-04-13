@@ -9,7 +9,7 @@
 ################################################################################
 # SET UP PROMPT
 ################################################################################
-export STARSHIP_CONFIG={{ .chezmoi.sourceDir }}/starship-zsh.toml
+export STARSHIP_CONFIG=~/.dotfiles/starship-zsh.toml
 eval "$(starship init zsh)"
 
 ################################################################################
@@ -62,7 +62,7 @@ alias src='[ -r ~/.zshrc ] && . ~/.zshrc'
 # make bash help command work in zsh
 help() { bash -c "help $1" }
 # aliases
-[ -r ~/.aliasrc ] && . ~/.aliasrc
+[ -r ~/.dotfiles/aliasrc ] && . ~/.dotfiles/aliasrc
 
 ################################################################################
 # HISTORY

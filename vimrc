@@ -29,7 +29,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
 " make directories
 if !isdirectory($HOME . '/.vim/undo')
     call mkdir($HOME . '/.vim/undo', 'p')
@@ -63,10 +62,10 @@ set linebreak " wrap long lines
 set list " show hidden chars
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set nofoldenable " files not folded on open
+set noshowmode
 set nowrap " disable softwrap of words
 set path+=** " search down into subfolders
 set rnu nu
-set ruler " show percent down page " useless with statusline
 set scrolloff=5 " keep a certain ammount of context
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=4
@@ -80,7 +79,6 @@ set smartcase " search is case insensitive unless one is capital
 set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop
 set softtabstop=4
 set splitright
-set statusline=\ \%n\ %f%=%m%y%r\ %p%%\ %l:%c\ " show filename
 set swapfile
 set tabstop=4
 set textwidth=80
@@ -94,7 +92,7 @@ set undoreload=10000 " number of lines to save
 set updatetime=300
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu " display all matching files when we tab complete
-if has("nvim-0.5.0") || has("patch-8.1.1564")
+if has('nvim-0.5.0') || has('patch-8.1.1564')
     set signcolumn=number
 else
     set signcolumn=yes
@@ -105,13 +103,13 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" LEADER MAPS
 map <space> <leader>
-let g:mapleader=" "
+let g:mapleader=' '
 nnoremap <leader>ls :ls<cr>:b<space>
 nnoremap <leader>sb :below botright 5new<cr>
 nnoremap <leader>te :setlocal mouse=a<cr> :below botright term<cr>
 " reselect pasted text
 nmap <leader>gp `[v`]
-nmap <leader>qq :q<cr>
+nmap <leader>q :q<cr>
 nmap <leader>ws <c-w>s
 nmap <leader>wv <c-w>v
 nmap <leader>w= <c-w>=
@@ -151,7 +149,7 @@ if &term =~ "xterm\\|rxvt"
     let &t_EI="\<Esc>[1 q" " end insert mode, blinking block
 endif
 " enable syntax highlighting
-if &t_Co > 2 || has("gui_running")
+if &t_Co > 2 || has('gui_running')
     syntax enable
 endif
 " colored vim
@@ -177,9 +175,7 @@ let g:markdown_fenced_languages = [
             \ 'sh',
             \ 'css',
             \ ]
-highlight StatusLine ctermfg=blue ctermbg=white guifg=white guibg=#1e90ff
-highlight StatusLineNC ctermfg=white ctermbg=darkblue guifg=darkblue guibg=white
-highlight VertSplit ctermfg=lightblue ctermbg=white guifg=white guibg=lightblue
+highlight VertSplit ctermfg=darkblue ctermbg=white guifg=white guibg=darkblue
 highlight MatchParen cterm=bold ctermfg=magenta ctermbg=lightmagenta
 highlight LineNr ctermfg=grey guifg=#a9a9a9 guibg=NONE
 highlight LineNrAbove ctermfg=darkgrey guifg=#696969
@@ -217,32 +213,25 @@ augroup show_trailing_spaces
     " show trailing spaces
     autocmd VimEnter,WinEnter * match ErrorMsg '\s\+$'
 augroup END
-augroup change_statusline_color
-    autocmd!
-    autocmd InsertEnter * highlight StatusLine ctermfg=magenta ctermbg=white
-    autocmd InsertEnter * highlight StatusLineNC ctermfg=white ctermbg=darkmagenta
-    autocmd InsertLeave * highlight StatusLine ctermfg=blue ctermbg=white
-    autocmd InsertLeave * highlight StatusLineNC ctermfg=white ctermbg=darkblue
-augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" FUNCTIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://vim.fandom.com/wiki/Remove_unwanted_spaces
 function! TrimWhiteSpace()
-    echom "trimming whitespace"
+    echom 'trimming whitespace'
     silent %s/\s*$//
     ''
 endfunction
 command TrimWhiteSpace :call TrimWhiteSpace()
 function! RemoveCarriageReturn()
-    echom "removing carriage returns"
+    echom 'removing carriage returns'
     silent %s/\r*$//
     ''
 endfunction
 command RemoveCarriageReturn :call RemoveCarriageReturn()
 function! CombineWhiteSpace()
-    echom "combining white space"
+    echom 'combining white space'
     silent v/./,/./-j
     ''
 endfunction
@@ -306,6 +295,7 @@ Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
 Plug 'https://github.com/vim-scripts/argtextobj.vim'
+Plug 'https://github.com/itchyny/lightline.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -336,10 +326,10 @@ nmap <leader>gqf :GitGutterQuickFix \| copen<cr>
 " dont use 'qeibsvt'
 let g:startify_bookmarks =
     \ [
-    \     { "x": "~/.vimrc" },
-    \     { "y": "~/.bashrc" },
-    \     { "z": "~/.zshrc" },
-    \     { "d": "~/.dotfiles"},
+    \     { 'x': '~/.vimrc' },
+    \     { 'y': '~/.bashrc' },
+    \     { 'z': '~/.zshrc' },
+    \     { 'd': '~/.dotfiles'},
     \ ]
 let g:startify_change_to_vcs_root = 0
 let g:ascii = [
@@ -509,7 +499,7 @@ function! s:show_documentation()
     elseif (coc#rpc#ready())
         call CocActionAsync('doHover')
     else
-        execute '!' . &keywordprg . " " . expand('<cword>')
+        execute '!' . &keywordprg . ' ' . expand('<cword>')
     endif
 endfunction
 """"""""""""""""""
@@ -531,3 +521,21 @@ augroup tpope_commentary
     autocmd!
     autocmd FileType c setlocal commentstring=//\ %s
 augroup END
+""""""""""""
+"" LIGHTLINE
+""""""""""""
+let g:lightline = {
+\ 'colorscheme': 'wombat',
+\ 'active': {
+        \ 'left': [
+            \ [ 'mode', 'paste' ],
+            \ [ 'bufnum' ],
+            \ [ 'readonly', 'filename', 'modified' ],
+        \ ],
+        \ 'right': [
+            \ [ 'lineinfo' ],
+            \ [ 'percent' ],
+            \ [ 'fileformat', 'fileencoding', 'filetype' ],
+        \ ],
+    \ },
+\ }

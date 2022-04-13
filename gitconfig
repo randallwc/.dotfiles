@@ -2,7 +2,7 @@
     path = .gitlocal
 [user]
     name = William Randall
-    email = {{ .github_email }}
+    email = 15082470+randallwc@users.noreply.github.com
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
@@ -73,5 +73,3 @@
     stl = stash list
     sts = stash show -p
     wt = worktree
-{{ if eq .chezmoi.os "darwin" }}[credential]
-    helper = osxkeychain{{ end }}
