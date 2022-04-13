@@ -80,7 +80,6 @@ cask "font-jetbrains-mono-nerd-font"
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
-cask "ipynb-quicklook"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Text editor
