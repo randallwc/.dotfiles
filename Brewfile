@@ -15,6 +15,8 @@ brew "bat"
 brew "bfg"
 # New way to see and navigate directory trees
 brew "broot"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
 # Cross-platform make
 brew "cmake"
 # Color-highlighted diff(1) output
