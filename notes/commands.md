@@ -82,6 +82,8 @@ sha
 sha256
 bc # calculator
 nohup command & # run the command in the background and not stop even if you quit
+hash # show all commands
+yes # print y a bunch
 ```
 
 https://linuxize.com/post/how-to-run-linux-commands-in-background
