@@ -4,7 +4,7 @@
 # no newline between prompts
 add_newline = false
 
-format = """$time$all"""
+format = """$shlvl$time$all"""
 
 [line_break]
 disabled = true
@@ -31,3 +31,9 @@ format = "[$hostname]($style) "
 [username]
 style_user="bold green"
 format = "[$user@]($style)"
+
+[shlvl]
+disabled = false
+style = "bold red"
+format = "[$shlvl]($style) "
+threshold = 2
