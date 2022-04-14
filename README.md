@@ -121,13 +121,6 @@ Folders`
 1. put sound in menu bar
 1. play feedback when volume is changed
 
-# set up gitlocal
-```git
-# ~/.gitlocal on mac
-[credential]
-    helper = osxkeychain
-```
-
 # Quicklook
 - use Brew to install the quicklook plugins into `~/Library/QuickLook`
 
@@ -191,22 +184,13 @@ specific software may be accessed.
 # TODO
 ## minor
 
-## setup.sh
- - [ ] add auto generation of gitlocal based on the machine
-
-### documentation
- - [ ] add hyperlinks to notes
- - [ ] clean up notes
-
 ### terminal
 - [ ] [colorized man pages](https://superuser.com/questions/452034/bash-colorized-man-page)
 
 ### bash
 - [ ] add better tab completion in bash
-- [ ] add right hand side of prompt
 
 ### vim
-- [ ] fix search in vim to fuzzy search
 - [ ] read this [thing](https://vi.stackexchange.com/questions/12806/configure-which-column-gq-wraps-at)
 
 ### zsh
@@ -215,10 +199,6 @@ specific software may be accessed.
   mode )
 - [ ] https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
 
-## quicklook
-- [ ] look at the json quicklook and make it open wider
-
 ## major
-- [ ] [dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
 - [ ] clean up documentation
 - [ ] QMK leader key
