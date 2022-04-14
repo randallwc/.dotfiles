@@ -21,7 +21,7 @@
       create: true
       path: coc-settings.json
     ~/.gitlocal:
-      if: '[ "$(uname)" = Darwin ]'
+      if: '[[ "$(uname)" == Darwin ]]'
       path: gitlocal_mac
 
 - create:
@@ -50,4 +50,12 @@
   -
     command: '[[ "$(uname)" == Darwin ]] && brew bundle --file=~/.dotfiles/Brewfile || >&2 echo "not on mac"'
     description: brewfile on mac
+    stderr: true
+  -
+    command: '[[ "$(uname)" == Darwin ]] && defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true || >&2 echo "not on mac"'
+    description: iterm2 load prefs from folder
+    stderr: true
+  -
+    command: '[[ "$(uname)" == Darwin ]] && defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2" || >&2 echo "not on mac"'
+    description: iterm2 give prefs folder
     stderr: true
