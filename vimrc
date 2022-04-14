@@ -9,22 +9,18 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""LINKS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" (vim videos)
-" https://vimeo.com/user1690209/videos
-" (vim script book)
+" http://vimcasts.org/
 " https://learnvimscriptthehardway.stevelosh.com/
-" (https://spacevim.org/)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" TODO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" https://github.com/vim-airline/vim-airline
+" move to NEOVIM
 " look at fzf for fuzzy file find (https://github.com/junegunn/fzf)
 
 " COC
 " coc-pairs - tab out of pairs
 " maybe shift enter to move to next line even though there was a match
-" fix pylint for extra warnings
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" ENV
