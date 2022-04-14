@@ -534,4 +534,13 @@ let g:lightline = {
             \ [ 'fileformat', 'fileencoding', 'filetype' ],
         \ ],
     \ },
+\ 'inactive': {
+        \ 'left': [
+            \ [ 'filename', 'modified' ],
+        \ ],
+        \ 'right': [
+            \ [ 'lineinfo' ],
+            \ [ 'percent' ],
+        \ ],
+    \ }
 \ }
