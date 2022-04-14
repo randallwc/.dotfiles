@@ -32,18 +32,18 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   -
-    command: git clone git@github.com:randallwc/randallwc.github.io.git ~/GitHub/randallwc.github.io
+    command: git clone git@github.com:randallwc/randallwc.github.io.git ~/GitHub/randallwc.github.io || exit 0
     description: clone randallwc.github.io
     stderr: true
   -
-    command: git clone git@github.com:randallwc/Team3.git ~/GitHub/Team3
+    command: git clone git@github.com:randallwc/Team3.git ~/GitHub/Team3 || exit 0
     description: clone Team3
     stderr: true
   -
-    command: git clone git@github.com:randallwc/180DA-WarmUp.git ~/GitHub/180DA-WarmUp
+    command: git clone git@github.com:randallwc/180DA-WarmUp.git ~/GitHub/180DA-WarmUp || exit 0
     description: clone 180DA-WarmUp
     stderr: true
   -
-    command: git clone git@github.com:qmk/qmk_firmware.git ~/GitHub/qmk_firmware
+    command: git clone git@github.com:qmk/qmk_firmware.git ~/GitHub/qmk_firmware || exit 0
     description: clone qmk/qmk_firmware.git
     stderr: true
