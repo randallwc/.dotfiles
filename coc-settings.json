@@ -1,6 +1,5 @@
 {
     "suggest.autoTrigger": "none",
-    "diagnostic-languageserver.mergeConfig": true,
     "diagnostic-languageserver.linters": {},
     "diagnostic-languageserver.filetypes": {
         "vim": "vint",
@@ -9,14 +8,24 @@
     },
     "diagnostic-languageserver.formatters": {
         "shfmt": {
+            "command": "shfmt",
             "args": [
                 "-i",
-                "4"
+                "4",
+                "-filename",
+                "%filepath"
             ]
         },
         "docformatter": {
             "command": "docformatter",
             "args": [
+                "-"
+            ]
+        },
+        "autopep8": {
+            "command": "autopep8",
+            "args": [
+                "-aa",
                 "-"
             ]
         }
