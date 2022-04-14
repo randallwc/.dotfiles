@@ -1,0 +1,32 @@
+{
+    "suggest.autoTrigger": "none",
+    "diagnostic-languageserver.mergeConfig": true,
+    "diagnostic-languageserver.linters": {},
+    "diagnostic-languageserver.filetypes": {
+        "vim": "vint",
+        "sh": "shellcheck",
+        "python": "pylint"
+    },
+    "diagnostic-languageserver.formatters": {
+        "shfmt": {
+            "args": [
+                "-i",
+                "4"
+            ]
+        },
+        "docformatter": {
+            "command": "docformatter",
+            "args": [
+                "-"
+            ]
+        }
+    },
+    "diagnostic-languageserver.formatFiletypes": {
+        "sh": "shfmt",
+        "python": [
+            "autopep8",
+            "isort",
+            "docformatter"
+        ]
+    }
+}

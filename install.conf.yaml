@@ -1,0 +1,49 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~', '.vim']
+
+- link:
+    ~/.vimrc:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.condarc:
+    ~/.gitconfig:
+    ~/.gitignore_global:
+    ~/.ideavimrc:
+    ~/.profile:
+    ~/.pylintrc:
+    ~/.vimrc:
+    ~/.zprofile:
+    ~/.zshrc:
+    ~/.vim/coc-settings.json:
+      create: true
+      path: coc-settings.json
+    ~/.gitlocal:
+      if: '[ $(uname) = Darwin ]'
+      path: gitlocal_mac
+
+- create:
+    - ~/GitHub
+    - ~/.vim/swap
+    - ~/.vim/undo
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  -
+    command: git clone git@github.com:randallwc/randallwc.github.io.git ~/GitHub/randallwc.github.io
+    description: clone randallwc.github.io
+    stderr: true
+  -
+    command: git clone git@github.com:randallwc/Team3.git ~/GitHub/Team3
+    description: clone Team3
+    stderr: true
+  -
+    command: git clone git@github.com:randallwc/180DA-WarmUp.git ~/GitHub/180DA-WarmUp
+    description: clone 180DA-WarmUp
+    stderr: true
+  -
+    command: git clone git@github.com:qmk/qmk_firmware.git ~/GitHub/qmk_firmware
+    description: clone qmk/qmk_firmware.git
+    stderr: true
