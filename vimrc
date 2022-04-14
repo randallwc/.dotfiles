@@ -269,7 +269,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/Yggdroot/indentLine',       {'on':'IndentLinesToggle'}
 Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'https://github.com/ap/vim-css-color'
-Plug 'https://github.com/cespare/vim-toml'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/easymotion/vim-easymotion'
 Plug 'https://github.com/honza/vim-snippets'
@@ -292,6 +291,7 @@ Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
 Plug 'https://github.com/vim-scripts/argtextobj.vim'
 Plug 'https://github.com/itchyny/lightline.vim'
+Plug 'https://github.com/sheerun/vim-polyglot'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
