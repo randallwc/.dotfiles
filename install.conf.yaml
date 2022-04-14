@@ -21,7 +21,7 @@
       create: true
       path: coc-settings.json
     ~/.gitlocal:
-      if: '[ $(uname) = Darwin ]'
+      if: '[ "$(uname)" = Darwin ]'
       path: gitlocal_mac
 
 - create:
@@ -32,18 +32,22 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   -
-    command: git clone git@github.com:randallwc/randallwc.github.io.git ~/GitHub/randallwc.github.io || exit 0
+    command: git clone git@github.com:randallwc/randallwc.github.io.git ~/GitHub/randallwc.github.io || >&2 echo "clone fail"
     description: clone randallwc.github.io
     stderr: true
   -
-    command: git clone git@github.com:randallwc/Team3.git ~/GitHub/Team3 || exit 0
+    command: git clone git@github.com:randallwc/Team3.git ~/GitHub/Team3 || >&2 echo "clone fail"
     description: clone Team3
     stderr: true
   -
-    command: git clone git@github.com:randallwc/180DA-WarmUp.git ~/GitHub/180DA-WarmUp || exit 0
+    command: git clone git@github.com:randallwc/180DA-WarmUp.git ~/GitHub/180DA-WarmUp || >&2 echo "clone fail"
     description: clone 180DA-WarmUp
     stderr: true
   -
-    command: git clone git@github.com:qmk/qmk_firmware.git ~/GitHub/qmk_firmware || exit 0
+    command: git clone git@github.com:qmk/qmk_firmware.git ~/GitHub/qmk_firmware || >&2 echo "clone fail"
     description: clone qmk/qmk_firmware.git
+    stderr: true
+  -
+    command: '[[ "$(uname)" == Darwin ]] && brew bundle --file=~/.dotfiles/Brewfile || >&2 echo "not on mac"'
+    description: brewfile on mac
     stderr: true
