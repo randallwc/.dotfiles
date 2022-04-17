@@ -33,6 +33,8 @@ brew "gh"
 brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Platform built on V8 to build network applications
 brew "node"
 # Cross-platform library for audio I/O
