@@ -140,7 +140,7 @@ onoremap <silent> il :<C-U>normal! ^vg_<CR>
 "" CONDITIONAL
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " change cursor based on mode
-if &term =~ "xterm\\|rxvt"
+if &term =~? "xterm\\|rxvt"
     let &t_SI="\<Esc>[3 q" " start insert mode, blinking underline cursor
     let &t_EI="\<Esc>[1 q" " end insert mode, blinking block
 endif
@@ -246,7 +246,7 @@ runtime ftplugin/man.vim
 if has('win32') || has('win64')
     set guifont=Consolas:h12
 elseif has('gui_macvim')
-    set guifont=JetBrains\ Mono:h13
+    set guifont=JetBrainsMonoNerdFontComplete-Regular:h13
     set macligatures
 else " linux
     set guifont=Monospace\ 12
@@ -262,9 +262,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 " run pluginstall if there are missing plugins
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif
+augroup vim_plug_augroup
+    autocmd!
+    autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+    \| PlugInstall --sync | source $MYVIMRC
+    \| endif
+augroup end
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/Yggdroot/indentLine',       {'on':'IndentLinesToggle'}
 Plug 'https://github.com/airblade/vim-gitgutter'
@@ -301,6 +304,10 @@ call plug#end()
 """"""""""""
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+""""""""""""
+"" CTRLP
+""""""""""""
+let g:ctrlp_cmd = 'CtrlPBuffer'
 """"""""""""
 "" VIM-VMATH
 """"""""""""
@@ -371,7 +378,10 @@ highlight HighlightedyankRegion cterm=reverse gui=reverse
 """""""""""""
 "" INDENTLINE
 """""""""""""
-autocmd! User indentLine doautocmd indentLine Syntax
+augroup indent_line_augroup
+    autocmd!
+    autocmd! User indentLine doautocmd indentLine Syntax
+augroup end
 let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_bgcolor_term = 0
@@ -416,6 +426,7 @@ let g:coc_global_extensions = [
             \ 'coc-snippets',
             \ 'coc-sql',
             \ 'coc-tsserver',
+            \ 'coc-eslint',
             \ 'coc-vimlsp',
             \ 'coc-diagnostic',
             \ ]
@@ -501,10 +512,10 @@ endfunction
 """"""""""""""""""
 """ COC AUTOGROUPS
 """"""""""""""""""
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
 augroup coc_augroup
     autocmd!
+    " Highlight the symbol and its references when holding the cursor.
+    autocmd CursorHold * silent call CocActionAsync('highlight')
     " Setup formatexpr specified filetype(s).
     autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
     " Update signature help on jump placeholder.
