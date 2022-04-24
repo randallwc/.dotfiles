@@ -128,6 +128,8 @@ case $os in
             brew upgrade &&
             centerandcolor "brew cleanup" blue &&
             brew cleanup --prune=all &&
+            centerandcolor "brew autoremove" blue &&
+            brew autoremove &&
             centerandcolor "brew doctor" blue &&
             if ! brew doctor
             then
