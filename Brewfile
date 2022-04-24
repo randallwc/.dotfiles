@@ -11,8 +11,6 @@ tap "osx-cross/avr"
 tap "qmk/qmk"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Remove large files or passwords from Git history like git-filter-branch
-brew "bfg"
 # New way to see and navigate directory trees
 brew "broot"
 # Cross-platform make
@@ -33,6 +31,8 @@ brew "gh"
 brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
+# Simple terminal UI for git commands
+brew "lazygit"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Platform built on V8 to build network applications
@@ -59,8 +59,6 @@ brew "watchman"
 brew "mongodb/brew/mongodb-community"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
-# Application launcher and productivity software
-cask "alfred"
 # Application uninstaller
 cask "appcleaner"
 # Multi-track audio editor and recorder
@@ -73,15 +71,11 @@ cask "boop"
 cask "cyberduck"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerized applications and microservices
-cask "docker"
 # Text editor
 cask "emacs"
 cask "font-jetbrains-mono-nerd-font"
 # Web browser
 cask "google-chrome"
-# Client for the Google Drive storage service
-cask "google-drive"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Text editor
