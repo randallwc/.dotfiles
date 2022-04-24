@@ -429,6 +429,8 @@ let g:coc_global_extensions = [
             \ 'coc-eslint',
             \ 'coc-vimlsp',
             \ 'coc-diagnostic',
+            \ 'coc-css',
+            \ 'coc-prettier',
             \ ]
 """""""""""""""
 """ COC KEYMAPS
