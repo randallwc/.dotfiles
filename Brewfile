@@ -47,6 +47,8 @@ brew "shellcheck"
 brew "shfmt"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Code-search similar to ack
+brew "the_silver_searcher"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Vim script Language Lint
