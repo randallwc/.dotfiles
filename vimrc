@@ -46,7 +46,7 @@ set copyindent " copy the previous indentation on autoindenting
 set directory=~/.vim/swap//
 set encoding=utf-8
 set expandtab
-set foldmethod=syntax " files fold based on syntax
+set foldmethod=indent
 set formatoptions=jrolq
 set hidden " this lets you use buffers in the right way
 set history=1000 " remember more commands and search history
@@ -188,6 +188,8 @@ highlight FgCocErrorFloatBgCocFloating cterm=bold ctermfg=red ctermbg=darkgrey g
 highlight FgCocHintFloatBgCocFloating cterm=bold ctermfg=lightblue ctermbg=darkgrey guifg=#15aabf guibg=#d7e5dc
 highlight FgCocWarningFloatBgCocFloating cterm=bold ctermfg=214 ctermbg=242 guifg=#ff922b guibg=#d7e5dc
 highlight CursorColumn cterm=bold term=reverse ctermfg=blue ctermbg=NONE guibg=Grey40
+highlight Folded ctermbg=236
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
