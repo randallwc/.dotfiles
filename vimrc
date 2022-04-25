@@ -36,6 +36,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" SET
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let &showbreak = '↪ '
 set autoindent
 set autoread
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
@@ -67,10 +68,10 @@ set shiftround
 set shiftwidth=4
 set shortmess+=c
 set shortmess-=S
-set showbreak=↪\ "show line wrap
 set showcmd
 set showmatch
 set sidescrolloff=10
+set signcolumn=number
 set smartcase
 set smarttab
 set softtabstop=4
@@ -88,11 +89,6 @@ set undoreload=10000
 set updatetime=300
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
-if has('nvim-0.5.0') || has('patch-8.1.1564')
-    set signcolumn=number
-else
-    set signcolumn=yes
-endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" MAPS
