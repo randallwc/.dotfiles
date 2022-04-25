@@ -49,45 +49,45 @@ set expandtab
 set foldmethod=indent
 set formatoptions=jrolq
 set hidden " this lets you use buffers in the right way
-set history=1000 " remember more commands and search history
-set hlsearch " enable hightlighting when searching
-set ignorecase " ignore case when searching
-set incsearch " incremental searching
-set laststatus=2 " always show statusline
-set linebreak " wrap long lines
-set list " show hidden chars
+set history=1000
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set linebreak
+set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
-set nofoldenable " files not folded on open
+set nofoldenable
 set noshowmode
-set nowrap " disable softwrap of words
+set nowrap
 set path+=** " search down into subfolders
 set rnu nu
-set scrolloff=5 " keep a certain ammount of context
-set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
+set scrolloff=5
+set shiftround
 set shiftwidth=4
 set shortmess+=c
 set shortmess-=S
 set showbreak=↪\ "show line wrap
-set showcmd " show command which is being typed
-set showmatch " set show matching parenthesis
+set showcmd
+set showmatch
 set sidescrolloff=10
-set smartcase " search is case insensitive unless one is capital
-set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop
+set smartcase
+set smarttab
 set softtabstop=4
 set splitright
 set swapfile
 set tabstop=4
 set textwidth=80
-set title " change the terminal's title
+set title
 set titlelen=70
 set titlestring=%<%F%=%P "filename & percent down screen
-set undodir=$HOME/.vim/undo// " where to save undo histories
-set undofile " save undos after file closes
-set undolevels=1000 " how many undos
-set undoreload=10000 " number of lines to save
+set undodir=$HOME/.vim/undo//
+set undofile
+set undolevels=1000
+set undoreload=10000
 set updatetime=300
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set wildmenu " display all matching files when we tab complete
+set wildmenu
 if has('nvim-0.5.0') || has('patch-8.1.1564')
     set signcolumn=number
 else
