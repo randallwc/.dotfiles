@@ -37,6 +37,7 @@ tr
 shuf
 cut
 fmt
+column
 ```
 
 ## COMPUTER CONTROL
