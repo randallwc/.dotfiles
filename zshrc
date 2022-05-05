@@ -105,10 +105,3 @@ unset __conda_setup
 test -e "${HOME}/.iterm2_shell_integration.zsh" &&
     source "${HOME}/.iterm2_shell_integration.zsh" ||
     echo "no iterm2 shell integration"
-
-################################################################################
-# BROOT
-################################################################################
-test -e "${HOME}/.config/broot/launcher/bash/br" &&
-    source "${HOME}/.config/broot/launcher/bash/br" ||
-    echo "no broot"

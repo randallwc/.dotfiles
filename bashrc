@@ -36,10 +36,3 @@ then
         unset COMPLETION
     fi
 fi
-
-################################################################################
-# BROOT
-################################################################################
-test -e "${HOME}/.config/broot/launcher/bash/br" &&
-    source "${HOME}/.config/broot/launcher/bash/br" ||
-    echo "no broot"

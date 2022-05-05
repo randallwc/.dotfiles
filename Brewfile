@@ -11,8 +11,6 @@ tap "osx-cross/avr"
 tap "qmk/qmk"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# New way to see and navigate directory trees
-brew "broot"
 # Cross-platform make
 brew "cmake"
 # Color-highlighted diff(1) output
