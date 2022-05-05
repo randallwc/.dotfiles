@@ -36,4 +36,4 @@ format = "[$user@]($style)"
 disabled = false
 style = "bold red"
 format = "[$shlvl]($style) "
-threshold = 2
+threshold = 3
