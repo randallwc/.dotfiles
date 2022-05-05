@@ -49,6 +49,8 @@ brew "shfmt"
 brew "starship"
 # Code-search similar to ack
 brew "the_silver_searcher"
+# Terminal multiplexer
+brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Vim script Language Lint
