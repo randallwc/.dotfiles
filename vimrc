@@ -302,10 +302,10 @@ nmap ga <Plug>(EasyAlign)
 """"""""""""
 "" FZF
 """"""""""""
-map <expr> <c-p> fugitive#head() != '' ? ':GFiles --cached --others --exclude-standard<CR>' : ':Files<CR>'
+map <expr> <c-p> fugitive#head() != '' ? ':GFiles --cached --others --exclude-standard<cr>' : ':Files<cr>'
+nnoremap <expr> <c-b> len(getbufinfo({'buflisted':1})) > 1 ? ':Buffers<cr>' : ':History<cr>'
 nnoremap <leader>f :Files<cr>
 nnoremap <c-_> :Lines<cr>
-nnoremap <c-b> :Buffers<cr>
 """"""""""""
 "" VIM-VMATH
 """"""""""""
