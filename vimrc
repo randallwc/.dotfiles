@@ -125,9 +125,6 @@ vnoremap < <gv
 vnoremap > >gv
 " repeat dot macro over a range
 xmap . :normal .<cr>
-" scroll window
-map <s-up> <c-y>
-map <s-down> <c-e>
 nnoremap Y y$
 " inner line
 xnoremap <silent> il <Esc>^vg_
