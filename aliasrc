@@ -9,117 +9,38 @@
 #         \/__//__/  \/_/\/_/
 ################################################################################
 
-# add colors to ls
 os=$(uname)
 case $os in
-    MING*) alias ls='ls --color=auto' ;;
-    Linux) alias ls='ls --color=auto';;
-    Darwin) alias ls='ls -G' ;;
-    *) alias ls='ls --color=auto' ;;
-esac
-
-# ls options
-alias l='ls -F'
-alias lR='ls -FR'
-alias la='ls -a'
-alias ll='ls -l'
-alias llR='ls -lR'
-alias llf='ll -F'
-alias lll='ls -al'
-alias lllR='ls -alR'
-alias lllf='lll -F'
-
-# show hidden files
-alias l.='ls -d1 .*'
-
-# make grep show colors
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-# NETWORKING ALIASES
-# start a simple http server
-sserver() {
-    local p=8080
-    if [ "$#" -eq 1 ]; then
-        p=$1
-    fi
-    printf "http://%s:%s\n" "$(hostname)" "$p" && sudo python3 -m http.server "$p"
-}
-# get local ip
-alias localip='ipconfig getifaddr en0'
-# mac addresses
-alias macaddrs='arp -a'
-# get IP
-alias publicip='curl ifconfig.me'
-
-# ssh aliases
-# ucla
-alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
-alias sshc='ssh culver9'
-# raspberry pi zero
-alias sshzi='ssh pi@$(publicip)'
-alias sshz='ssh pi@raspberrypi.local'
-
-alias c='clear'
-alias e='exit'
-
-# alias for quick changing directories
-alias ghub='cd ~/GitHub/'
-alias ucla='cd ~/Documents/ucla/4th\ yr/2nd\ qtr'
-alias team3='cd ~/GitHub/Team3/'
-alias desk='cd ~/Desktop/'
-alias doc='cd ~/Documents/'
-alias down='cd ~/Downloads/'
-alias dot='cd ~/.dotfiles/'
-alias vol='cd /Volumes/'
-
-# X11 forwarding
-# export DISPLAY=:0
-
-# alias to output path
-alias path='echo $PATH | tr : \\n | sort'
-alias pathu='path | uniq -c'
-
-# alias to output fpath
-alias fpath='echo $FPATH | tr : \\n | sort'
-alias fpathu='fpath | uniq -c'
-
-# keep display awake
-alias nosleep='caffeinate -d'
-
-# mac only aliases
-case $os in
-    Darwin)
-        # replace cat with bat
-        command -v bat >/dev/null && alias cat='bat'
-
-        # brew deps tree
-        alias bdt='brew deps --tree --installed'
-
-        # update brew bundle
-        alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
-
-        # brew leaves
-        alias bl='brew leaves'
-
-        # update and clean up packages on mac
-        # https://misc.flogisoft.com/bash/tip_colors_and_formatting
-        centerandcolor() {
-            echo -n "\e[1m" && # begin bold
+Darwin)
+    ###########
+    # MAC ALIAS
+    ###########
+    alias ls='ls -G'
+    command -v bat >/dev/null && alias cat='bat'
+    alias bdt='brew deps --tree --installed'
+    alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
+    alias bl='brew leaves'
+    alias airport='/Sy*/L*/Priv*/Apple8*/V*/C*/R*/airport'
+    alias wifiname='airport -I | grep -E "\s+SSID:"'
+    alias vol='cd /Volumes/'
+    ###########
+    # FUNCTIONS
+    ###########
+    manpdf() { man -t "${1}" | open -f -a /System/Applications/Preview.app/; }
+    centerandcolor() {
+        echo -n "\e[1m" && # begin bold
             case $2 in
-                blue) echo -n "\e[34m" ;;
-                red) echo -n "\e[31m" ;;
-                green) echo -n "\e[32m" ;;
-                dgray) echo -n "\e[90m" ;;
-                lgray) echo -n "\e[37m" ;;
-                *) echo "invalid color" && exit 1 ;;
+            blue) echo -n "\e[34m" ;;
+            red) echo -n "\e[31m" ;;
+            green) echo -n "\e[32m" ;;
+            dgray) echo -n "\e[90m" ;;
+            lgray) echo -n "\e[37m" ;;
             esac
-            echo -n "===$1===" | fmt -c -w $COLUMNS &&
+        echo -n "===$1===" | fmt -c -w $COLUMNS &&
             echo -n "\e[0m" # end color
-        }
-        macupdate() {
-            centerandcolor "deactivating conda environment" dgray &&
+    }
+    macupdate() {
+        centerandcolor "deactivating conda environment" dgray &&
             conda deactivate &&
             centerandcolor "brew commands" dgray &&
             centerandcolor "brew update" blue &&
@@ -131,11 +52,10 @@ case $os in
             centerandcolor "brew autoremove" blue &&
             brew autoremove &&
             centerandcolor "brew doctor" blue &&
-            if ! brew doctor
-            then
+            if ! brew doctor; then
                 centerandcolor "FAIL brew doctor" red
             fi
-            centerandcolor "conda commands" dgray &&
+        centerandcolor "conda commands" dgray &&
             conda activate &&
             centerandcolor "conda update" blue &&
             conda update --all -y &&
@@ -143,46 +63,83 @@ case $os in
             conda clean --all -y &&
             centerandcolor "success" green &&
             brewDeps=$(brew leaves --installed-as-dependency)
-            if [[ $(printf "%s" "${brewDeps}" | wc -l) -ne 0 ]]
-            then
-                centerandcolor "uninstall the following" red &&
+        if [[ $(printf "%s" "${brewDeps}" | wc -l) -ne 0 ]]; then
+            centerandcolor "uninstall the following" red &&
                 echo "${brewDeps}"
+        fi
+        unset brewDeps
+    }
+    ####################
+    # KEYBOARD COMPILING
+    ####################
+    nibblecompile() {
+        pushd ~/GitHub/qmk_firmware &&
+            if make nullbitsco/nibble:"$1"; then
+                lllf -- *.hex
             fi
-            unset brewDeps
-        }
-
-        # nibble compile
-        nibblec() {
-            pushd ~/GitHub/qmk_firmware &&
-            if make nullbitsco/nibble:"$1"
-            then
-                lllf *.hex
-            fi
-            popd || exit 1
-        }
-
-        # nibble directory
-        alias nibbled='ghub && cd qmk_firmware/keyboards/nullbitsco/nibble/'
-
-        # enable airport utility
-        alias airport='/Sy*/L*/Priv*/Apple8*/V*/C*/R*/airport'
-
-        # alias to find WiFi name
-        alias wifiname='airport -I | grep -E "\s+SSID:"'
-
-        # Open man page as PDF
-        manpdf() {
-            man -t "${1}" | open -f -a /System/Applications/Preview.app/
-        }
-
-        ;;
+        popd || exit 1
+    }
+    alias nibblecd='ghub && cd qmk_firmware/keyboards/nullbitsco/nibble/'
+    #########
+    # EXPORTS
+    #########
+    # FZF
+    export FZF_DEFAULT_COMMAND='fd --type f --hidden'
+    export FZF_ALT_C_COMMAND="fd --type d --hidden"
+    export FZF_ALT_C_OPTS="--preview 'tree -C -L 2 {} | head -50'"
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+    export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}'"
+    # X11 forwarding
+    # export DISPLAY=:0
+    ;;
+*) alias ls='ls --color=auto' ;;
 esac
 
-# json format
+################################################################################
+# ALIASES
+################################################################################
+alias l.='ls -d1 .*'
+alias l='ls -F'
+alias lR='ls -FR'
+alias la='ls -a'
+alias ll='ls -l'
+alias llR='ls -lR'
+alias llf='ll -F'
+alias lll='ls -al'
+alias lllR='ls -alR'
+alias lllf='lll -F'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias localip='ipconfig getifaddr en0'
+alias macaddrs='arp -a'
+alias publicip='curl ifconfig.me'
+alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
+alias sshc='ssh culver9'
+alias sshzi='ssh pi@$(publicip)'
+alias sshz='ssh pi@raspberrypi.local'
+alias c='clear'
+alias e='exit'
+alias ghub='cd ~/GitHub/'
+alias ucla='cd ~/Documents/ucla/4th\ yr/3rd\ qtr'
+alias team3='cd ~/GitHub/Team3/'
+alias desk='cd ~/Desktop/'
+alias doc='cd ~/Documents/'
+alias down='cd ~/Downloads/'
+alias dot='cd ~/.dotfiles/'
+alias path='echo $PATH | tr : \\n | sort'
+alias pathu='path | uniq -c'
+alias fpath='echo $FPATH | tr : \\n | sort'
+alias fpathu='fpath | uniq -c'
+alias nosleep='caffeinate -d'
 alias jsonformat='python3 -m json.tool'
-
-# make tree output in color
 alias tree='tree -C'
-
-# cd to git current git root
 alias gr='cd $(git rev-parse --show-toplevel)'
+
+################################################################################
+# FUNCTIONS
+################################################################################
+sserver() {
+    local p=8080
+    printf "http://%s:%s\n" "$(hostname)" "$p" && sudo python3 -m http.server "$p"
+}
