@@ -50,3 +50,7 @@ fi
 # FZF
 ################################################################################
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# unbind <m-c> because <esc>c is often pressed
+[[ $- =~ i ]] && bindkey -r '\ec'
+# rebind to <m-q>
+bindkey '\eq' fzf-cd-widget
