@@ -89,6 +89,7 @@ set undoreload=10000
 set updatetime=300
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
+scriptencoding utf-8
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" MAPS
@@ -202,11 +203,6 @@ augroup pip_python
     autocmd!
     autocmd filetype python :IndentLinesToggle
 augroup END
-augroup show_trailing_spaces
-    autocmd!
-    " show trailing spaces
-    autocmd VimEnter,WinEnter * match ErrorMsg '\s\+$'
-augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" FUNCTIONS
@@ -270,9 +266,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/Yggdroot/indentLine',       {'on':'IndentLinesToggle'}
 Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'https://github.com/ap/vim-css-color'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/easymotion/vim-easymotion'
 Plug 'https://github.com/honza/vim-snippets'
+Plug 'https://github.com/itchyny/lightline.vim'
+Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/junegunn/gv.vim'
 Plug 'https://github.com/junegunn/vim-easy-align',   {'on':'<Plug>(EasyAlign)'}
 Plug 'https://github.com/junegunn/vim-peekaboo'
@@ -283,6 +281,7 @@ Plug 'https://github.com/neoclide/coc.nvim',         {'branch': 'release'}
 Plug 'https://github.com/nixon/vim-vmath'
 Plug 'https://github.com/preservim/nerdtree',        {'on':'NERDTreeToggle'}
 Plug 'https://github.com/rhysd/git-messenger.vim',   {'on':'<Plug>(git-messenger)'}
+Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/tpope/vim-abolish'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-fugitive'
@@ -291,8 +290,6 @@ Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
 Plug 'https://github.com/vim-scripts/argtextobj.vim'
-Plug 'https://github.com/itchyny/lightline.vim'
-Plug 'https://github.com/sheerun/vim-polyglot'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -303,9 +300,12 @@ call plug#end()
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 """"""""""""
-"" CTRLP
+"" FZF
 """"""""""""
-let g:ctrlp_cmd = 'CtrlPBuffer'
+map <expr> <c-p> fugitive#head() != '' ? ':GFiles --cached --others --exclude-standard<CR>' : ':Files<CR>'
+nnoremap <leader>f :Files<cr>
+nnoremap <c-_> :Lines<cr>
+nnoremap <c-b> :Buffers<cr>
 """"""""""""
 "" VIM-VMATH
 """"""""""""
@@ -484,15 +484,15 @@ xmap     ic         <Plug>(coc-classobj-i)
 omap     ic         <Plug>(coc-classobj-i)
 xmap     ac         <Plug>(coc-classobj-a)
 omap     ac         <Plug>(coc-classobj-a)
-" <C-f> and <C-b> scroll float windows/popups
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
+" " <C-f> and <C-b> scroll float windows/popups
+" if has('nvim-0.4.0') || has('patch-8.2.0750')
+"     nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+"     nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+"     inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+"     inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+"     vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+"     vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+" endif
 """"""""""""""""""""""""
 """ COC HELPER FUNCTIONS
 """"""""""""""""""""""""
