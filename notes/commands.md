@@ -96,6 +96,7 @@ read
 
 ## ZSH COMMANDS
 ```
+bindkey
 ^r # search through history
 ^x h # give information about completion system
 ^q save command for one command later

@@ -112,5 +112,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" &&
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # unbind <m-c> because <esc>c is often pressed
 [[ $- =~ i ]] && bindkey -r '\ec'
-# rebind to <m-q>
-bindkey '\eq' fzf-cd-widget
+bindkey "^f" fzf-cd-widget
