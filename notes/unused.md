@@ -83,6 +83,11 @@ RPROMPT+='%F{yellow}%*%f' # time
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set colorcolumn=80 " color past a certain number of chars
 "highlight ColorColumn ctermbg=8 " set color of highlight to gray
+augroup show_trailing_spaces
+    autocmd!
+    " show trailing spaces
+    autocmd VimEnter,WinEnter * match ErrorMsg '\s\+$'
+augroup END
 ```
 
 # BASHRC
