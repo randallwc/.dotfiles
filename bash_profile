@@ -1,3 +1,4 @@
+#! /usr/bin/env bash
 # ~/.bash_profile
 #     __      __  ______
 #    /\ \  __/\ \/\  __  \
