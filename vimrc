@@ -481,15 +481,13 @@ xmap     ic         <Plug>(coc-classobj-i)
 omap     ic         <Plug>(coc-classobj-i)
 xmap     ac         <Plug>(coc-classobj-a)
 omap     ac         <Plug>(coc-classobj-a)
-" " <C-f> and <C-b> scroll float windows/popups
-" if has('nvim-0.4.0') || has('patch-8.2.0750')
-"     nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-"     nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-"     inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-"     inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-"     vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-"     vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-" endif
+" <s-down> and <s-up> scroll float windows/popups
+nnoremap <silent><nowait><expr> <s-down> coc#float#has_scroll() ? coc#float#scroll(1) : "\<s-down>"
+nnoremap <silent><nowait><expr> <s-up> coc#float#has_scroll() ? coc#float#scroll(0) : "\<s-up>"
+inoremap <silent><nowait><expr> <s-down> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <silent><nowait><expr> <s-up> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+vnoremap <silent><nowait><expr> <s-down> coc#float#has_scroll() ? coc#float#scroll(1) : "\<s-down>"
+vnoremap <silent><nowait><expr> <s-up> coc#float#has_scroll() ? coc#float#scroll(0) : "\<s-up>"
 """"""""""""""""""""""""
 """ COC HELPER FUNCTIONS
 """"""""""""""""""""""""
