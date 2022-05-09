@@ -98,16 +98,11 @@ esac
 ################################################################################
 # ALIASES
 ################################################################################
-alias l.='ls -d1 .*'
-alias l='ls -F'
-alias lR='ls -FR'
-alias la='ls -a'
-alias ll='ls -l'
-alias llR='ls -lR'
-alias llf='ll -F'
-alias lll='ls -al'
-alias lllR='ls -alR'
-alias lllf='lll -F'
+# shellcheck disable=SC2142
+alias l.='ls --color=always -ald .* | awk "{print \$9 \$10 \$11}"'
+alias l='ls -aF'
+alias ll='ls -lF'
+alias lll='ls -alF'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
