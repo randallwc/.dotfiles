@@ -99,10 +99,10 @@ esac
 # ALIASES
 ################################################################################
 # shellcheck disable=SC2142
-alias l.='ls --color=always -ald .* | awk "{print \$9 \$10 \$11}"'
-alias l='ls -aF'
+alias l.='ls --color=always -Ald .* | awk "{print \$9 \$10 \$11}"'
+alias l='ls -AF'
 alias ll='ls -lF'
-alias lll='ls -alF'
+alias lll='ls -AlF'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
