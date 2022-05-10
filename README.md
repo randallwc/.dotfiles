@@ -181,18 +181,6 @@ specific software may be accessed.
 ### terminal
 - [ ] [colorized man pages](https://superuser.com/questions/452034/bash-colorized-man-page)
 
-### bash
-- [ ] add better tab completion in bash
-
-### vim
-- [ ] read this [thing](https://vi.stackexchange.com/questions/12806/configure-which-column-gq-wraps-at)
-
 ### zsh
 - [ ] look into greyed out tab completion in zsh
-- [ ] look into vi mode for zsh ( add visual indicator for insert and command
-  mode )
 - [ ] https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
-
-## major
-- [ ] clean up documentation
-- [ ] QMK leader key
