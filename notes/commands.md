@@ -38,6 +38,9 @@ shuf
 cut
 fmt
 column
+paste
+awk
+seq
 ```
 
 ## COMPUTER CONTROL
@@ -78,7 +81,6 @@ whatis # find out what a command does
 apropos # find commands related to keyword
 cal
 date
-awk
 sha
 sha256
 bc # calculator
