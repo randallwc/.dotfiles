@@ -1,4 +1,5 @@
 tap "beeftornado/rmtree"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -59,6 +60,8 @@ brew "vint", args: ["HEAD"]
 brew "watch"
 # Watch files and take action when they change
 brew "watchman"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # Quantum Mechanical Keyboard (QMK) Firmware
