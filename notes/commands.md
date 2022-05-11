@@ -41,6 +41,7 @@ column
 paste
 awk
 seq
+nl
 ```
 
 ## COMPUTER CONTROL
@@ -56,6 +57,7 @@ mount
 ps
 jobs
 fg
+bg
 pidof
 uptime
 top
@@ -63,11 +65,12 @@ $0  # name of the script
 $#  # number of positional parameters
 $$  # pid of the current shell
 $@  # array-like construct of all positional parameters
+$-  # shell info
 printenv || env
 ```
 
 ## USERS & PERMS
-```
+```bash
 whoami
 who
 w
@@ -88,7 +91,6 @@ nohup command & # run the command in the background and not stop even if you qui
 hash # show all commands
 yes # print y a bunch
 ```
-
 https://linuxize.com/post/how-to-run-linux-commands-in-background
 
 ## user input
@@ -108,8 +110,8 @@ zsh -o SOURCE_TRACE
 ## BREW
 ```bash
 cowsay
-    cowthink
+cowthink
 figlet
-    figlist
-    showfigfonts
+figlist
+showfigfonts
 ```
