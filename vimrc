@@ -260,24 +260,23 @@ augroup vim_plug_augroup
     \| endif
 augroup end
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/Yggdroot/indentLine',       {'on':'IndentLinesToggle'}
+Plug 'https://github.com/Yggdroot/indentLine',     { 'on':'IndentLinesToggle'}
 Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'https://github.com/ap/vim-css-color'
-Plug 'https://github.com/easymotion/vim-easymotion'
 Plug 'https://github.com/honza/vim-snippets'
 Plug 'https://github.com/itchyny/lightline.vim'
-Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf',            { 'do': { -> fzf#install() } }
 Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/junegunn/gv.vim'
-Plug 'https://github.com/junegunn/vim-easy-align',   {'on':'<Plug>(EasyAlign)'}
+Plug 'https://github.com/junegunn/vim-easy-align', { 'on':'<Plug>(EasyAlign)'}
 Plug 'https://github.com/junegunn/vim-peekaboo'
 Plug 'https://github.com/machakann/vim-highlightedyank'
-Plug 'https://github.com/mbbill/undotree',           {'on':'UndotreeToggle'}
+Plug 'https://github.com/mbbill/undotree',         { 'on':'UndotreeToggle'}
 Plug 'https://github.com/mhinz/vim-startify'
-Plug 'https://github.com/neoclide/coc.nvim',         {'branch': 'release'}
+Plug 'https://github.com/neoclide/coc.nvim',       { 'branch': 'release'}
 Plug 'https://github.com/nixon/vim-vmath'
-Plug 'https://github.com/preservim/nerdtree',        {'on':'NERDTreeToggle'}
-Plug 'https://github.com/rhysd/git-messenger.vim',   {'on':'<Plug>(git-messenger)'}
+Plug 'https://github.com/preservim/nerdtree',      { 'on':'NERDTreeToggle'}
+Plug 'https://github.com/rhysd/git-messenger.vim', { 'on':'<Plug>(git-messenger)'}
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/tpope/vim-abolish'
 Plug 'https://github.com/tpope/vim-commentary'
@@ -401,11 +400,6 @@ augroup END
 "" GV.VIM
 """""""""
 nmap <leader>gl :GV<cr>
-"""""""""""""""""
-"" VIM-EASYMOTION
-"""""""""""""""""
-nmap s <Plug>(easymotion-overwin-f)
-nmap s <Plug>(easymotion-overwin-f2)
 """""""""""
 "" COC.NVIM
 """""""""""
