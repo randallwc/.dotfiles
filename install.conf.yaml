@@ -5,7 +5,6 @@
 - clean: ['~', '.vim']
 
 - link:
-    ~/.vimrc:
     ~/.bash_profile:
     ~/.bashrc:
     ~/.condarc:
@@ -14,6 +13,8 @@
     ~/.ideavimrc:
     ~/.profile:
     ~/.pylintrc:
+    ~/.tmux.conf:
+    ~/.vimrc:
     ~/.vimrc:
     ~/.zprofile:
     ~/.zshrc:
