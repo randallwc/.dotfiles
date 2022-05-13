@@ -181,22 +181,13 @@ xnoremap <silent> il <Esc>^vg_
 onoremap <silent> il :<C-U>normal! ^vg_<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" CONDITIONAL
+"" HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colored vim
 if !has('gui_running')
     set t_Co=256
 endif
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" HIGHLIGHTS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has('gui_running')
-    colorscheme macvim
-    set background=dark
-else
-    colorscheme default
-endif
 let g:markdown_fenced_languages = [
             \ 'html',
             \ 'python',
