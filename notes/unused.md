@@ -88,6 +88,32 @@ augroup show_trailing_spaces
     " show trailing spaces
     autocmd VimEnter,WinEnter * match ErrorMsg '\s\+$'
 augroup END
+
+if has('gui_running')
+    colorscheme macvim
+    set background=dark
+else
+    colorscheme default
+endif
+
+highlight VertSplit ctermfg=darkblue ctermbg=white guifg=white guibg=darkblue
+highlight MatchParen cterm=bold ctermfg=magenta ctermbg=lightmagenta
+highlight LineNr ctermfg=grey guifg=#a9a9a9 guibg=NONE
+highlight LineNrAbove ctermfg=darkgrey guifg=#696969
+highlight LineNrBelow ctermfg=darkgrey guifg=#696969
+highlight Search guibg=yellow
+highlight IncSearch cterm=bold ctermfg=white ctermbg=172 gui=bold guifg=white guibg=orange
+highlight ColorColumn ctermbg=236 guibg=#4d4d4d
+highlight SpellBad ctermfg=white
+highlight Pmenu guibg=#d7e5dc gui=NONE ctermbg=darkgrey ctermfg=lightgrey
+highlight PmenuSel guibg=#b7c7b7 gui=NONE ctermfg=lightgrey ctermbg=blue
+highlight PmenuSbar guibg=#bcbcbc ctermfg=magenta
+highlight PmenuThumb guibg=#585858 ctermbg=lightgrey
+highlight FgCocErrorFloatBgCocFloating cterm=bold ctermfg=red ctermbg=darkgrey guifg=#ff0000 guibg=#d7e5dc
+highlight FgCocHintFloatBgCocFloating cterm=bold ctermfg=lightblue ctermbg=darkgrey guifg=#15aabf guibg=#d7e5dc
+highlight FgCocWarningFloatBgCocFloating cterm=bold ctermfg=214 ctermbg=242 guifg=#ff922b guibg=#d7e5dc
+highlight CursorColumn cterm=bold term=reverse ctermfg=blue ctermbg=NONE guibg=Grey40
+highlight Folded ctermbg=236
 ```
 
 # MACVIM
