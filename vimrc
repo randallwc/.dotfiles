@@ -183,9 +183,14 @@ onoremap <silent> il :<C-U>normal! ^vg_<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" HIGHLIGHTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" colored vim
+syntax enable
+colorscheme onedark
+let g:onedark_terminal_italics=1
+
 if !has('gui_running')
-    set t_Co=256
+    set termguicolors
+    highlight Normal guibg=NONE ctermbg=NONE
+    highlight Terminal guibg=NONE ctermbg=NONE
 endif
 
 let g:markdown_fenced_languages = [
