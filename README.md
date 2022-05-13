@@ -178,6 +178,9 @@ specific software may be accessed.
 # TODO
 ## minor
 
+- [ ] ls --> exa
+- [ ] tree --> exa
+
 ### terminal
 - [ ] [colorized man pages](https://superuser.com/questions/452034/bash-colorized-man-page)
 

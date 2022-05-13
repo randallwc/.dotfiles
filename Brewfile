@@ -18,6 +18,10 @@ brew "cmake"
 brew "colordiff"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Run arbitrary commands when files change
+brew "entr"
+# Modern replacement for 'ls'
+brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Banner-like program prints strings as ASCII art
