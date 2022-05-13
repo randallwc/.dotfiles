@@ -36,10 +36,10 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" SET
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let &showbreak = '↪ '
 set autoindent
 set autoread
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set backupcopy=yes
 set breakindent " indents word-wrapped lines as much as the parent line
 set colorcolumn=80
 set confirm
@@ -89,6 +89,10 @@ set undoreload=10000
 set updatetime=300
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
+let &showbreak = '↪ '
+let &t_SI="\<Esc>[3 q" " start insert mode, blinking underline cursor
+let &t_EI="\<Esc>[1 q" " end insert mode, blinking block
+syntax enable
 scriptencoding utf-8
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -133,15 +137,6 @@ onoremap <silent> il :<C-U>normal! ^vg_<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CONDITIONAL
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" change cursor based on mode
-if &term =~? "xterm\\|rxvt"
-    let &t_SI="\<Esc>[3 q" " start insert mode, blinking underline cursor
-    let &t_EI="\<Esc>[1 q" " end insert mode, blinking block
-endif
-" enable syntax highlighting
-if &t_Co > 2 || has('gui_running')
-    syntax enable
-endif
 " colored vim
 if !has('gui_running')
     set t_Co=256
