@@ -34,6 +34,52 @@ if !isdirectory($HOME . '/.vim/swap')
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" VIM PLUG
+" https://github.com/junegunn/vim-plug/
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+" run pluginstall if there are missing plugins
+augroup vim_plug_augroup
+    autocmd!
+    autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+    \| PlugInstall --sync | source $MYVIMRC
+    \| endif
+augroup end
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/Yggdroot/indentLine',     { 'on':'IndentLinesToggle'}
+Plug 'https://github.com/airblade/vim-gitgutter'
+Plug 'https://github.com/ap/vim-css-color'
+Plug 'https://github.com/honza/vim-snippets'
+Plug 'https://github.com/itchyny/lightline.vim'
+Plug 'https://github.com/joshdick/onedark.vim'
+Plug 'https://github.com/junegunn/fzf',            { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf.vim'
+Plug 'https://github.com/junegunn/gv.vim'
+Plug 'https://github.com/junegunn/vim-easy-align', { 'on':'<Plug>(EasyAlign)'}
+Plug 'https://github.com/junegunn/vim-peekaboo'
+Plug 'https://github.com/machakann/vim-highlightedyank'
+Plug 'https://github.com/mbbill/undotree',         { 'on':'UndotreeToggle'}
+Plug 'https://github.com/mhinz/vim-startify'
+Plug 'https://github.com/neoclide/coc.nvim',       { 'branch': 'release'}
+Plug 'https://github.com/nixon/vim-vmath'
+Plug 'https://github.com/preservim/nerdtree',      { 'on':'NERDTreeToggle'}
+Plug 'https://github.com/rhysd/git-messenger.vim', { 'on':'<Plug>(git-messenger)'}
+Plug 'https://github.com/sheerun/vim-polyglot'
+Plug 'https://github.com/tpope/vim-abolish'
+Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/tpope/vim-repeat'
+Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/tpope/vim-unimpaired'
+Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
+Plug 'https://github.com/vim-scripts/argtextobj.vim'
+call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" SET
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set autoindent
@@ -217,51 +263,6 @@ elseif has('gui_macvim')
 else " linux
     set guifont=Monospace\ 12
 endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" VIM PLUG
-" https://github.com/junegunn/vim-plug/
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-" run pluginstall if there are missing plugins
-augroup vim_plug_augroup
-    autocmd!
-    autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-    \| PlugInstall --sync | source $MYVIMRC
-    \| endif
-augroup end
-call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/Yggdroot/indentLine',     { 'on':'IndentLinesToggle'}
-Plug 'https://github.com/airblade/vim-gitgutter'
-Plug 'https://github.com/ap/vim-css-color'
-Plug 'https://github.com/honza/vim-snippets'
-Plug 'https://github.com/itchyny/lightline.vim'
-Plug 'https://github.com/junegunn/fzf',            { 'do': { -> fzf#install() } }
-Plug 'https://github.com/junegunn/fzf.vim'
-Plug 'https://github.com/junegunn/gv.vim'
-Plug 'https://github.com/junegunn/vim-easy-align', { 'on':'<Plug>(EasyAlign)'}
-Plug 'https://github.com/junegunn/vim-peekaboo'
-Plug 'https://github.com/machakann/vim-highlightedyank'
-Plug 'https://github.com/mbbill/undotree',         { 'on':'UndotreeToggle'}
-Plug 'https://github.com/mhinz/vim-startify'
-Plug 'https://github.com/neoclide/coc.nvim',       { 'branch': 'release'}
-Plug 'https://github.com/nixon/vim-vmath'
-Plug 'https://github.com/preservim/nerdtree',      { 'on':'NERDTreeToggle'}
-Plug 'https://github.com/rhysd/git-messenger.vim', { 'on':'<Plug>(git-messenger)'}
-Plug 'https://github.com/sheerun/vim-polyglot'
-Plug 'https://github.com/tpope/vim-abolish'
-Plug 'https://github.com/tpope/vim-commentary'
-Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'https://github.com/tpope/vim-repeat'
-Plug 'https://github.com/tpope/vim-surround'
-Plug 'https://github.com/tpope/vim-unimpaired'
-Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
-Plug 'https://github.com/vim-scripts/argtextobj.vim'
-call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" PLUGIN SETTINGS
