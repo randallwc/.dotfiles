@@ -135,10 +135,10 @@ set undoreload=10000
 set updatetime=300
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
+
 let &showbreak = '↪ '
-let &t_SI="\<Esc>[3 q" " start insert mode, blinking underline cursor
 let &t_EI="\<Esc>[1 q" " end insert mode, blinking block
-syntax enable
+let &t_SI="\<Esc>[3 q" " start insert mode, blinking underline cursor
 scriptencoding utf-8
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -361,7 +361,7 @@ map <leader>ie :IndentLinesToggle<cr>
 """"""""""""""""
 nmap <leader>gm <Plug>(git-messenger)
 """""""""""
-"" nerdtree
+"" NERDTREE
 """""""""""
 nnoremap <leader>n :NERDTreeToggle<CR>
 augroup nerd_loader
@@ -378,9 +378,9 @@ augroup END
 nmap <leader>gl :GV<cr>
 """""""""""
 "" COC.NVIM
-"""""""""""
-""" EXTENSIONS
-""""""""""""""
+""""""""""""""""""
+""" COC EXTENSIONS
+""""""""""""""""""
 let g:coc_global_extensions = [
             \ 'coc-clangd',
             \ 'coc-css',
