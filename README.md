@@ -8,22 +8,15 @@ for M1 chips
 
 `softwareupdate --install-rosetta`
 
-# symlink files
-`./install`
-
 # github
 
 [create git ssh
 key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 # [install homebrew](https://brew.sh)
-## link the settings file
-```sh
-# this is to link the file
-brew bundle --file=~/.dotfiles/Brewfile
-# and run this to update it
-brew bundle dump --force --describe --file=~/.dotfiles/Brewfile
-```
+
+# auto install
+`./install`
 
 ## visual studio
  - run `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool
@@ -94,14 +87,6 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 `Finder > View > Show Status Bar`
 
 ## optional
-
-`defaults write com.apple.finder AppleShowAllFiles YES` to have it auto show
-hidden files
-
-# [miniconda](https://docs.conda.io/en/latest/miniconda.html)
-> installed with homebrew
-- [jupyter lab](https://jupyter.org/install)
-- ipython
 
 # enable document sync on icloud
 
