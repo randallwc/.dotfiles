@@ -268,6 +268,7 @@ nmap ga <Plug>(EasyAlign)
 map <expr> <c-p> fugitive#head() != '' ? ':GFiles --cached --others --exclude-standard<cr>' : ':Files<cr>'
 nnoremap <expr> <c-b> len(getbufinfo({'buflisted':1})) > 1 ? ':Buffers<cr>' : ':History<cr>'
 nnoremap <leader>f :Files<cr>
+" <c-/> == <c-_> idk why
 nnoremap <c-_> :Lines<cr>
 """"""""""""
 "" VIM-VMATH
