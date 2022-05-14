@@ -66,6 +66,8 @@ brew "vint", args: ["HEAD"]
 brew "watch"
 # Watch files and take action when they change
 brew "watchman"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database

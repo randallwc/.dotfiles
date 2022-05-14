@@ -113,3 +113,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" &&
 # unbind <m-c> because <esc>c is often pressed
 [[ $- =~ i ]] && bindkey -r '\ec'
 bindkey "^f" fzf-cd-widget
+
+################################################################################
+# ZSH AUTOCOMPLETE HISTORY
+################################################################################
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
