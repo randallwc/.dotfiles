@@ -186,13 +186,8 @@ onoremap <silent> il :<C-U>normal! ^vg_<CR>
 syntax enable
 colorscheme onedark
 let g:onedark_terminal_italics=1
-
-if !has('gui_running')
-    set termguicolors
-    highlight Normal guibg=NONE ctermbg=NONE
-    highlight Terminal guibg=NONE ctermbg=NONE
-endif
-
+highlight Normal ctermbg=NONE
+highlight Terminal ctermbg=NONE
 let g:markdown_fenced_languages = [
             \ 'html',
             \ 'python',
@@ -296,9 +291,6 @@ nmap <leader>gqf :GitGutterQuickFix \| copen<cr>
 let g:startify_bookmarks =
     \ [
     \     { 'x': '~/.vimrc' },
-    \     { 'y': '~/.bashrc' },
-    \     { 'z': '~/.zshrc' },
-    \     { 'd': '~/.dotfiles'},
     \ ]
 let g:startify_change_to_vcs_root = 0
 let g:ascii = [
@@ -322,6 +314,12 @@ let g:startify_lists = [
     \ ]
 let g:startify_session_persistence = 1
 let g:startify_session_before_save = [ 'silent! tabdo NERDTreeClose' ]
+highlight StartifyFile ctermfg=blue cterm=bold guifg=lightblue
+highlight startifypath ctermfg=grey cterm=NONE guifg=darkgrey
+highlight StartifyNumber ctermfg=lightgreen guifg=lightgreen
+highlight StartifySection ctermfg=lightmagenta guifg=lightmagenta
+highlight StartifyHeader ctermfg=lightmagenta guifg=lightmagenta
+highlight StartifyFooter ctermfg=lightmagenta guifg=lightmagenta
 map <leader>st :Startify<cr>
 """""""""""""""
 "" VIM-PEEKABOO
