@@ -11,12 +11,10 @@ for M1 chips
 # symlink files
 `./install`
 
-# set up github links
+# github
 
 [create git ssh
 key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-
-`./setup.sh --github`
 
 # [install homebrew](https://brew.sh)
 ## link the settings file
