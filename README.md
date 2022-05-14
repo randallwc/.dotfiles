@@ -9,7 +9,7 @@ for M1 chips
 `softwareupdate --install-rosetta`
 
 # symlink files
-`./setup.sh`
+`./install`
 
 # set up github links
 
