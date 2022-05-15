@@ -300,16 +300,20 @@ let g:startify_bookmarks =
     \     { 'x': '~/.vimrc' },
     \ ]
 let g:startify_change_to_vcs_root = 0
-let g:ascii = [
-    \ ' __      __  ______',
-    \ '/\ \  __/\ \/\  __  \',
-    \ '\ \ \/\ \ \ \ \ \_\  \',
-    \ ' \ \ \ \ \ \ \ \  _  /',
-    \ '  \ \ \_/ \_\ \ \ \\  \',
-    \ '   \ \____^___/\ \_\ \_\',
-    \ '     \/__//__/  \/_/\/_/'
-    \ ]
-let g:startify_custom_header = 'startify#pad(g:ascii)'
+if executable('figlet')
+    let g:startify_custom_header = startify#pad(split(system('figlet -f "$(find "$(brew --prefix figlet)"/share/figlet/fonts/*.flf -type f | sort -R | head -1)" will'), '\n'))
+else
+    let g:ascii = [
+        \ ' __      __  ______',
+        \ '/\ \  __/\ \/\  __  \',
+        \ '\ \ \/\ \ \ \ \ \_\  \',
+        \ ' \ \ \ \ \ \ \ \  _  /',
+        \ '  \ \ \_/ \_\ \ \ \\  \',
+        \ '   \ \____^___/\ \_\ \_\',
+        \ '     \/__//__/  \/_/\/_/'
+        \ ]
+    let g:startify_custom_header = 'startify#pad(g:ascii)'
+endif
 let g:startify_custom_footer = 'startify#pad(startify#fortune#boxed())'
 let g:startify_fortune_use_unicode = 1
 let g:startify_lists = [

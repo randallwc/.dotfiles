@@ -30,7 +30,7 @@ pbpaste
 ## TEXT
 ```bash
 grep
-sed
+sed # http://www.yourownlinux.com/2015/04/sed-command-in-linux-print-lines-in-file.html
 comm
 diff
 tr

@@ -155,3 +155,6 @@ colortest() {
         printf "\n";
     }'
 }
+randfig() {
+    figlet -f "$(find "$(brew --prefix figlet)"/share/figlet/fonts/*.flf -type f | sort -R | head -1)" "$@"
+}
