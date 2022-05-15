@@ -181,13 +181,19 @@ xnoremap <silent> il <Esc>^vg_
 onoremap <silent> il :<C-U>normal! ^vg_<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" HIGHLIGHTS
+"" COLORSCHEME
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
+" ---onedark---
 colorscheme onedark
 let g:onedark_terminal_italics=1
-highlight Normal ctermbg=NONE
+
+" --- no backgrounds ---
+highlight Normal ctermbg=NONE ctermfg=white
 highlight Terminal ctermbg=NONE
+highlight LineNr ctermbg=NONE
+highlight EndOfBuffer ctermbg=NONE
+
 let g:markdown_fenced_languages = [
             \ 'html',
             \ 'python',
