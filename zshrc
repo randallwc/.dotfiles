@@ -122,9 +122,10 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # MUST BE AT END
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 typeset -A ZSH_HIGHLIGHT_STYLES
+# set | grep ZSH_HIGHLIGHT_STYLES | tr " " '\n'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=blue'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=blue,bold'
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=green'
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=magenta'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)

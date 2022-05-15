@@ -67,6 +67,7 @@ $$  # pid of the current shell
 $@  # array-like construct of all positional parameters
 $-  # shell info
 printenv || env
+set # shows all the shell variables https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux
 ```
 
 ## USERS & PERMS
