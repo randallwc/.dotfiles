@@ -70,6 +70,8 @@ brew "watch"
 brew "watchman"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
