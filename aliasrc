@@ -16,7 +16,6 @@ Darwin)
     # MAC ALIAS
     ###########
     alias ls='ls -G'
-    command -v bat >/dev/null && alias cat='bat'
     alias bdt='brew deps --tree --installed'
     alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
     alias bl='brew leaves'
@@ -130,6 +129,11 @@ alias nosleep='caffeinate -d'
 alias jsonformat='python3 -m json.tool'
 alias tree='tree -C'
 alias gr='cd $(git rev-parse --show-toplevel)'
+
+# command dependent aliases
+command -v bat >/dev/null && alias cat='bat'
+command -v bat >/dev/null && alias man='batman'
+command -v colordiff >/dev/null && alias diff='colordiff'
 
 ################################################################################
 # FUNCTIONS
