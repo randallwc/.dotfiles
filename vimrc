@@ -192,7 +192,7 @@ let g:onedark_terminal_italics=1
 highlight Normal ctermbg=NONE ctermfg=white
 highlight Terminal ctermbg=NONE
 highlight LineNr ctermbg=NONE
-highlight EndOfBuffer ctermbg=NONE
+" highlight NonText ctermbg=NONE
 
 let g:markdown_fenced_languages = [
             \ 'html',
