@@ -185,7 +185,10 @@ onoremap <silent> il :<C-U>normal! ^vg_<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 " ---onedark---
-let g:onedark_terminal_italics=0
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
 colorscheme onedark
 
 " --- no backgrounds ---
