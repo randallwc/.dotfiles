@@ -162,3 +162,8 @@ colortest() {
 randfig() {
     figlet -f "$(find "$(brew --prefix figlet)"/share/figlet/fonts/*.flf -type f | sort -R | head -1)" "$@"
 }
+
+################################################################################
+# EXPORTS
+################################################################################
+export TERM=xterm-256color
