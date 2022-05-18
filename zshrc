@@ -55,30 +55,19 @@ _comp_options+=(globdots)
 zmodload -i zsh/complist
 
 ################################################################################
-# ALIASES
+# TERMINAL SETTINGS
 ################################################################################
+# ALIASES
 # alias to source .zshrc
 alias src='[ -r ~/.zshrc ] && . ~/.zshrc'
 # make bash help command work in zsh
 help() { bash -c "help $1" }
 # aliases
 [ -r ~/.dotfiles/aliasrc ] && . ~/.dotfiles/aliasrc
-
-################################################################################
-# HISTORY
-################################################################################
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-
-################################################################################
-# SETOPT
-################################################################################
 setopt autocd beep extendedglob nomatch notify
-
-################################################################################
-# BINDINGS
-################################################################################
 bindkey -e # emacs mode
 
 ################################################################################
@@ -117,12 +106,12 @@ bindkey "^f" fzf-cd-widget
 ################################################################################
 # ZSH AUTOCOMPLETE AND SYNTAX HIGHLIGHTING
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md
+# set | grep ZSH_HIGHLIGHT_STYLES | tr " " '\n'
 ################################################################################
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # MUST BE AT END
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 typeset -A ZSH_HIGHLIGHT_STYLES
-# set | grep ZSH_HIGHLIGHT_STYLES | tr " " '\n'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=blue'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=blue,bold'
