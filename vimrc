@@ -185,17 +185,20 @@ onoremap <silent> il :<C-U>normal! ^vg_<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 " ---onedark---
+augroup colorextend
+    autocmd!
+    " --- white highlight text ---
+    autocmd ColorScheme * call onedark#extend_highlight("Visual", { "fg": {"gui": "#ABB2BF", "cterm": "145", "cterm16" : "7"} })
+    " --- no backgrounds ---
+    autocmd ColorScheme * call onedark#extend_highlight("Normal", { "fg": { "cterm": "white" }, "bg": { "cterm": "NONE" } })
+    autocmd ColorScheme * call onedark#extend_highlight("Terminal", { "fg": { "cterm": "white" }, "bg": { "cterm": "NONE" } })
+    autocmd ColorScheme * call onedark#extend_highlight("LineNr", { "bg": { "cterm": "NONE" } })
+augroup END
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 let g:onedark_termcolors=256
 let g:onedark_terminal_italics=1
 colorscheme onedark
-
-" --- no backgrounds ---
-highlight Normal ctermbg=NONE ctermfg=white
-highlight Terminal ctermbg=NONE
-highlight LineNr ctermbg=NONE
-" highlight NonText ctermbg=NONE
 
 let g:markdown_fenced_languages = [
             \ 'html',
