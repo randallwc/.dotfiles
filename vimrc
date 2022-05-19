@@ -445,7 +445,7 @@ nmap     <leader>cq <Plug>(coc-fix-current)
 nnoremap <leader>cd :<C-u>CocList diagnostics<cr>
 nnoremap <leader>ce :<C-u>CocList extensions<cr>
 nnoremap <leader>cm :<C-u>CocList commands<cr>
-nnoremap <leader>co :<C-u>CocList outline<cr>
+nnoremap <leader>co :<C-u>CocOutline<cr>
 nnoremap <leader>cs :<C-u>CocList -I symbols<cr>
 xmap     if         <Plug>(coc-funcobj-i)
 omap     if         <Plug>(coc-funcobj-i)
