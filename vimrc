@@ -287,11 +287,7 @@ nmap ++ vip++
 """"""""""""""""
 "" VIM-GITGUTTER
 """"""""""""""""
-highlight! link SignColumn LineNr
 set foldtext=gitgutter#fold#foldtext()
-highlight GitGutterAdd cterm=bold ctermfg=green gui=bold guifg=green
-highlight GitGutterChange cterm=bold ctermfg=214 gui=bold guifg=orange
-highlight GitGutterDelete cterm=bold ctermfg=red gui=bold guifg=red
 let g:gitgutter_sign_modified_removed = '±'
 nmap <leader>gqf :GitGutterQuickFix \| copen<cr>
 """""""""""""""
@@ -350,7 +346,6 @@ let g:undotree_SetFocusWhenToggle = 1
 "" HIGHLIGHTEDYANK
 """"""""""""""""""
 let g:highlightedyank_highlight_duration = 100
-highlight HighlightedyankRegion cterm=reverse gui=reverse
 """""""""""""
 "" INDENTLINE
 """""""""""""

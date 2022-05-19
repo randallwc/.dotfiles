@@ -114,6 +114,11 @@ highlight FgCocHintFloatBgCocFloating cterm=bold ctermfg=lightblue ctermbg=darkg
 highlight FgCocWarningFloatBgCocFloating cterm=bold ctermfg=214 ctermbg=242 guifg=#ff922b guibg=#d7e5dc
 highlight CursorColumn cterm=bold term=reverse ctermfg=blue ctermbg=NONE guibg=Grey40
 highlight Folded ctermbg=236
+highlight HighlightedyankRegion cterm=reverse gui=reverse
+highlight GitGutterAdd cterm=bold ctermfg=green gui=bold guifg=green
+highlight GitGutterChange cterm=bold ctermfg=214 gui=bold guifg=orange
+highlight GitGutterDelete cterm=bold ctermfg=red gui=bold guifg=red
+highlight! link SignColumn LineNr
 ```
 
 # MACVIM
