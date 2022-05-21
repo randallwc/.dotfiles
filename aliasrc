@@ -164,6 +164,10 @@ randfig() {
     figlet -f "$(find "$(brew --prefix figlet)"/share/figlet/fonts/*.flf -type f | sort -R | head -1)" "$@"
 }
 
+pickfig() {
+    figlet -f "$(find "$(brew --prefix figlet)"/share/figlet/fonts/*.flf -type f | fzf --preview="figlet -f {} $1")" "$1"
+}
+
 ################################################################################
 # EXPORTS
 ################################################################################
