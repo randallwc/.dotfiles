@@ -60,8 +60,6 @@ zmodload -i zsh/complist
 # ALIASES
 # alias to source .zshrc
 alias src='[ -r ~/.zshrc ] && . ~/.zshrc'
-# make bash help command work in zsh
-help() { bash -c "help $1" }
 # aliases
 [ -r ~/.dotfiles/aliasrc ] && . ~/.dotfiles/aliasrc
 HISTFILE=~/.zsh_history
