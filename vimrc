@@ -149,7 +149,8 @@ map <space> <leader>
 let g:mapleader=' '
 nnoremap <leader>ls :ls<cr>:b<space>
 nnoremap <leader>sb :below botright 5new<cr>
-nnoremap <leader>te :setlocal mouse=a<cr> :below botright term<cr>
+nnoremap <leader>te :below botright term<cr>
+nnoremap <leader>so :source $MYVIMRC<cr>
 " reselect pasted text
 nmap <leader>gp `[v`]
 nmap <leader>q :q<cr>
@@ -212,14 +213,6 @@ let g:markdown_fenced_languages = [
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" AUTOCMD
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" https://learnvimscriptthehardway.stevelosh.com/chapters/14.html
-augroup saving_vimrc
-    autocmd!
-    autocmd BufWritePost vimrc echom "sourcing vimrc"
-    autocmd BufWritePost vimrc source $MYVIMRC
-    autocmd BufWritePost .vimrc echom "sourcing vimrc"
-    autocmd BufWritePost .vimrc source $MYVIMRC
-augroup END
 augroup pip_python
     autocmd!
     autocmd filetype python :IndentLinesToggle
