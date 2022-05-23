@@ -188,8 +188,7 @@ syntax enable
 " ---onedark---
 augroup colorextend
     autocmd!
-    " --- white highlight text ---
-    autocmd ColorScheme * call onedark#extend_highlight("Visual", { "fg": {"gui": "#ABB2BF", "cterm": "145", "cterm16" : "7"} })
+    autocmd ColorScheme * call onedark#extend_highlight("Search", { "fg": {"cterm": "lightyellow"} })
     " --- no backgrounds ---
     autocmd ColorScheme * call onedark#extend_highlight("Normal", { "fg": { "cterm": "white" }, "bg": { "cterm": "NONE" } })
     autocmd ColorScheme * call onedark#extend_highlight("Terminal", { "fg": { "cterm": "white" }, "bg": { "cterm": "NONE" } })
