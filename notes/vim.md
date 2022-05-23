@@ -51,6 +51,7 @@ G                       end of file
 ``                      undo last jump
 '.                      jump to last changed line (will just go to last edit)
 g;                      jump to place of last edit (will keep going back in edits)
+g,                      jump to place of next edit
 %                       jump to other bracket
 *                       search for word under cursor
 #                       search for word under cursor backwards
