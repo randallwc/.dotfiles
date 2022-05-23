@@ -188,7 +188,11 @@ syntax enable
 " ---onedark---
 augroup colorextend
     autocmd!
-    autocmd ColorScheme * call onedark#extend_highlight("Search", { "fg": {"cterm": "lightyellow"} })
+    " https://github.com/joshdick/onedark.vim/issues/301
+    " autocmd ColorScheme * call onedark#extend_highlight("Search", { "cterm": "bold" })
+    let s:myfgcolor = { 'gui': '#282C34', 'cterm': 'yellow', 'cterm16' : '0' }
+    let s:yellow = { 'gui': '#E5C07B', 'cterm': '180', 'cterm16' : '3' }
+    autocmd ColorScheme * call onedark#set_highlight("Search", { "cterm": "bold,italic", "fg": s:myfgcolor, "bg": s:yellow })
     " --- no backgrounds ---
     autocmd ColorScheme * call onedark#extend_highlight("Normal", { "fg": { "cterm": "white" }, "bg": { "cterm": "NONE" } })
     autocmd ColorScheme * call onedark#extend_highlight("Terminal", { "fg": { "cterm": "white" }, "bg": { "cterm": "NONE" } })
