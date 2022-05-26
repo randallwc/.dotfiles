@@ -97,44 +97,55 @@ esac
 ################################################################################
 # ALIASES
 ################################################################################
-# shellcheck disable=SC2142
-alias l.='ls --color=always -Ald .* | awk "{print \$9 \$10 \$11}"'
-alias l='ls -AF'
-alias ll='ls -lF'
-alias lll='ls -AlF'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
+# command dependent aliases
+if command -v bat >/dev/null; then
+    alias cat='bat'
+    alias man='batman'
+    help() { "$@" --help 2>&1 | bat --plain --language=help; }
+fi
+command -v colordiff >/dev/null && alias diff='colordiff'
+if command -v exa >/dev/null; then
+    alias exa='exa --icons --git --color-scale --group-directories-first'
+    alias ls='exa'
+    alias l.='exa --sort=size -a1Fd .*'
+    alias l='exa -aF'
+    alias ll='exa -lF'
+    alias lll='exa -alF'
+    alias tree='exa --tree'
+else
+    # shellcheck disable=SC2142
+    alias l.='ls --color=always -Ald .* | awk "{print \$9 \$10 \$11}"'
+    alias l='ls -AF'
+    alias ll='ls -lF'
+    alias lll='ls -AlF'
+fi
+
+alias c='clear'
+alias desk='cd ~/Desktop/'
+alias doc='cd ~/Documents/'
+alias dot='cd ~/.dotfiles/'
+alias down='cd ~/Downloads/'
+alias e='exit'
 alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias fpath='echo $FPATH | tr : \\n | sort'
+alias fpathu='echo $FPATH | tr : \\n | sort | uniq -c'
+alias ghub='cd ~/GitHub/'
+alias gr='cd $(git rev-parse --show-toplevel)'
+alias grep='grep --color=auto'
+alias jsonformat='python3 -m json.tool'
 alias localip='ipconfig getifaddr en0'
 alias macaddrs='arp -a'
+alias nosleep='caffeinate -d'
+alias path='echo $PATH | tr : \\n | sort'
+alias pathu='echo $PATH | tr : \\n | sort | uniq -c'
 alias publicip='curl ifconfig.me'
 alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
 alias sshc='ssh culver9'
-alias sshzi='ssh pi@$(publicip)'
 alias sshz='ssh pi@raspberrypi.local'
-alias c='clear'
-alias e='exit'
-alias ghub='cd ~/GitHub/'
-alias ucla='cd ~/Documents/ucla/4th\ yr/3rd\ qtr'
+alias sshzi='ssh pi@$(curl ifconfig.me)'
 alias team3='cd ~/GitHub/Team3/'
-alias desk='cd ~/Desktop/'
-alias doc='cd ~/Documents/'
-alias down='cd ~/Downloads/'
-alias dot='cd ~/.dotfiles/'
-alias path='echo $PATH | tr : \\n | sort'
-alias pathu='path | uniq -c'
-alias fpath='echo $FPATH | tr : \\n | sort'
-alias fpathu='fpath | uniq -c'
-alias nosleep='caffeinate -d'
-alias jsonformat='python3 -m json.tool'
-alias tree='tree -C'
-alias gr='cd $(git rev-parse --show-toplevel)'
-
-# command dependent aliases
-command -v bat >/dev/null && alias cat='bat'
-command -v bat >/dev/null && alias man='batman'
-command -v colordiff >/dev/null && alias diff='colordiff'
-command -v bat >/dev/null && help() { "$@" --help 2>&1 | bat --plain --language=help; }
+alias ucla='cd ~/Documents/ucla/4th\ yr/3rd\ qtr'
 
 ################################################################################
 # FUNCTIONS

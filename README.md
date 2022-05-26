@@ -157,16 +157,3 @@ specific software may be accessed.
 # do not disturb
 1. System Preferences > Keyboard > Shortcuts > Mission Control
 1. Turn Do Not Disturb On/Off ⌃⌥⌘D
-
-# TODO
-## minor
-
-- [ ] ls --> exa
-- [ ] tree --> exa
-
-### terminal
-- [ ] [colorized man pages](https://superuser.com/questions/452034/bash-colorized-man-page)
-
-### zsh
-- [ ] look into greyed out tab completion in zsh
-- [ ] https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
