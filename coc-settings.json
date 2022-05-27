@@ -38,5 +38,6 @@
             "isort",
             "docformatter"
         ]
-    }
+    },
+    "codeLens.enable": true
 }
