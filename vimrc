@@ -387,7 +387,6 @@ let g:coc_global_extensions = [
             \ 'coc-html',
             \ 'coc-json',
             \ 'coc-jedi',
-            \ 'coc-sh',
             \ 'coc-snippets',
             \ 'coc-sql',
             \ 'coc-tsserver',
@@ -397,6 +396,7 @@ let g:coc_global_extensions = [
             \ 'coc-css',
             \ 'coc-prettier',
             \ ]
+" \ 'coc-sh',
 """""""""""""""
 """ COC KEYMAPS
 """""""""""""""
