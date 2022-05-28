@@ -102,7 +102,7 @@ if command -v bat >/dev/null; then
     alias cat='bat'
     alias man='batman'
     help() { "$@" --help 2>&1 | bat --plain --language=help; }
-    tailf(){ tail -f "$1" | bat --paging=never -l log; }
+    tailf(){ tail -f "$@" | bat --paging=never -l log; }
 fi
 command -v colordiff >/dev/null && alias diff='colordiff'
 if command -v exa >/dev/null; then
