@@ -12,6 +12,7 @@
     excludesfile = ~/.gitignore_global
     editor = vim
     ignorecase = false
+    autocrlf = input
 [color]
     ui = true
 [color "diff"]
