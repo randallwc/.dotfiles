@@ -395,8 +395,8 @@ let g:coc_global_extensions = [
             \ 'coc-diagnostic',
             \ 'coc-css',
             \ 'coc-prettier',
+            \ 'coc-sh',
             \ ]
-" \ 'coc-sh',
 """""""""""""""
 """ COC KEYMAPS
 """""""""""""""
