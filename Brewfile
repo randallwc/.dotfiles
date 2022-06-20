@@ -14,8 +14,6 @@ tap "qmk/qmk"
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
 brew "bat-extras"
-# Cross-platform make
-brew "cmake"
 # Color-highlighted diff(1) output
 brew "colordiff"
 # Configurable talking characters in ASCII art
