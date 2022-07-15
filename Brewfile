@@ -4,6 +4,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
@@ -86,6 +87,8 @@ cask "boop"
 cask "cyberduck"
 # Voice and text chat software
 cask "discord"
+# Emulator to play GameCube and Wii games
+cask "dolphin-dev"
 # Text editor
 cask "emacs"
 cask "font-jetbrains-mono-nerd-font"
