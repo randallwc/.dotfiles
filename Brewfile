@@ -83,6 +83,8 @@ cask "audacity"
 cask "balenaetcher"
 # Scriptable scratchpad for developers
 cask "boop"
+# Guitar Hero clone
+cask "clone-hero"
 # Server and cloud storage browser
 cask "cyberduck"
 # Voice and text chat software
