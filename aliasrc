@@ -141,12 +141,9 @@ alias nosleep='caffeinate -d'
 alias path='echo $PATH | tr : \\n | sort'
 alias pathu='echo $PATH | tr : \\n | sort | uniq -c'
 alias publicip='curl ifconfig.me'
-alias ssh115c='ssh -X culver@eeapps.seas.ucla.edu'
-alias sshc='ssh culver9'
 alias sshz='ssh pi@raspberrypi.local'
 alias sshzi='ssh pi@$(curl ifconfig.me)'
 alias team3='cd ~/GitHub/Team3/'
-alias ucla='cd ~/Documents/ucla/4th\ yr/3rd\ qtr'
 
 ################################################################################
 # FUNCTIONS
