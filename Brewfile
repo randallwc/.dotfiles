@@ -81,10 +81,6 @@ cask "appcleaner"
 cask "audacity"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# Scriptable scratchpad for developers
-cask "boop"
-# Guitar Hero clone
-cask "clone-hero"
 # Server and cloud storage browser
 cask "cyberduck"
 # Voice and text chat software
@@ -93,6 +89,7 @@ cask "discord"
 cask "dolphin-dev"
 # Text editor
 cask "emacs"
+# Developer targeted fonts with a high number of glyphs
 cask "font-jetbrains-mono-nerd-font"
 # Web browser
 cask "google-chrome"
@@ -110,6 +107,7 @@ cask "pycharm"
 cask "qlcolorcode"
 # QuickLook generator for Markdown files
 cask "qlmarkdown"
+# QuickLook plugin for plaintext files without an extension
 cask "qlstephen"
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
