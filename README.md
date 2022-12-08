@@ -70,6 +70,11 @@ defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -b
 ## set up the guesture button
 ![logi options image](images/logiOptions.png)
 
+# monitor control
+![monitor control general settings](images/monitorcontrol_general.png)
+![monitor control app menu settings](images/monitorcontrol_appmenu.png)
+![monitor control keyboard settings](images/monitorcontrol_keyboard.png)
+
 # set up key board repeat
 `Keyboard > Keyboard > Key Repeat`
 

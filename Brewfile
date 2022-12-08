@@ -101,6 +101,8 @@ cask "macvim"
 cask "messenger"
 # Minimal installer for conda
 cask "miniconda"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
 # IDE for professional Python development
 cask "pycharm"
 # QuickLook plug-in that renders source code with syntax highlighting
