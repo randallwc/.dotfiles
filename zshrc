@@ -7,6 +7,20 @@
 #       \ \____^___/\ \_\ \_\
 #         \/__//__/  \/_/\/_/
 ################################################################################
+# TERMINAL SETTINGS
+################################################################################
+# ALIASES
+# alias to source .zshrc
+alias src='[ -r ~/.zshrc ] && . ~/.zshrc'
+# aliases
+[ -r ~/.dotfiles/aliasrc ] && . ~/.dotfiles/aliasrc
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd beep extendedglob nomatch notify
+bindkey -e # emacs mode
+
+################################################################################
 # SET UP PROMPT
 ################################################################################
 export STARSHIP_CONFIG=~/.dotfiles/starship-zsh.toml
@@ -17,13 +31,15 @@ eval "$(starship init zsh)"
 ################################################################################
 # https://zsh.sourceforge.io/Doc/Release/Completion-Widgets.html#Completion-Matching-Control
 # https://thevaluable.dev/zsh-completion-guide-examples/
+# https://mybyways.com/blog/macos-zsh-configuration
 # add other completion systems
 zstyle ':completion:*' completer _extensions _complete _approximate
 # case-insensitive matching only if there are no case-sensitive matches
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # tab complete select visually
-zstyle ':completion:*' menu select
-zstyle ':completion:*' verbose yes
+zstyle ':completion:*' menu select verbose yes
+# color of directories
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # color of descriptions
 zstyle ':completion:*:*:*:*:descriptions' format '%F{cyan}%B-- %d --%b%f'
 # explain corrections
@@ -53,20 +69,6 @@ autoload -Uz compinit && compinit
 _comp_options+=(globdots)
 # tab completion with highlighting
 zmodload -i zsh/complist
-
-################################################################################
-# TERMINAL SETTINGS
-################################################################################
-# ALIASES
-# alias to source .zshrc
-alias src='[ -r ~/.zshrc ] && . ~/.zshrc'
-# aliases
-[ -r ~/.dotfiles/aliasrc ] && . ~/.dotfiles/aliasrc
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-setopt autocd beep extendedglob nomatch notify
-bindkey -e # emacs mode
 
 ################################################################################
 # CONDA
