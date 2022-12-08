@@ -142,7 +142,6 @@ alias pathu='echo $PATH | tr : \\n | sort | uniq -c'
 alias publicip='curl ifconfig.me'
 alias sshz='ssh pi@raspberrypi.local'
 alias sshzi='ssh pi@$(curl ifconfig.me)'
-alias team3='cd ~/GitHub/Team3/'
 
 ################################################################################
 # FUNCTIONS

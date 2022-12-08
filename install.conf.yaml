@@ -40,14 +40,6 @@
     description: clone randallwc.github.io
     stderr: true
   -
-    command: git clone git@github.com:randallwc/Team3.git ~/GitHub/Team3 || >&2 echo "clone fail"
-    description: clone Team3
-    stderr: true
-  -
-    command: git clone git@github.com:randallwc/180DA-WarmUp.git ~/GitHub/180DA-WarmUp || >&2 echo "clone fail"
-    description: clone 180DA-WarmUp
-    stderr: true
-  -
     command: git clone git@github.com:qmk/qmk_firmware.git ~/GitHub/qmk_firmware || >&2 echo "clone fail"
     description: clone qmk/qmk_firmware.git
     stderr: true
