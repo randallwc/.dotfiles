@@ -1,6 +1,5 @@
 {
     "suggest.autoTrigger": "none",
-    "coc.preferences.formatOnSaveFiletypes": ["python", "c"],
     "diagnostic-languageserver.linters": {},
     "diagnostic-languageserver.filetypes": {
         "vim": "vint",
