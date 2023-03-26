@@ -111,8 +111,6 @@ cask "qlcolorcode"
 cask "qlmarkdown"
 # QuickLook plugin for plaintext files without an extension
 cask "qlstephen"
-# Toolbox companion for QMK Firmware
-cask "qmk-toolbox"
 # QuickLook plugin for JSON files
 cask "quicklook-json"
 # Move and resize windows using keyboard shortcuts or snap areas
