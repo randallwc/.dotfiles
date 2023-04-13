@@ -1,4 +1,2 @@
 1. make red background when caps
 2. bongo cat
-3. ^-> and ^<-
-4. brightness on knob
