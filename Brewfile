@@ -113,8 +113,8 @@ cask "qlmarkdown"
 cask "qlstephen"
 # QuickLook plugin for JSON files
 cask "quicklook-json"
-# Move and resize windows using keyboard shortcuts or snap areas
-cask "rectangle"
+# Window snapping tool
+cask "rectangle-pro"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
