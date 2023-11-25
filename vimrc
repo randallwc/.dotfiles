@@ -108,7 +108,7 @@ set nofoldenable
 set noshowmode
 set nowrap
 set path+=** " search down into subfolders
-set rnu nu
+set nu
 set scrolloff=5
 set shiftround
 set shiftwidth=4
