@@ -67,11 +67,11 @@
     pla = pull --all
     r = reset
     remotes = remote -v
-    s = status --show-stash
+    s = status --short
     sh = show
     shs = show --stat
     sl = shortlog
-    ss = status --short
+    ss = status --show-stash
     st = stash
     stl = stash list
     sts = stash show -p
