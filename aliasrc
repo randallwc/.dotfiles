@@ -18,7 +18,7 @@ Darwin)
     alias bdt='brew deps --tree --installed'
     alias bbd='brew bundle dump --force --describe --file=~/.dotfiles/Brewfile'
     alias bl='brew leaves'
-    alias airport='/Sy*/L*/Priv*/Apple8*/V*/C*/R*/airport'
+    alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
     alias wifiname='airport -I | grep -E "\s+SSID:"'
     alias vol='cd /Volumes/'
     ###########
