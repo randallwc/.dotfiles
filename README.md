@@ -162,3 +162,9 @@ specific software may be accessed.
 # do not disturb
 1. System Preferences > Keyboard > Shortcuts > Mission Control
 1. Turn Do Not Disturb On/Off ⌃⌥⌘D
+
+# hidden apps
+
+```bash
+defaults write com.apple.Dock showhidden -boolean yes; killall Dock
+```
