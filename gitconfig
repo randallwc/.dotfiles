@@ -62,7 +62,7 @@
     m = merge
     ma = merge --abort
     mt = mergetool
-    p = push
+    pu = push
     pl = pull
     pla = pull --all
     r = reset
