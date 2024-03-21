@@ -34,10 +34,16 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Open-source video transcoder available for Linux, Mac, and Windows
+brew "handbrake"
 # Improved top (interactive process viewer)
 brew "htop"
+# Tool to measure maximum TCP and UDP bandwidth
+brew "iperf"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Read the content info of a DVD
+brew "lsdvd"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Platform built on V8 to build network applications
@@ -92,25 +98,31 @@ cask "emacs"
 cask "font-jetbrains-mono-nerd-font"
 # Web browser
 cask "google-chrome"
+# Open-source video transcoder
+cask "handbrake"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Software for Logitech devices
+cask "logi-options-plus"
 # Text editor
 cask "macvim"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
+# Sandbox construction video game
+cask "minecraft"
 # Minimal installer for conda
 cask "miniconda"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # IDE for professional Python development
 cask "pycharm"
-# QuickLook plug-in that renders source code with syntax highlighting
+# Quick Look plug-in that renders source code with syntax highlighting
 cask "qlcolorcode"
-# QuickLook generator for Markdown files
+# Quick Look generator for Markdown files
 cask "qlmarkdown"
-# QuickLook plugin for plaintext files without an extension
+# Quick Look plugin for plaintext files without an extension
 cask "qlstephen"
-# QuickLook plugin for JSON files
+# Quick Look plugin for JSON files
 cask "quicklook-json"
 # Window snapping tool
 cask "rectangle-pro"
@@ -130,12 +142,15 @@ cask "xquartz"
 cask "zoom"
 vscode "eamodio.gitlens"
 vscode "jeff-hykin.better-cpp-syntax"
-vscode "KevinRose.vsc-python-indent"
+vscode "kevinrose.vsc-python-indent"
+vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
