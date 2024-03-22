@@ -257,7 +257,7 @@ runtime ftplugin/man.vim
 if has('win32') || has('win64')
     set guifont=Consolas:h12
 elseif has('gui_macvim')
-    set guifont=JetBrainsMonoNerdFontComplete-Regular:h13
+    set guifont=JetBrainsMonoNFM-Regular:h13
     set macligatures
 else " linux
     set guifont=Monospace\ 12
