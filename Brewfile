@@ -20,8 +20,8 @@ brew "colordiff"
 brew "cowsay"
 # Run arbitrary commands when files change
 brew "entr"
-# Modern replacement for 'ls'
-brew "exa"
+# Modern, maintained replacement for ls
+brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Banner-like program prints strings as ASCII art
@@ -34,8 +34,6 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Open-source video transcoder available for Linux, Mac, and Windows
-brew "handbrake"
 # Improved top (interactive process viewer)
 brew "htop"
 # Tool to measure maximum TCP and UDP bandwidth
@@ -44,10 +42,10 @@ brew "iperf"
 brew "lazygit"
 # Read the content info of a DVD
 brew "lsdvd"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
 # Platform built on V8 to build network applications
 brew "node"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Cross-platform library for audio I/O
 brew "portaudio"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
@@ -124,6 +122,8 @@ cask "qlmarkdown"
 cask "qlstephen"
 # Quick Look plugin for JSON files
 cask "quicklook-json"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Window snapping tool
 cask "rectangle-pro"
 # Team communication and collaboration software
