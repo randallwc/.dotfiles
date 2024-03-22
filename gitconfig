@@ -47,6 +47,7 @@
     cp = cherry-pick
     d = diff
     dc = diff --cached
+    ds = diff --staged
     diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
     dt = difftool
     dw = diff --word-diff=color
