@@ -168,3 +168,19 @@ specific software may be accessed.
 ```bash
 defaults write com.apple.Dock showhidden -boolean yes; killall Dock
 ```
+
+# raycast
+
+import the `./raycast.rayconfig` into raycast
+
+# touch id sudo
+
+```
+sudo vim /etc/pam.d/sudo
+```
+
+add this line
+
+```
+auth sufficient pam_tid.so
+```
