@@ -143,6 +143,13 @@ alias pathu='echo $PATH | tr : \\n | sort | uniq -c'
 alias publicip='curl ifconfig.me'
 alias sshz='ssh pi@raspberrypi.local'
 alias sshzi='ssh pi@$(curl ifconfig.me)'
+if command -v tmux >/dev/null; then
+    alias tns='tmux new-session -s'
+    alias ta='tmux attach -d -t "$( tmux list-sessions | ( fzf --select-1 --exit-0; (( $? == 130 )) && echo "NO_SESSION_CHOSEN" ) | cut -d: -f1)"'
+    alias tca='tmux -CC attach -d -t "$( tmux list-sessions | ( fzf --select-1 --exit-0; (( $? == 130 )) && echo "NO_SESSION_CHOSEN" ) | cut -d: -f1)"'
+    alias tsw='tmux switch-client -t "$( tmux list-sessions | ( fzf --select-1 --exit-0; (( $? == 130 )) && echo "NO_SESSION_CHOSEN" ) | cut -d: -f1)"'
+    alias tk='tmux kill-session -t "$( tmux list-sessions | ( fzf --select-1 --exit-0; (( $? == 130 )) && echo "NO_SESSION_CHOSEN" ) | cut -d: -f1)"'
+fi
 
 ################################################################################
 # FUNCTIONS
