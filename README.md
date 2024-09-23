@@ -6,7 +6,7 @@
 [here](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
 for M1 chips
 
-`softwareupdate --install-rosetta`
+`softwareupdate --install-rosetta --agree-to-license`
 
 # github
 
