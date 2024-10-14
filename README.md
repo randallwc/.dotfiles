@@ -36,34 +36,14 @@ key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/gen
  - settings > user & groups > remove steam from startup
 
 # download apps from appstore
-- Scan Thing
 - Daisy Disk
-- Amphetamine
 - Horo
-- Good Notes
 
 # enable 3 finger drag
 
 `System Preferences > Accessibility > Pointer Control > Mouse & Trackpad >
 Trackpad Options > Enable Dragging > Three Finger Drag`
 
-# iTerm2 Settings
-```sh
-defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
-defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
-```
-
-## install jetbrains mono manually (or just use homebrew)
-[font](https://www.jetbrains.com/lp/mono/)
-
-- open `Font Book` and press `+`
-- select the whole folder and add it
-
-> RECOMMENDED SETTINGS FOR THE FONT
->
-> Size: 13
-> Line spacing: 1.2
 
 # [install logi options](https://www.logitech.com/en-us/product/options)
 
@@ -153,13 +133,8 @@ now on you can either add (dis)allowed programs to the list within the Firewall
 Options or just click on Allow\/Deny, if you get a popup asking you if a
 specific software may be accessed.
 
-# chrome
-
-1. System Preferences > Keyboard > Shortcuts > App Shortcuts > Google Chrome.app
-1. `Enter Full Screen` ^⌘F
-1. `Exit Full Screen` ^⌘F
-
 # do not disturb
+
 1. System Preferences > Keyboard > Shortcuts > Mission Control
 1. Turn Do Not Disturb On/Off ⌃⌥⌘D
 
@@ -189,3 +164,18 @@ auth sufficient pam_tid.so
 
 1. go to iphone messages settings
 1. turn on imessage forwarding
+
+# appendix
+
+## iTerm2 Settings
+```sh
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
+defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
+```
+
+## chrome
+
+1. System Preferences > Keyboard > Shortcuts > App Shortcuts > Google Chrome.app
+1. `Enter Full Screen` ^⌘F
+1. `Exit Full Screen` ^⌘F
