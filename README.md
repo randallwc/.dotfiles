@@ -184,3 +184,8 @@ add this line
 ```
 auth sufficient pam_tid.so
 ```
+
+# messages
+
+1. go to iphone messages settings
+1. turn on imessage forwarding
