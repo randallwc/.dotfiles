@@ -7,7 +7,6 @@
 - link:
     ~/.bash_profile:
     ~/.bashrc:
-    ~/.condarc:
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.ideavimrc:

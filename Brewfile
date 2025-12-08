@@ -108,8 +108,6 @@ cask "macvim"
 cask "messenger"
 # Sandbox construction video game
 cask "minecraft"
-# Minimal installer for conda
-cask "miniconda"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # IDE for professional Python development
