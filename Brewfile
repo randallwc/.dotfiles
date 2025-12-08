@@ -56,8 +56,6 @@ brew "ripgrep"
 brew "shellcheck"
 # Autoformat shell script source code
 brew "shfmt"
-# Cross-shell prompt for astronauts
-brew "starship"
 # Code-search similar to ack
 brew "the_silver_searcher"
 # Terminal multiplexer

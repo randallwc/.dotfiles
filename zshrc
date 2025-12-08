@@ -21,12 +21,6 @@ setopt autocd beep extendedglob nomatch notify
 bindkey -e # emacs mode
 
 ################################################################################
-# SET UP PROMPT
-################################################################################
-export STARSHIP_CONFIG=~/.dotfiles/starship-zsh.toml
-eval "$(starship init zsh)"
-
-################################################################################
 # TAB COMPLETION
 ################################################################################
 # https://zsh.sourceforge.io/Doc/Release/Completion-Widgets.html#Completion-Matching-Control
