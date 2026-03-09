@@ -1,55 +1,47 @@
+# ~/.zshrc
+
+# fzf
 source <(fzf --zsh)
+
+# brew
 export PATH="/opt/homebrew/opt/avr-gcc@8/bin:$PATH"
 export PATH="/opt/homebrew/opt/arm-none-eabi-binutils/bin:$PATH"
+export PATH="${HOME}/Developer/dotfiles/bin:$PATH"
 
-alias ls='ls -G'
-alias ll='ls -Gl'
-alias la='ls -Ga'
-
-alias vim='nvim'
-alias vi='nvim'
-
-# functions #
-
-find-json() {
-  local substr="$1"
-  local file="$2"
-  if [[ -z "$substr" || -z "$file" ]]; then
-    echo "Usage: find-json <substring> <file.json>"
+# utils
+checkcmd() {
+  if ! command -v "$1" >/dev/null; then
+    echo "download $1 to use aliases"
+    echo "  brew install $1"
     return 1
   fi
-  jq --arg substr "$substr" '
-    paths as $p
-    | select(
-      (getpath($p) | type) == "string"
-      and (getpath($p) | test($substr))
-    )
-    | $p
-  ' "$file"
+  return 0
 }
 
-find-file-types-recursively() {
-  local dir="$1"
-  if [[ -z "$dir" ]]; then
-    echo "Usage: find-file-types-recursively <dir>"
-    return 1
-  fi
-  find "$dir" -type file -print | sed -E 's/.*(\.[A-Za-z0-9]+)/\1/g' | sort -u
-}
-
-delete-ds-store-recursively() {
-  local dir="$1"
-  if [[ -z "$dir" ]]; then
-    echo "Usage: delete-ds-store-recursively <dir>"
-    return 1
-  fi
-  echo 'finding...'
-  find "$dir" -name '.DS_Store'-type file -print
-  echo 'deleting...'
-  find "$dir" -name '.DS_Store'-type file -delete
-  echo 'checking...'
-  find "$dir" -name '.DS_Store'-type file -print
-  echo 'done'
-}
-
-
+# aliases
+if checkcmd tmux ||
+  checkcmd fzf ||
+  checkcmd nvim ||
+  checkcmd jq ||
+  checkcmd git; then
+  alias desk='cd ~/Desktop/'
+  alias dev='cd ~/Developer/'
+  alias doc='cd ~/Documents/'
+  alias dot='cd ~/Developer/dotfiles/'
+  alias down='cd ~/Downloads/'
+  alias gr='cd $(git rev-parse --show-toplevel)'
+  alias grep='grep --color=auto'
+  alias l.='ls --color=always -Ald .* | awk "{print \$9 \$10 \$11}"'
+  alias l='ls -AF'
+  alias la='ls -Ga'
+  alias ll='ls -Gl'
+  alias ll='ls -lF'
+  alias lll='ls -AlF'
+  alias ls='ls -G'
+  alias ta='tmux attach -d -t "$( tmux list-sessions | ( fzf --select-1 --exit-0; (( $? == 130 )) && echo "NO_SESSION_CHOSEN" ) | cut -d: -f1)"'
+  alias tk='tmux kill-session -t "$( tmux list-sessions | ( fzf --select-1 --exit-0; (( $? == 130 )) && echo "NO_SESSION_CHOSEN" ) | cut -d: -f1)"'
+  alias tns='tmux new-session -s'
+  alias tsw='tmux switch-client -t "$( tmux list-sessions | ( fzf --select-1 --exit-0; (( $? == 130 )) && echo "NO_SESSION_CHOSEN" ) | cut -d: -f1)"'
+  alias vi='nvim'
+  alias vim='nvim'
+fi
