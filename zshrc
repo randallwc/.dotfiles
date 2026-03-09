@@ -74,13 +74,27 @@ if checkcmd tmux ||
   checkcmd nvim ||
   checkcmd jq ||
   checkcmd git; then
+
   alias desk='cd ~/Desktop/'
   alias dev='cd ~/Developer/'
   alias doc='cd ~/Documents/'
   alias dot='cd ~/Developer/dotfiles/'
   alias down='cd ~/Downloads/'
+  alias ga='git add'
+  alias gaa='git add -A'
+  alias gc='git commit'
+  alias gca='git commit --amend'
+  alias gcm='git commit -m'
+  alias gd='git diff'
+  alias gds='git diff --staged'
+  alias gl='git log'
+  alias glo='git log --oneline'
+  alias gpl='git pull'
+  alias gpu='git push'
   alias gr='cd $(git rev-parse --show-toplevel)'
   alias grep='grep --color=auto'
+  alias gs='git status --short'
+  alias gst='git status'
   alias l.='ls --color=always -Ald .* | awk "{print \$9 \$10 \$11}"'
   alias l='ls -AF'
   alias la='ls -Ga'
@@ -94,6 +108,7 @@ if checkcmd tmux ||
   alias tsw='tmux switch-client -t "$( tmux list-sessions | ( fzf --select-1 --exit-0; (( $? == 130 )) && echo "NO_SESSION_CHOSEN" ) | cut -d: -f1)"'
   alias vi='nvim'
   alias vim='nvim'
+
 fi
 
 # zsh autocomplete and syntax highlighting
