@@ -1,178 +1,100 @@
-# setting up new mac
-# install xcode
+```
+ __      __  ______
+/\ \  __/\ \/\  __  \
+\ \ \/\ \ \ \ \ \_\  \
+ \ \ \ \ \ \ \ \  _  /
+  \ \ \_/ \_\ \ \ \\  \
+   \ \____^___/\ \_\ \_\
+     \/__//__/  \/_/\/_/
+```
+
+# new mac setup
+
+## install xcode
 `xcode-select --install`
 
-# install rosetta
-[here](https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable)
-for M1 chips
+## install rosetta
 
 `softwareupdate --install-rosetta --agree-to-license`
 
-# github
+## github
 
-[create git ssh
-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+create git ssh key
 
-# [install homebrew](https://brew.sh)
+<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
 
-# auto install
-`./install`
+## homebrew
+
+<https://brew.sh>
 
 ## visual studio
- - run `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool
-   false` for key repeat
+
+`defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false`
 
 ## spotify
-1. show advanced settings
-1. say no to opening on login
+
+show advanced settings > no opening on login
 
 ## messenger
- - go to settings > disable launch on startup
 
-## zoom
- - settings > share screen > window size ... > maintain current size
+go to settings > disable launch on startup
 
 ## steam
- - settings > user & groups > remove steam from startup
 
-# download apps from appstore
-- Daisy Disk
-- Horo
+settings > user & groups > remove steam from startup
 
-# enable 3 finger drag
+## 3 finger drag
 
-`System Preferences > Accessibility > Pointer Control > Mouse & Trackpad >
-Trackpad Options > Enable Dragging > Three Finger Drag`
+System Preferences > Accessibility > Pointer Control > Mouse & Trackpad > Trackpad Options > Enable Dragging > Three Finger Drag
 
+## keyboard repeat
 
-# [install logi options](https://www.logitech.com/en-us/product/options)
+Keyboard > Keyboard > Key Repeat
 
-## set up the guesture button
-![logi options image](images/logiOptions.png)
+`fast`
 
-# monitor control
-![monitor control general settings](images/monitorcontrol_general.png)
-![monitor control app menu settings](images/monitorcontrol_appmenu.png)
-![monitor control keyboard settings](images/monitorcontrol_keyboard.png)
+Keyboard > Keyboard > Delay Until Repeat
 
-# set up key board repeat
-`Keyboard > Keyboard > Key Repeat`
+`short`
 
-**set fast**
+## finder
 
-`Keyboard > Keyboard > Delay Until Repeat`
+Finder > Preferences > [do stuff here]
 
-**set short**
+Finder > View > Show Path Bar
 
-# update finder settings
-`Finder > Preferences > [do stuff here]`
+Finder > View > Show Status Bar
 
-`Finder > View > Show Path Bar`
+## enable document sync on icloud
 
-`Finder > View > Show Status Bar`
+System Preferences > Apple ID > iCloud Drive > Options > Desktop & Documents Folders
 
-## optional
+## misc settings
 
-# enable document sync on icloud
-
-`System Preferences > Apple ID > iCloud Drive > Options > Desktop & Documents
-Folders`
-
-# disable icloud optimization
-`System Preferences > Apple ID > iCloud and disable Optimize Mac Storage`
-
-# misc settings
 1. enable icloud on messages
 1. enable control zoom
 1. enable tts
-1. put bluetooth in menu bar
-1. put sound in menu bar
 1. play feedback when volume is changed
 
-# Quicklook
-- use Brew to install the quicklook plugins into `~/Library/QuickLook`
-
-## ql color code on m1 fix
-[here](https://github.com/jpc/QLColorCode/releases/tag/release-4.1.2%2Bm1)
-
-## ql stephen fix
-```bash
-xattr -Cr ~/Library/QuickLook/QLStephen.qlgenerator
-qlmanage -r
-qlmanage -r cache
-killall Finder
-```
-
-## [ipynb quicklook](https://github.com/tuxu/ipynb-quicklook/releases)
-1. unzip
-1. move to `/Library/QuickLook`
-
-```bash
-qlmanage -r
-killall Finder
-```
-
-# firewall
-
-[This one is a bit controversial. If you do not install software which allows
-network access of any kind, skip it. If you run potentially vulnerable software
-you don't want to be accessed from other machines, consider turning the built-in
-firewall on. This particularly applies if you develop network
-software.](https://sourabhbajaj.com/mac-setup/Security/)
-
-1. Choose Apple menu () > System Preferences, then click Security & Privacy.
-1. Click the Firewall tab.
-1. Click the Lock button, then enter an administrator name and password.
-1. Click Turn On Firewall.
-1. Click Firewall Options.
-1. Uncheck `Automatically allow signed software to receive incoming
-   connections`.
-
-The last step disables automatic access for software from the App Store. From
-now on you can either add (dis)allowed programs to the list within the Firewall
-Options or just click on Allow\/Deny, if you get a popup asking you if a
-specific software may be accessed.
-
-# do not disturb
+## do not disturb keyboard toggle
 
 1. System Preferences > Keyboard > Shortcuts > Mission Control
 1. Turn Do Not Disturb On/Off ⌃⌥⌘D
 
-# hidden apps
+## hidden apps in dock
 
 ```bash
 defaults write com.apple.Dock showhidden -boolean yes; killall Dock
 ```
 
-# raycast
+## touch id sudo
 
-import the `./raycast.rayconfig` into raycast
+turn on touch id support for sudo
 
-# touch id sudo
-
-```
-sudo vim /etc/pam.d/sudo
-```
-
-add this line
-
-```
-auth sufficient pam_tid.so
-```
-
-# messages
+## messages
 
 1. go to iphone messages settings
 1. turn on imessage forwarding
-
-# appendix
-
-## iTerm2 Settings
-```sh
-defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
-defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
-```
 
 ## chrome
 
