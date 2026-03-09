@@ -65,6 +65,8 @@ Finder > View > Show Path Bar
 
 Finder > View > Show Status Bar
 
+Trash > Settings > Advanced > Remove items ... after 30 days
+
 ## enable document sync on icloud
 
 System Preferences > Apple ID > iCloud Drive > Options > Desktop & Documents Folders
