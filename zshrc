@@ -89,6 +89,7 @@ if checkcmd tmux ||
   alias gca='git commit --amend'
   alias gcm='git commit -m'
   alias gco='git checkout'
+  alias gcp='git cherry-pick'
   alias gd='git diff'
   alias gds='git diff --staged'
   alias gl='git log'
